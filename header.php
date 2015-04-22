@@ -83,11 +83,8 @@
 
     <link rel="shortcut icon" href="/favicon.ico" /> -->
 
-<!-- wp_head is necessary for a lot of wp hooks and actions, such as javascript queueing -->
+<!-- wp_head is necessary for a lot of wp hooks and actions, such as javascript queueing  -->
     <?php wp_head(); ?>
 
 </head>
 <body>
-
-</body>
-</html>
