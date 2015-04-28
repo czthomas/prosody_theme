@@ -15,7 +15,7 @@ gulp.task('stylus', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch('*.styl', ['stylus']);
+    gulp.watch('**/*.styl', ['stylus']);
 });
 
 gulp.task('default', ['watch']);
