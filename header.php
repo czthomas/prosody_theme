@@ -6,36 +6,36 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . 'css/style.css'; ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . 'scripts/thickbox.css'; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/screen.css'; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/scripts/thickbox.css'; ?>">
     <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
 
     <!-- Javascripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/scripts/thickbox-compressed.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/popus.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
 
     <script type="text/javascript">var tb_pathToImage = "<?php echo get_template_directory_uri(); ?>/scripts/images/loadingAnimation.gif";</script>
 
     <!-- This is to be reworked using localStorage -->
     <script type="text/javascript">
-        $(document).ready(function(){
-                var cookieName = 'stickyAccordion';
+    //     $(document).ready(function(){
+    //             var cookieName = 'stickyAccordion';
 
-                $("#poem_sorting").accordion({
-                    active: ( $.cookies.get( cookieName ) || 0 ),
-                    header: 'h4',
-                                    collapsible: true,
-                    change: function( e, ui ) {
-                        $.cookies.set( cookieName, $( this ).find( 'h4' ).index ( ui.newHeader[0] ) );
-                    }
-                } );
-        });
-    </script>
+    //             $("#poem_sorting").accordion({
+    //                 active: ( $.cookies.get( cookieName ) || 0 ),
+    //                 header: 'h4',
+    //                                 collapsible: true,
+    //                 change: function( e, ui ) {
+    //                     $.cookies.set( cookieName, $( this ).find( 'h4' ).index ( ui.newHeader[0] ) );
+    //                 }
+    //             } );
+    //     });
+    // </script>
 
 <!-- This controlled the page/tab structure. Better to redo this with the actual WP nav menu, and attach resources to end of each poem directly (i.e. not in a new tab) -->
-    <?php if(!is_page()) { ?>
+    <?php if(!is_page()) : ?>
         <script type="text/javascript">
             $(document).ready(function(){
                 $('#poem-tabs').tabs({
@@ -58,7 +58,7 @@
         </script>
     <?php endif; ?>
 
-    <?php if ( is_front_page(); ) : ?>
+    <?php if ( is_front_page() ) : ?>
         <script type="text/javascript" src="<? echo get_template_directory_uri(); ?>/js/jquery.cycle.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
@@ -70,7 +70,7 @@
                             nowrap:  1,
 
                 });
-                $('#poem-tabs').tabs();
+                // $('#poem-tabs').tabs();
              });
         </script>
     <?php endif; ?>
@@ -91,7 +91,7 @@
 
     <div class="wrapper">
         <?php if (is_home()) : ?>
-            <div class="logo">
+            <div id="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo01.gif" alt="" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo02.gif" alt="" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo03.gif" alt="" />
