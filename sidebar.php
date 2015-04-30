@@ -41,7 +41,7 @@
                 <ul class="titles">
                     <?php if ( $warming_up->have_posts() ) : while ($warming_up->have_posts() ) : $warming_up->the_post();?>
                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                    <?php endwhile; endif; wp_reset_query(); ?>
+                    <?php endwhile; endif; wp_reset_postdata(); ?>
                 </ul>
 
                 <h4>Moving Along</h4>
@@ -60,7 +60,7 @@
                 <ul class="titles">
                     <?php if ( $moving_along->have_posts() ) : while ($moving_along->have_posts() ) : $moving_along->the_post();?>
                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                    <?php endwhile; endif; wp_reset_query(); ?>
+                    <?php endwhile; endif; wp_reset_postdata(); ?>
                 </ul>
 
                 <h4>Special Challenge</h4>
@@ -79,7 +79,7 @@
                 <ul class="titles">
                     <?php if ( $special_challenge->have_posts() ) : while ($special_challenge->have_posts() ) : $special_challenge->the_post();?>
                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                    <?php endwhile; endif; wp_reset_query(); ?>
+                    <?php endwhile; endif; wp_reset_postdata(); ?>
                 </ul>
             </div>
         <h3 class="poem-sort-method">By Type</h3>
