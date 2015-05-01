@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset ="UTF-8" />
+    <title>For Better for Verse</title>
+    <meta name="description" content="An interactive learning tool that can help you understand what makes metered poetry in English tick.">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:8888/prosody/wp-content/themes/prosody/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8888/prosody/wp-content/themes/prosody/scripts/thickbox.css">
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
+
+    <!-- Javascripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="http://localhost:8888/prosody/wp-content/themes/prosody/scripts/thickbox-compressed.js"></script>
+    <script src="http://localhost:8888/prosody/wp-content/themes/prosody/js/popup.js"></script>
+
+    <script type="text/javascript">var tb_pathToImage = "http://localhost:8888/prosody/wp-content/themes/prosody/scripts/images/loadingAnimation.gif";</script>
+
+    <!-- This is to be reworked using localStorage -->
+    <script type="text/javascript">
+    //     $(document).ready(function(){
+    //             var cookieName = 'stickyAccordion';
+
+    //             $("#poem_sorting").accordion({
+    //                 active: ( $.cookies.get( cookieName ) || 0 ),
+    //                 header: 'h4',
+    //                                 collapsible: true,
+    //                 change: function( e, ui ) {
+    //                     $.cookies.set( cookieName, $( this ).find( 'h4' ).index ( ui.newHeader[0] ) );
+    //                 }
+    //             } );
+    //     });
+    // </script>
+
+<!-- This controlled the page/tab structure. Better to redo this with the actual WP nav menu, and attach resources to end of each poem directly (i.e. not in a new tab) -->
+            <script type="text/javascript">
+            $(document).ready(function(){
+                $('#poem-tabs').tabs({
+                    load: function(event, ui) {
+                        $('a', ui.panel).click(function() {
+                            $(ui.panel).load(this.href);
+                            return false;
+                        });
+                    }
+                }  );
+                $('#subnav-wrapper').tabs({
+                    load: function(event, ui) {
+                        $('a', ui.panel).click(function() {
+                            $(ui.panel).load(this.href);
+                            return false;
+                        });
+                    }
+                });
+          });
+        </script>
+
+            <script type="text/javascript" src="http://localhost:8888/prosody/wp-content/themes/prosody/js/jquery.cycle.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('#logo').cycle({
+                                            fx: 'none',
+                            timeout:  100,
+                            speed:    500,
+                            delay:    -100,
+                            nowrap:  1,
+
+                });
+                // $('#poem-tabs').tabs();
+             });
+        </script>
+
+<!-- RSS feed, Atom feed, pingback url, favicon - Are these necessary? -->
+
+<!--     <link rel="alternate" type="application/rss+xml" title=" RSS Feed" href="" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="" />
+    <link rel="pingback" href="" />
+
+    <link rel="shortcut icon" href="/favicon.ico" /> -->
+
+<!-- wp_head is necessary for a lot of wp hooks and actions, such as javascript queueing  -->
+    <meta name='robots' content='noindex,follow' />
+        <script type="text/javascript">
+            window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/localhost:8888\/prosody\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.1"}};
+            !function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f;c.supports={simple:d("simple"),flag:d("flag")},c.supports.simple&&c.supports.flag||(f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+        </script>
+        <style type="text/css">
+img.wp-smiley,
+img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='http://localhost:8888/prosody/wp-includes/css/dashicons.min.css?ver=4.2.1' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://localhost:8888/prosody/wp-includes/css/admin-bar.min.css?ver=4.2.1' type='text/css' media='all' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://localhost:8888/prosody/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://localhost:8888/prosody/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 4.2.1" />
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+<style type="text/css" media="screen">
+    html { margin-top: 32px !important; }
+    * html body { margin-top: 32px !important; }
+    @media screen and ( max-width: 782px ) {
+        html { margin-top: 46px !important; }
+        * html body { margin-top: 46px !important; }
+    }
+</style>
+
+</head>
+<body>
+
+    <div class="wrapper">
+                    <div id="logo">
+                <img src="http://localhost:8888/prosody/wp-content/themes/prosody/images/logo01.gif" alt="" />
+                <img src="http://localhost:8888/prosody/wp-content/themes/prosody/images/logo02.gif" alt="" />
+                <img src="http://localhost:8888/prosody/wp-content/themes/prosody/images/logo03.gif" alt="" />
+                <img src="http://localhost:8888/prosody/wp-content/themes/prosody/images/logo04.gif" alt="" />
+                <img src="http://localhost:8888/prosody/wp-content/themes/prosody/images/logo05.gif" alt="" />
+                <img src="http://localhost:8888/prosody/wp-content/themes/prosody/images/logo06.gif" alt="" />
+                <img src="http://localhost:8888/prosody/wp-content/themes/prosody/images/logo.gif" alt="For Better for Verse" />
+            </div>
+                <div id="intro">
+            <p>For Better for Verse:An interactive learning tool that can help you understand what makes metered poetry in English tick.</p>
+            <h2 id="tagline"><a href="http://www.engl.virginia.edu">a project of the University of Virginia English Department</a></h2>
+        </div>
+
+
+
+
+    <div class="main">
+        <div class="poem">
+            <div>
+                <p><?xml version="1.0"?></p>
+<div xmlns="http://www.w3.org/1999/xhtml" id="rhyme" style="display:none;">
+<div id="rhymespacer"> </div>
+<form name="abababababab" id="rhymeform" autocomplete="off"><br/>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-1-1" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-1-2" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-1-3" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-1-4" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<p><br/>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-2-1" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-2-2" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-2-3" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-2-4" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<p><br/>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-3-1" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-3-2" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-3-3" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme"><input size="1" maxlength="1" value="" name="lrhyme-3-4" type="text" onFocus="this.value='';this.style['color'] = '#44FFFF';"/></div>
+<div class="lrhyme check"><input type="submit" value="&#x2713;" size="1" maxlength="1" id="rhymecheck"/></div>
+</form>
+</div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="rhymebar"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:prosody="http://www.prosody.org" xmlns:TEI="http://www.tei-c.org/ns/1.0" id="poem">
+<div id="poemtitle">
+<h2>I Look Into My Glass<small class="date">(1898)</small></h2>
+<h4>Thomas Hardy</h4>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-1" n="1" part="N" met="-+-+-+" real="-++--+|-+-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-1-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">I </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-1-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">look</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-1-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">in</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-1-2-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">to</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-1-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">my</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-1-3-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">glass,</span></span></div>
+<div class="TEI-l" id="prosody-real-1" n="1" part="N" met="-+-+-+" real="-++--+|-+-+-+"><span style="display:none;" linegroupindex="1" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-1-1-1-1" onclick="switchfoot('prosody-real-1-1-1-1');">I </span><span class="prosody-syllable" real="" id="prosody-real-1-1-1-2" onclick="switchfoot('prosody-real-1-1-1-2');">look</span> <span class="prosody-syllable" real="" id="prosody-real-1-2-1-1" onclick="switchfoot('prosody-real-1-2-1-1');" discrepant="">in</span><span class="prosody-syllable" real="" id="prosody-real-1-2-2-1" onclick="switchfoot('prosody-real-1-2-2-1');" discrepant="">to</span> <span class="prosody-syllable" real="" id="prosody-real-1-3-1-1" onclick="switchfoot('prosody-real-1-3-1-1');">my</span> <span class="prosody-syllable" real="" id="prosody-real-1-3-2-1" onclick="switchfoot('prosody-real-1-3-2-1');">glass,</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress1" name="Check stress" onclick="checkstress(1)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet1" name="Check feet" onclick="checkfeet(1)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter1" name="Check meter" onclick="checkmeter(1,1)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-2" n="2" part="N" met="-+-+-+" real="-+-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-2-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">And </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-2-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">view</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-2-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">my </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-2-2-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">wast</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-2-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">ing</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-2-3-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">skin,</span></span></div>
+<div class="TEI-l" id="prosody-real-2" n="2" part="N" met="-+-+-+" real="-+-+-+"><span style="display:none;" linegroupindex="2" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-2-1-1-1" onclick="switchfoot('prosody-real-2-1-1-1');">And </span><span class="prosody-syllable" real="" id="prosody-real-2-1-1-2" onclick="switchfoot('prosody-real-2-1-1-2');">view</span> <span class="prosody-syllable" real="" id="prosody-real-2-2-1-1" onclick="switchfoot('prosody-real-2-2-1-1');">my </span><span class="prosody-syllable" real="" id="prosody-real-2-2-1-2" onclick="switchfoot('prosody-real-2-2-1-2');">wast</span><span class="prosody-syllable" real="" id="prosody-real-2-3-1-1" onclick="switchfoot('prosody-real-2-3-1-1');">ing</span> <span class="prosody-syllable" real="" id="prosody-real-2-3-2-1" onclick="switchfoot('prosody-real-2-3-2-1');">skin,</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress2" name="Check stress" onclick="checkstress(2)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet2" name="Check feet" onclick="checkfeet(2)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter2" name="Check meter" onclick="checkmeter(2,2)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-3" n="3" part="N" met="-+-+-+-+" real="-+++-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-3-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">And </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-3-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">say,</span></span> <span class="caesura" style="display:none">//</span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-3-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">&#8220;Would </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-3-2-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">God</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-3-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">it </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-3-3-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">came</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-3-4-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">to</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-3-4-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">pass</span></span></div>
+<div class="TEI-l" id="prosody-real-3" n="3" part="N" met="-+-+-+-+" real="-+++-+-+"><span style="display:none;" linegroupindex="3" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-3-1-1-1" onclick="switchfoot('prosody-real-3-1-1-1');">And </span><span class="prosody-syllable" real="" id="prosody-real-3-1-1-2" onclick="switchfoot('prosody-real-3-1-1-2');">say,</span> <span class="caesura" style="display:none">//</span><span class="prosody-syllable" real="" id="prosody-real-3-2-1-1" onclick="switchfoot('prosody-real-3-2-1-1');" discrepant="">&#8220;Would </span><span class="prosody-syllable" real="" id="prosody-real-3-2-1-2" onclick="switchfoot('prosody-real-3-2-1-2');" discrepant="">God</span> <span class="prosody-syllable" real="" id="prosody-real-3-3-1-1" onclick="switchfoot('prosody-real-3-3-1-1');">it </span><span class="prosody-syllable" real="" id="prosody-real-3-3-1-2" onclick="switchfoot('prosody-real-3-3-1-2');">came</span> <span class="prosody-syllable" real="" id="prosody-real-3-4-1-1" onclick="switchfoot('prosody-real-3-4-1-1');">to</span> <span class="prosody-syllable" real="" id="prosody-real-3-4-2-1" onclick="switchfoot('prosody-real-3-4-2-1');">pass</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress3" name="Check stress" onclick="checkstress(3)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet3" name="Check feet" onclick="checkfeet(3)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter3" name="Check meter" onclick="checkmeter(3,3)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-4" n="4" part="N" met="-+-+-+" real="-+-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-4-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">My </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-4-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">heart</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-4-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">had </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-4-2-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">shrunk</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-4-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">as</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-4-3-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">thin!&#8221;</span></span></div>
+<div class="TEI-l" id="prosody-real-4" n="4" part="N" met="-+-+-+" real="-+-+-+"><span style="display:none;" linegroupindex="4" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-4-1-1-1" onclick="switchfoot('prosody-real-4-1-1-1');">My </span><span class="prosody-syllable" real="" id="prosody-real-4-1-1-2" onclick="switchfoot('prosody-real-4-1-1-2');">heart</span> <span class="prosody-syllable" real="" id="prosody-real-4-2-1-1" onclick="switchfoot('prosody-real-4-2-1-1');">had </span><span class="prosody-syllable" real="" id="prosody-real-4-2-1-2" onclick="switchfoot('prosody-real-4-2-1-2');">shrunk</span> <span class="prosody-syllable" real="" id="prosody-real-4-3-1-1" onclick="switchfoot('prosody-real-4-3-1-1');">as</span> <span class="prosody-syllable" real="" id="prosody-real-4-3-2-1" onclick="switchfoot('prosody-real-4-3-2-1');">thin!&#8221;</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress4" name="Check stress" onclick="checkstress(4)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet4" name="Check feet" onclick="checkfeet(4)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter4" name="Check meter" onclick="checkmeter(4,4)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<p><br/>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-5" n="5" part="N" met="-+-+-+" real="-+-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-5-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">For </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-5-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">then,</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-5-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">I,</span></span> <span class="caesura" style="display:none">//</span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-5-2-3-1" onclick="switchstress(this);"><span class="prosody-placeholder">un</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-5-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">dis</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-5-3-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">trest</span></span></div>
+<div class="TEI-l" id="prosody-real-5" n="5" part="N" met="-+-+-+" real="-+-+-+"><span style="display:none;" linegroupindex="1" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-5-1-1-1" onclick="switchfoot('prosody-real-5-1-1-1');">For </span><span class="prosody-syllable" real="" id="prosody-real-5-1-1-2" onclick="switchfoot('prosody-real-5-1-1-2');">then,</span> <span class="prosody-syllable" real="" id="prosody-real-5-2-1-1" onclick="switchfoot('prosody-real-5-2-1-1');">I,</span> <span class="caesura" style="display:none">//</span><span class="prosody-syllable" real="" id="prosody-real-5-2-3-1" onclick="switchfoot('prosody-real-5-2-3-1');">un</span><span class="prosody-syllable" real="" id="prosody-real-5-3-1-1" onclick="switchfoot('prosody-real-5-3-1-1');">dis</span><span class="prosody-syllable" real="" id="prosody-real-5-3-2-1" onclick="switchfoot('prosody-real-5-3-2-1');">trest</span></div>
+<div class="buttons"><span class="button"><button class="prosody-note-button" id="displaynotebutton5" name="Note about this line" onclick=""><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/blank.gif"/></button>
+<p class="prosody-note" id="hintfor5"><span>Note on line 5:</span> You might want to stress &#8220;I&#8221; here, set off as it is by a                         pair of commas. But by this point the first-person pronoun isn&#8217;t news: it&#8217;s                         occurred three times already in stanza one. Besides, stress thrown on &#8220;I&#8221;                         would detract from the stress of sense that belongs to the syllables on                         either side of it. &#8220;Then&#8221; emphasizes the desirability of that anesthetic                         state for which the poem professes to yearn; and more subtly &#8220;un-&#8221; does                         something of the same kind, highlighting the distress the speaker is all too                         palpably undergoing. And finally the regularity of a straight iambic                         scansion of this line mimics the condition of &#8220;equanimity&#8221; that is imagined                         (and likewise rhythmically performed) at the end of this stanza. </p>
+<p></span><span class="button"><button class="prosody-checkstress" id="checkstress5" name="Check stress" onclick="checkstress(5)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet5" name="Check feet" onclick="checkfeet(5)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter5" name="Check meter" onclick="checkmeter(5,1)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-6" n="6" part="N" met="-+-+-+" real="-+++-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-6-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">By </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-6-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">hearts</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-6-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">grown </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-6-2-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">cold</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-6-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">to</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-6-3-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">me,</span></span></div>
+<div class="TEI-l" id="prosody-real-6" n="6" part="N" met="-+-+-+" real="-+++-+"><span style="display:none;" linegroupindex="2" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-6-1-1-1" onclick="switchfoot('prosody-real-6-1-1-1');">By </span><span class="prosody-syllable" real="" id="prosody-real-6-1-1-2" onclick="switchfoot('prosody-real-6-1-1-2');">hearts</span> <span class="prosody-syllable" real="" id="prosody-real-6-2-1-1" onclick="switchfoot('prosody-real-6-2-1-1');" discrepant="">grown </span><span class="prosody-syllable" real="" id="prosody-real-6-2-1-2" onclick="switchfoot('prosody-real-6-2-1-2');" discrepant="">cold</span> <span class="prosody-syllable" real="" id="prosody-real-6-3-1-1" onclick="switchfoot('prosody-real-6-3-1-1');">to</span> <span class="prosody-syllable" real="" id="prosody-real-6-3-2-1" onclick="switchfoot('prosody-real-6-3-2-1');">me,</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress6" name="Check stress" onclick="checkstress(6)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet6" name="Check feet" onclick="checkfeet(6)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter6" name="Check meter" onclick="checkmeter(6,2)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-7" n="7" part="N" met="-+-+-+-+" real="-+-+-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-7-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">Could </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-7-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">lone</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-7-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">ly </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-7-2-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">wait</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-7-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">my </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-7-3-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">end</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-7-4-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">less</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-7-4-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">rest</span></span></div>
+<div class="TEI-l" id="prosody-real-7" n="7" part="N" met="-+-+-+-+" real="-+-+-+-+"><span style="display:none;" linegroupindex="3" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-7-1-1-1" onclick="switchfoot('prosody-real-7-1-1-1');">Could </span><span class="prosody-syllable" real="" id="prosody-real-7-1-1-2" onclick="switchfoot('prosody-real-7-1-1-2');">lone</span><span class="prosody-syllable" real="" id="prosody-real-7-2-1-1" onclick="switchfoot('prosody-real-7-2-1-1');">ly </span><span class="prosody-syllable" real="" id="prosody-real-7-2-1-2" onclick="switchfoot('prosody-real-7-2-1-2');">wait</span> <span class="prosody-syllable" real="" id="prosody-real-7-3-1-1" onclick="switchfoot('prosody-real-7-3-1-1');">my </span><span class="prosody-syllable" real="" id="prosody-real-7-3-1-2" onclick="switchfoot('prosody-real-7-3-1-2');">end</span><span class="prosody-syllable" real="" id="prosody-real-7-4-1-1" onclick="switchfoot('prosody-real-7-4-1-1');">less</span> <span class="prosody-syllable" real="" id="prosody-real-7-4-2-1" onclick="switchfoot('prosody-real-7-4-2-1');">rest</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress7" name="Check stress" onclick="checkstress(7)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet7" name="Check feet" onclick="checkfeet(7)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter7" name="Check meter" onclick="checkmeter(7,3)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-8" n="8" part="N" met="-+-+-+" real="-+-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-8-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">With </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-8-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">e</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-8-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">qua</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-8-2-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">ni</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-8-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">mi</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-8-3-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">ty.</span></span></div>
+<div class="TEI-l" id="prosody-real-8" n="8" part="N" met="-+-+-+" real="-+-+-+"><span style="display:none;" linegroupindex="4" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-8-1-1-1" onclick="switchfoot('prosody-real-8-1-1-1');">With </span><span class="prosody-syllable" real="" id="prosody-real-8-1-1-2" onclick="switchfoot('prosody-real-8-1-1-2');">e</span><span class="prosody-syllable" real="" id="prosody-real-8-2-1-1" onclick="switchfoot('prosody-real-8-2-1-1');">qua</span><span class="prosody-syllable" real="" id="prosody-real-8-2-2-1" onclick="switchfoot('prosody-real-8-2-2-1');">ni</span><span class="prosody-syllable" real="" id="prosody-real-8-3-1-1" onclick="switchfoot('prosody-real-8-3-1-1');">mi</span><span class="prosody-syllable" real="" id="prosody-real-8-3-2-1" onclick="switchfoot('prosody-real-8-3-2-1');">ty.</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress8" name="Check stress" onclick="checkstress(8)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet8" name="Check feet" onclick="checkfeet(8)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter8" name="Check meter" onclick="checkmeter(8,4)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<p><br/>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-9" n="9" part="N" met="-+-+-+" real="-+-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-9-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">But </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-9-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">Time</span></span> <span class="caesura" style="display:none">//</span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-9-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">to </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-9-2-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">make</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-9-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">me</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-9-3-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">grieve,</span></span></div>
+<div class="TEI-l" id="prosody-real-9" n="9" part="N" met="-+-+-+" real="-+-+-+"><span style="display:none;" linegroupindex="1" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-9-1-1-1" onclick="switchfoot('prosody-real-9-1-1-1');">But </span><span class="prosody-syllable" real="" id="prosody-real-9-1-1-2" onclick="switchfoot('prosody-real-9-1-1-2');">Time</span> <span class="caesura" style="display:none">//</span><span class="prosody-syllable" real="" id="prosody-real-9-2-1-1" onclick="switchfoot('prosody-real-9-2-1-1');">to </span><span class="prosody-syllable" real="" id="prosody-real-9-2-1-2" onclick="switchfoot('prosody-real-9-2-1-2');">make</span> <span class="prosody-syllable" real="" id="prosody-real-9-3-1-1" onclick="switchfoot('prosody-real-9-3-1-1');">me</span> <span class="prosody-syllable" real="" id="prosody-real-9-3-2-1" onclick="switchfoot('prosody-real-9-3-2-1');">grieve,</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress9" name="Check stress" onclick="checkstress(9)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet9" name="Check feet" onclick="checkfeet(9)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter9" name="Check meter" onclick="checkmeter(9,1)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-10" n="10" part="N" met="++-+-+" real="++-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-10-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">Part </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-10-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">steals,</span></span> <span class="caesura" style="display:none">//</span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-10-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">lets </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-10-2-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">part</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-10-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">a</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-10-3-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">bide;</span></span></div>
+<div class="TEI-l" id="prosody-real-10" n="10" part="N" met="++-+-+" real="++-+-+"><span style="display:none;" linegroupindex="2" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-10-1-1-1" onclick="switchfoot('prosody-real-10-1-1-1');">Part </span><span class="prosody-syllable" real="" id="prosody-real-10-1-1-2" onclick="switchfoot('prosody-real-10-1-1-2');">steals,</span> <span class="caesura" style="display:none">//</span><span class="prosody-syllable" real="" id="prosody-real-10-2-1-1" onclick="switchfoot('prosody-real-10-2-1-1');">lets </span><span class="prosody-syllable" real="" id="prosody-real-10-2-1-2" onclick="switchfoot('prosody-real-10-2-1-2');">part</span> <span class="prosody-syllable" real="" id="prosody-real-10-3-1-1" onclick="switchfoot('prosody-real-10-3-1-1');">a</span><span class="prosody-syllable" real="" id="prosody-real-10-3-2-1" onclick="switchfoot('prosody-real-10-3-2-1');">bide;</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress10" name="Check stress" onclick="checkstress(10)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet10" name="Check feet" onclick="checkfeet(10)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter10" name="Check meter" onclick="checkmeter(10,2)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-11" n="11" part="N" met="-+-+-+-+" real="-+-+-+-+"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-11-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">And </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-11-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">shakes</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-11-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">this </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-11-2-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">frag</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-11-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">ile </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-11-3-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">frame</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-11-4-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">at</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-11-4-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">eve</span></span></div>
+<div class="TEI-l" id="prosody-real-11" n="11" part="N" met="-+-+-+-+" real="-+-+-+-+"><span style="display:none;" linegroupindex="3" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-11-1-1-1" onclick="switchfoot('prosody-real-11-1-1-1');">And </span><span class="prosody-syllable" real="" id="prosody-real-11-1-1-2" onclick="switchfoot('prosody-real-11-1-1-2');">shakes</span> <span class="prosody-syllable" real="" id="prosody-real-11-2-1-1" onclick="switchfoot('prosody-real-11-2-1-1');">this </span><span class="prosody-syllable" real="" id="prosody-real-11-2-1-2" onclick="switchfoot('prosody-real-11-2-1-2');">frag</span><span class="prosody-syllable" real="" id="prosody-real-11-3-1-1" onclick="switchfoot('prosody-real-11-3-1-1');">ile </span><span class="prosody-syllable" real="" id="prosody-real-11-3-1-2" onclick="switchfoot('prosody-real-11-3-1-2');">frame</span> <span class="prosody-syllable" real="" id="prosody-real-11-4-1-1" onclick="switchfoot('prosody-real-11-4-1-1');">at</span> <span class="prosody-syllable" real="" id="prosody-real-11-4-2-1" onclick="switchfoot('prosody-real-11-4-2-1');">eve</span></div>
+<div class="buttons"><span class="button"><button class="prosody-checkstress" id="checkstress11" name="Check stress" onclick="checkstress(11)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet11" name="Check feet" onclick="checkfeet(11)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter11" name="Check meter" onclick="checkmeter(11,3)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<div class="prosody-line ">
+<div class="prosody-shadowline" id="prosody-shadow-12" n="12" part="N" met="-+-+-+" real="-+--++"><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-12-1-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">With </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-12-1-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">throb</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-12-2-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">bings </span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-12-2-1-2" onclick="switchstress(this);"><span class="prosody-placeholder">of</span></span> <span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-12-3-1-1" onclick="switchstress(this);"><span class="prosody-placeholder">noon</span></span><span class="prosody-shadowsyllable" shadow="" id="prosody-shadow-12-3-2-1" onclick="switchstress(this);"><span class="prosody-placeholder">tide.</span></span></div>
+<div class="TEI-l" id="prosody-real-12" n="12" part="N" met="-+-+-+" real="-+--++"><span style="display:none;" linegroupindex="4" answer="-+(3/3/4/3)">Meter</span><span class="prosody-syllable" real="" id="prosody-real-12-1-1-1" onclick="switchfoot('prosody-real-12-1-1-1');">With </span><span class="prosody-syllable" real="" id="prosody-real-12-1-1-2" onclick="switchfoot('prosody-real-12-1-1-2');">throb</span><span class="prosody-syllable" real="" id="prosody-real-12-2-1-1" onclick="switchfoot('prosody-real-12-2-1-1');" discrepant="">bings </span><span class="prosody-syllable" real="" id="prosody-real-12-2-1-2" onclick="switchfoot('prosody-real-12-2-1-2');" discrepant="">of</span> <span class="prosody-syllable" real="" id="prosody-real-12-3-1-1" onclick="switchfoot('prosody-real-12-3-1-1');" discrepant="">noon</span><span class="prosody-syllable" real="" id="prosody-real-12-3-2-1" onclick="switchfoot('prosody-real-12-3-2-1');" discrepant="">tide.</span></div>
+<div class="buttons"><span class="button"><button class="prosody-note-button" id="displaynotebutton12" name="Note about this line" onclick=""><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/blank.gif"/></button>
+<p class="prosody-note" id="hintfor12"><span>Note on line 12:</span> Scansion as EKG monitor? When a good poet writes about                         the pounding heart, expect to hear and feel it in the verse. The perfectly                         regular iambics of line 11 are there to set up the syncopated, skipped beat                         with which the poem thuds home. If it weren&#8217;t our rule that rhyme syllables                         take stress, we&#8217;d probably scan the last foot a trochee. Don&#8217;t let the                         spondee keep you from feeling how the last syllable flags, in comparison to                         the brightness of &#8220;noon&#8221; just before it. Hardy thus registers both the                         strength of still-young feeling and its dangerous incongruity with the                         &#8220;fragile frame&#8221; of a man growing old. </p>
+<p></span><span class="button"><button class="prosody-checkstress" id="checkstress12" name="Check stress" onclick="checkstress(12)" onmouseover="Tip('Check stress', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/stress-default.png"/></button></span><span class="button"><button class="prosody-checkfeet" id="checkfeet12" name="Check feet" onclick="checkfeet(12)" onmouseover="Tip('Check feet', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/feet-default.png"/></button></span><span class="button"><button class="prosody-meter" id="checkmeter12" name="Check meter" onclick="checkmeter(12,4)" onmouseover="Tip('Check meter', BGCOLOR, '#676767', BORDERWIDTH, 0, FONTCOLOR, '#FFF')" onmouseout="UnTip()"><img src="http://localhost:8888/prosody/wp-content/plugins/prosody_plugin/images/meter-default.png"/></button></span></div>
+</div>
+<p><br/></div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="rhymeflag">Rhyme</div>
+            </div>
+        </div>
+    </div>
+
+
+
+<div id="sidebar">
+    <h2>List of Poems</h2>
+
+    <div id="poem-sorting">
+
+        <h3 class="poem-sort-method">By Title</h3>
+
+            <div class="poem-results">
+                <ul class="titles">
+                                                                <li><a href="http://localhost:8888/prosody/?prosody_poem=holy-sonnet-14">Holy Sonnet 14</a></li>
+                                            <li><a href="http://localhost:8888/prosody/?prosody_poem=in-neglect">In Neglect</a></li>
+                                            <li><a href="http://localhost:8888/prosody/?prosody_poem=30">Looking glass</a></li>
+                                            <li><a href="http://localhost:8888/prosody/?prosody_poem=the-brain-is-wider-than-the-sky">The Brain is Wider than the Sky</a></li>
+                                            <li><a href="http://localhost:8888/prosody/?prosody_poem=the-windhover">The Windhover</a></li>
+                                            <li><a href="http://localhost:8888/prosody/?prosody_poem=when-a-man-hath-no-freedom">When a Man Hath No Freedom</a></li>
+                                    </ul>
+            </div>
+        <h3 class="poem-sort-method">By Difficulty</h3>
+
+            <div class="poem-results">
+            <h4>Warming Up</h4><ul class='titles'>                    <li><a href="http://localhost:8888/prosody/?prosody_poem=30">Looking glass</a></li>
+                                <li><a href="http://localhost:8888/prosody/?prosody_poem=when-a-man-hath-no-freedom">When a Man Hath No Freedom</a></li>
+            </ul><h4>Moving Along</h4><ul class='titles'>                    <li><a href="http://localhost:8888/prosody/?prosody_poem=holy-sonnet-14">Holy Sonnet 14</a></li>
+                                <li><a href="http://localhost:8888/prosody/?prosody_poem=the-brain-is-wider-than-the-sky">The Brain is Wider than the Sky</a></li>
+            </ul><h4>Special Challenge</h4><ul class='titles'>                    <li><a href="http://localhost:8888/prosody/?prosody_poem=in-neglect">In Neglect</a></li>
+                                <li><a href="http://localhost:8888/prosody/?prosody_poem=the-windhover">The Windhover</a></li>
+            </ul>
+            </div>
+        <h3 class="poem-sort-method">By Type</h3>
+
+            <div class="poem-results">
+                <h4>Ballad</h4><ul class='titles'></ul><h4>Blank Verse</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=in-neglect">In Neglect</a></li>
+                </ul><h4>Cinquain</h4><ul class='titles'></ul><h4>Couplet</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=holy-sonnet-14">Holy Sonnet 14</a></li>
+                </ul><h4>Quatrain</h4><ul class='titles'></ul><h4>Sixain</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=the-windhover">The Windhover</a></li>
+                </ul><h4>Song</h4><ul class='titles'></ul><h4>Sonnet</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=the-brain-is-wider-than-the-sky">The Brain is Wider than the Sky</a></li>
+                                        <li><a href="http://localhost:8888/prosody/?prosody_poem=when-a-man-hath-no-freedom">When a Man Hath No Freedom</a></li>
+                </ul><h4>Spenserian Stanza</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=30">Looking glass</a></li>
+                </ul>            </div>
+        <h3 class="poem-sort-method">By Author</h3>
+
+            <div class="poem-results">
+                <h4></h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=holy-sonnet-14">Holy Sonnet 14</a></li>
+                                        <li><a href="http://localhost:8888/prosody/?prosody_poem=in-neglect">In Neglect</a></li>
+                                        <li><a href="http://localhost:8888/prosody/?prosody_poem=30">Looking glass</a></li>
+                                        <li><a href="http://localhost:8888/prosody/?prosody_poem=the-brain-is-wider-than-the-sky">The Brain is Wider than the Sky</a></li>
+                                        <li><a href="http://localhost:8888/prosody/?prosody_poem=the-windhover">The Windhover</a></li>
+                                        <li><a href="http://localhost:8888/prosody/?prosody_poem=when-a-man-hath-no-freedom">When a Man Hath No Freedom</a></li>
+                </ul><h4>Byron</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=when-a-man-hath-no-freedom">When a Man Hath No Freedom</a></li>
+                </ul><h4>Dickinson</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=the-brain-is-wider-than-the-sky">The Brain is Wider than the Sky</a></li>
+                </ul><h4>Donne</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=holy-sonnet-14">Holy Sonnet 14</a></li>
+                </ul><h4>Frost</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=in-neglect">In Neglect</a></li>
+                </ul><h4>Hardy</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=30">Looking glass</a></li>
+                </ul><h4>Hopkins</h4><ul class='titles'>                        <li><a href="http://localhost:8888/prosody/?prosody_poem=the-windhover">The Windhover</a></li>
+                </ul>            </div>
+    </div>
+</div>
+
+        <footer>
+            <div class="scholars_lab_logo">
+                <a href="http://scholarslab.org/"><img alt="Scholars' Lab" src="http://localhost:8888/prosody/wp-content/themes/prosody/images/slab.png"/></a>
+            </div>
+            <div id="dept_container">
+                <div class="addr">University of Virginia Department of English</div>
+                <div class="addr">219 Bryan Hall, PO Box 400121</div>
+                <div class="addr">Charlottesville, VA 22904-4121</div>
+                <div class="addr">Fax: 434.924.1478 | TDD: 434.982.HEAR</div>
+            </div>
+            <div id="author_container">
+                <p><em>For Better For Verse</em> is authored by <a href="http://www.engl.virginia.edu/people/ht2t">Herbert Tucker</a>, John C. Coleman Professor of English at the <a href="http://virginia.edu">University of Virginia</a>.</p>
+            </div>
+
+            <!-- wp_footer is required for WP to queue scripts in the footer -->
+            <script type='text/javascript' src='http://localhost:8888/prosody/wp-includes/js/admin-bar.min.js?ver=4.2.1'></script>
+    <script type="text/javascript">
+        (function() {
+            var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
+
+            request = true;
+
+            b[c] = b[c].replace( rcs, ' ' );
+            b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
+        }());
+    </script>
+            <div id="wpadminbar" class="nojq nojs">
+                            <a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+                        <div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar" tabindex="0">
+                <ul id="wp-admin-bar-root-default" class="ab-top-menu">
+        <li id="wp-admin-bar-wp-logo" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://localhost:8888/prosody/wp-admin/about.php"><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-wp-logo-default" class="ab-submenu">
+        <li id="wp-admin-bar-about"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/about.php">About WordPress</a>     </li></ul><ul id="wp-admin-bar-wp-logo-external" class="ab-sub-secondary ab-submenu">
+        <li id="wp-admin-bar-wporg"><a class="ab-item"  href="https://wordpress.org/">WordPress.org</a>     </li>
+        <li id="wp-admin-bar-documentation"><a class="ab-item"  href="https://codex.wordpress.org/">Documentation</a>       </li>
+        <li id="wp-admin-bar-support-forums"><a class="ab-item"  href="https://wordpress.org/support/">Support Forums</a>       </li>
+        <li id="wp-admin-bar-feedback"><a class="ab-item"  href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a>        </li></ul></div>        </li>
+        <li id="wp-admin-bar-site-name" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://localhost:8888/prosody/wp-admin/">For Better for Verse</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-site-name-default" class="ab-submenu">
+        <li id="wp-admin-bar-dashboard"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/">Dashboard</a>        </li></ul><ul id="wp-admin-bar-appearance" class="ab-submenu">
+        <li id="wp-admin-bar-themes" class="hide-if-customize"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/themes.php">Themes</a>      </li>
+        <li id="wp-admin-bar-customize-themes" class="hide-if-no-customize"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/customize.php?url=http%3A%2F%2Flocalhost%3A8888%2Fprosody%2F&#038;autofocus%5Bsection%5D=themes">Themes</a>        </li>
+        <li id="wp-admin-bar-customize" class="hide-if-no-customize"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/customize.php?url=http%3A%2F%2Flocalhost%3A8888%2Fprosody%2F">Customize</a>       </li></ul></div>        </li>
+        <li id="wp-admin-bar-comments"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/edit-comments.php" title="0 comments awaiting moderation"><span class="ab-icon"></span><span id="ab-awaiting-mod" class="ab-label awaiting-mod pending-count count-0">0</span></a>      </li>
+        <li id="wp-admin-bar-new-content" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://localhost:8888/prosody/wp-admin/post-new.php"><span class="ab-icon"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-new-content-default" class="ab-submenu">
+        <li id="wp-admin-bar-new-post"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/post-new.php">Post</a>      </li>
+        <li id="wp-admin-bar-new-media"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/media-new.php">Media</a>       </li>
+        <li id="wp-admin-bar-new-page"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/post-new.php?post_type=page">Page</a>       </li>
+        <li id="wp-admin-bar-new-prosody_poem"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/post-new.php?post_type=prosody_poem">Poem</a>       </li>
+        <li id="wp-admin-bar-new-user"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/user-new.php">User</a>      </li></ul></div>        </li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+        <li id="wp-admin-bar-search" class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://localhost:8888/prosody/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div>       </li>
+        <li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item"  aria-haspopup="true" href="http://localhost:8888/prosody/wp-admin/profile.php">Howdy, csbailey<img alt='' src='http://1.gravatar.com/avatar/4058354b04d9515d1bdb54291ff0dfea?s=26&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4058354b04d9515d1bdb54291ff0dfea?s=52&amp;d=mm&amp;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' /></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class="ab-submenu">
+        <li id="wp-admin-bar-user-info"><a class="ab-item" tabindex="-1" href="http://localhost:8888/prosody/wp-admin/profile.php"><img alt='' src='http://1.gravatar.com/avatar/4058354b04d9515d1bdb54291ff0dfea?s=64&#038;d=mm&#038;r=g' srcset='http://1.gravatar.com/avatar/4058354b04d9515d1bdb54291ff0dfea?s=128&amp;d=mm&amp;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' /><span class='display-name'>csbailey</span></a>      </li>
+        <li id="wp-admin-bar-edit-profile"><a class="ab-item"  href="http://localhost:8888/prosody/wp-admin/profile.php">Edit My Profile</a>        </li>
+        <li id="wp-admin-bar-logout"><a class="ab-item"  href="http://localhost:8888/prosody/wp-login.php?action=logout&#038;_wpnonce=a104f808df">Log Out</a>       </li></ul></div>        </li></ul>          </div>
+                        <a class="screen-reader-shortcut" href="http://localhost:8888/prosody/wp-login.php?action=logout&#038;_wpnonce=a104f808df">Log Out</a>
+                    </div>
+
+                </footer>
+    </div><!-- closes wrapper -->
+
+    <!-- Google analytics - Need to check if this is still a valid account or if it needs updating -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19425148-1']);
+      _gaq.push(['_setDomainName', '.lib.virginia.edu']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+</body>
+</html>
