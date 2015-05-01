@@ -25,62 +25,37 @@
         <!-- By Difficulty will require that all poems have a difficulty assigned in meta data. Will then group and sort by difficulty. Meta key: Difficulty, values= warming_up, moving_along, special_challenge -->
         <!-- For each value of meta key, get posts with that value -->
             <div class="poem-results">
-                <h4>Warming Up</h4>
+            <?php
 
-                <?php
-                    $args = array(
-                            'post_type' => 'prosody_poem',
-                            'meta_key' => 'Difficulty',
-                            'meta_value' => 'warming_up',
-                            'orderby' => 'title',
-                            'order' => 'ASC',
-                            'posts_per_page' => -1
-                    );
-                    $warming_up = new WP_Query( $args );
-                ?>
-                <ul class="titles">
-                    <?php if ( $warming_up->have_posts() ) : while ($warming_up->have_posts() ) : $warming_up->the_post();?>
-                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                    <?php endwhile; endif; wp_reset_postdata(); ?>
-                </ul>
+            $difficulty_levels = array( 'warming_up', 'moving_along', 'special_challenge' );
 
-                <h4>Moving Along</h4>
 
-                <?php
-                    $args = array(
-                            'post_type' => 'prosody_poem',
-                            'meta_key' => 'Difficulty',
-                            'meta_value' => 'moving_along',
-                            'orderby' => 'title',
-                            'order' => 'ASC',
-                            'posts_per_page' => -1
-                    );
-                    $moving_along = new WP_Query( $args );
-                ?>
-                <ul class="titles">
-                    <?php if ( $moving_along->have_posts() ) : while ($moving_along->have_posts() ) : $moving_along->the_post();?>
-                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                    <?php endwhile; endif; wp_reset_postdata(); ?>
-                </ul>
+            foreach ($difficulty_levels as $difficulty ) {
+                echo "<h4>" . ucwords(str_replace('_', ' ', $difficulty)) . "</h4>";
+                echo "<ul class='titles'>";
+                global $post;
 
-                <h4>Special Challenge</h4>
+                $args = array(
+                        'post_type' => 'prosody_poem',
+                        'meta_key' => 'Difficulty',
+                        'meta_value' => $difficulty,
+                        'orderby' => 'title',
+                        'order' => 'ASC',
+                        'posts_per_page' => -1
+                );
 
-                <?php
-                    $args = array(
-                            'post_type' => 'prosody_poem',
-                            'meta_key' => 'Difficulty',
-                            'meta_value' => 'special_challenge',
-                            'orderby' => 'title',
-                            'order' => 'ASC',
-                            'posts_per_page' => -1
-                    );
-                    $special_challenge = new WP_Query( $args );
-                ?>
-                <ul class="titles">
-                    <?php if ( $special_challenge->have_posts() ) : while ($special_challenge->have_posts() ) : $special_challenge->the_post();?>
-                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                    <?php endwhile; endif; wp_reset_postdata(); ?>
-                </ul>
+                $difficulty_posts = get_posts( $args );
+                foreach ($difficulty_posts as $post ) :
+                    setup_postdata( $post );
+            ?>
+                    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+            <?php
+                endforeach;
+                wp_reset_postdata();
+                echo "</ul>";
+            }
+            ?>
+
             </div>
         <h3 class="poem-sort-method">By Type</h3>
         <!-- Type will also require assignment by meta data and then sorting by type. Meta key: Type-->
