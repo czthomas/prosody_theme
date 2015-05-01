@@ -1,3 +1,145 @@
+* {
+  background: rgba(0,0,0,0.05);
+}
+.wrapper {
+  *zoom: 1;
+  width: auto;
+  max-width: 1140px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.wrapper:before,
+.wrapper:after {
+  content: '';
+  display: table;
+}
+.wrapper:after {
+  clear: both;
+}
+#logo {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.6666666666667%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+#logo:before,
+#logo:after {
+  content: '';
+  display: table;
+}
+#logo:after {
+  clear: both;
+}
+#logo:last-child {
+  margin-right: 0%;
+}
+#intro {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.3333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+#intro:before,
+#intro:after {
+  content: '';
+  display: table;
+}
+#intro:after {
+  clear: both;
+}
+#intro:last-child {
+  margin-right: 0%;
+}
+.main {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.main:before,
+.main:after {
+  content: '';
+  display: table;
+}
+.main:after {
+  clear: both;
+}
+.main:last-child {
+  margin-right: 0%;
+}
+.main .content {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.6666666666667%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.main .content:before,
+.main .content:after {
+  content: '';
+  display: table;
+}
+.main .content:after {
+  clear: both;
+}
+.main .content:last-child {
+  margin-right: 0%;
+}
+.main #sidebar {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.3333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+.main #sidebar:before,
+.main #sidebar:after {
+  content: '';
+  display: table;
+}
+.main #sidebar:after {
+  clear: both;
+}
+.main #sidebar:last-child {
+  margin-right: 0%;
+}
+footer {
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+footer:before,
+footer:after {
+  content: '';
+  display: table;
+}
+footer:after {
+  clear: both;
+}
+footer:last-child {
+  margin-right: 0%;
+}
 .scholars_lab_logo {
   background: #000;
 }
