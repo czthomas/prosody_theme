@@ -94,7 +94,7 @@
             <div class="poem-results">
                 <?php
 
-                $authors = array( '' );
+                $authors = array();
 
                 $args = array(
                     'post_type' => 'prosody_poem',
@@ -106,6 +106,8 @@
                     $author_name = get_post_meta( $poem->ID, 'Author', true );
                     array_push( $authors, $author_name );
                 }
+
+                wp_reset_postdata();
 
                 sort($authors);
 
