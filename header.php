@@ -90,6 +90,7 @@
 <body>
 
     <div class="wrapper">
+        <header>
         <?php if (is_home()) : ?>
             <div id="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo01.gif" alt="" />
@@ -107,4 +108,5 @@
             <p><?php bloginfo('name'); ?>:<?php bloginfo('description'); ?></p>
             <h2 id="tagline"><a href="http://www.engl.virginia.edu">a project of the University of Virginia English Department</a></h2>
         </div>
+        </header>
 
