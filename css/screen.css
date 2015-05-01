@@ -28,6 +28,7 @@
   width: 65.6666666666667%;
   margin-left: 0%;
   margin-right: 3%;
+  width: 65.6666666666667% !important;
 }
 #logo:before,
 #logo:after {
