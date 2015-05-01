@@ -62,21 +62,35 @@
         <!-- For each value of meta key, get posts with that value -->
 
             <div class="poem-results">
-                <ul class="titles">
-                    <?php
-                        $args = array(
+                <?php
+
+                $poem_types = array( 'ballad', 'blank_verse', 'cinquain', 'couplet', 'quatrain', 'sixain', 'song', 'sonnet', 'spenserian_stanza' );
+
+
+                foreach ($poem_types as $type ) {
+                    echo "<h4>" . ucwords(str_replace('_', ' ', $type)) . "</h4>";
+                    echo "<ul class='titles'>";
+                    global $post;
+
+                    $args = array(
                             'post_type' => 'prosody_poem',
                             'meta_key' => 'Type',
-                            'orderby' => 'meta_value',
+                            'meta_value' => $type,
+                            'orderby' => 'title',
                             'order' => 'ASC',
                             'posts_per_page' => -1
-                        );
-                        $poems_by_type = new WP_Query( $args );
-                    ?>
-                    <?php if ( $poems_by_type->have_posts() ) : while ($poems_by_type->have_posts() ) : $poems_by_type->the_post();?>
+                    );
+
+                    $poem_types_posts = get_posts( $args );
+                    foreach ($poem_types_posts as $post ) :
+                        setup_postdata( $post ); ?>
                         <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                    <?php endwhile; endif; ?>
-                </ul>
+                <?php
+                    endforeach;
+                    wp_reset_postdata();
+                    echo "</ul>";
+                }
+                ?>
             </div>
         <h3 class="poem-sort-method">By Author</h3>
         <!-- Author will require creating an author meta box for each post, getting that data, and then sorting by meta_value. Meta key: Author -->
