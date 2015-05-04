@@ -6,6 +6,7 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/node_modules/normalize.css/normalize.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/screen.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/scripts/thickbox.css'; ?>">
     <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
