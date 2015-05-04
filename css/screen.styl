@@ -1,9 +1,11 @@
 @import 'jeet'
 
-edit()
+// edit()
+
+// layout styles
 
 .wrapper
-    center(1140px)
+    center(1080px)
 
 #logo
     col(2/3)
@@ -23,6 +25,72 @@ edit()
 
 footer
     col(4/4)
+
+// header styles
+header
+    background url(../images/bg_wrapper.jpg) right no-repeat
+    height 185px
+    margin-top 22px
+
+#logo
+    margin-top 50px
+    position relative
+
+#intro
+    margin-top 30px
+    height 100px
+    width 265px
+    font-size .95em
+
+    p
+        display inline
+
+    #tagline
+        background none
+        padding 0
+
+        a, a:visited
+            text-indent -9000px
+            display block
+            height 50px
+            width 265px
+            background url(../images/tagline.gif) no-repeat
+            margin-top 30px
+            padding 0
+
+// structure
+
+.wrapper
+    margin 0 auto
+    font-size 0.75em
+    padding 0 47px
+    overflow hidden
+
+// content div
+#main
+    background #2d2d2f
+    border-top 1px solid #444446
+    padding 40px 0 50px
+    z-index 1
+    overflow visible
+
+
+// Styles from old style sheet
+
+body
+    color #fff
+    background #232323 url(../images/bg.jpg) repeat-x
+
+body, select, textarea, input
+    font 100% Arial, Verdana, Helvetica, sans-serif
+
+p
+    margin 15px 0
+    line-height 150%
+
+
+
+// miscellaneous
 
 .scholars_lab_logo
     background black

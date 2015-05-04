@@ -1,10 +1,7 @@
-* {
-  background: rgba(0,0,0,0.05);
-}
 .wrapper {
   *zoom: 1;
   width: auto;
-  max-width: 1140px;
+  max-width: 1080px;
   float: none;
   display: block;
   margin-right: auto;
@@ -140,6 +137,65 @@ footer:after {
 }
 footer:last-child {
   margin-right: 0%;
+}
+header {
+  background: url("../images/bg_wrapper.jpg") right no-repeat;
+  height: 185px;
+  margin-top: 22px;
+}
+#logo {
+  margin-top: 50px;
+  position: relative;
+}
+#intro {
+  margin-top: 30px;
+  height: 100px;
+  width: 265px;
+  font-size: 0.95em;
+}
+#intro p {
+  display: inline;
+}
+#intro #tagline {
+  background: none;
+  padding: 0;
+}
+#intro #tagline a,
+#intro #tagline a:visited {
+  text-indent: -9000px;
+  display: block;
+  height: 50px;
+  width: 265px;
+  background: url("../images/tagline.gif") no-repeat;
+  margin-top: 30px;
+  padding: 0;
+}
+.wrapper {
+  margin: 0 auto;
+  font-size: 0.75em;
+  padding: 0 47px;
+  overflow: hidden;
+}
+#main {
+  background: #2d2d2f;
+  border-top: 1px solid #444446;
+  padding: 40px 0 50px;
+  z-index: 1;
+  overflow: visible;
+}
+body {
+  color: #fff;
+  background: #232323 url("../images/bg.jpg") repeat-x;
+}
+body,
+select,
+textarea,
+input {
+  font: 100% Arial, Verdana, Helvetica, sans-serif;
+}
+p {
+  margin: 15px 0;
+  line-height: 150%;
 }
 .scholars_lab_logo {
   background: #000;

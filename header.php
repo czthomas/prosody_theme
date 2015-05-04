@@ -111,7 +111,7 @@
             <h1 class="logo"><a href="/"><?php bloginfo('name'); ?></a></h1>
         <?php endif; ?>
         <div id="intro">
-            <p><?php bloginfo('name'); ?>:<?php bloginfo('description'); ?></p>
+            <p><strong><?php bloginfo('name'); ?></strong>: <?php bloginfo('description'); ?></p>
             <h2 id="tagline"><a href="http://www.engl.virginia.edu">a project of the University of Virginia English Department</a></h2>
         </div>
         </header>
