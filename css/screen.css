@@ -17,6 +17,21 @@
 .wrapper:after {
   clear: both;
 }
+body {
+  color: #fff;
+  background: #232323 url("../images/bg.jpg") repeat-x;
+  font-size: 18px;
+}
+body,
+select,
+textarea,
+input {
+  font: 100% Arial, Verdana, Helvetica, sans-serif;
+}
+p {
+  margin: 15px 0;
+  line-height: 150%;
+}
 header {
   background: url("../images/bg_wrapper.jpg") right no-repeat;
   height: 185px;
@@ -87,21 +102,28 @@ nav li a:visited a:focus {
   z-index: 1;
   overflow: visible;
 }
-body {
-  color: #fff;
-  background: #232323 url("../images/bg.jpg") repeat-x;
-  font-size: 18px;
+footer {
+  background-image: url("../images/bg_footer.gif");
+  background-repeat: repeat-x;
+  padding-top: 18px;
+  height: 125px;
+  font-size: 12px;
 }
-body,
-select,
-textarea,
-input {
-  font: 100% Arial, Verdana, Helvetica, sans-serif;
+footer a,
+footer a:visited {
+  color: #afafaf;
 }
-p {
-  margin: 15px 0;
-  line-height: 150%;
+footer p {
+  margin: 0;
 }
-.scholars_lab_logo {
-  background: #000;
+footer #author_container a {
+  text-decoration: underline;
+}
+footer #dept_container {
+  text-align: right;
+  border-right: 1px dotted #676767;
+}
+footer .scholars_lab_logo img {
+  padding-left: 15px;
+  padding-top: 15px;
 }

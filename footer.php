@@ -1,17 +1,18 @@
         <footer>
-            <div class="scholars_lab_logo">
-                <a href="http://scholarslab.org/"><img alt="Scholars' Lab" src="<? echo get_template_directory_uri(); ?>/images/slab.png"/></a>
+        <div class="row">
+            <div id="author_container" class="col-md-6">
+                <p><em>For Better For Verse</em> is authored by <a href="http://www.engl.virginia.edu/people/ht2t">Herbert Tucker</a>, John C. Coleman Professor of English at the <a href="http://virginia.edu">University of Virginia</a>.</p>
             </div>
-            <div id="dept_container">
+            <div id="dept_container" class="col-md-4">
                 <div class="addr">University of Virginia Department of English</div>
                 <div class="addr">219 Bryan Hall, PO Box 400121</div>
                 <div class="addr">Charlottesville, VA 22904-4121</div>
                 <div class="addr">Fax: 434.924.1478 | TDD: 434.982.HEAR</div>
             </div>
-            <div id="author_container">
-                <p><em>For Better For Verse</em> is authored by <a href="http://www.engl.virginia.edu/people/ht2t">Herbert Tucker</a>, John C. Coleman Professor of English at the <a href="http://virginia.edu">University of Virginia</a>.</p>
+            <div class="scholars_lab_logo" class="col-md-2">
+                <a href="http://scholarslab.org/"><img alt="Scholars' Lab" src="<? echo get_template_directory_uri(); ?>/images/slab.png"/></a>
             </div>
-
+            </div><!-- ends .row -->
             <!-- wp_footer is required for WP to queue scripts in the footer -->
             <?php wp_footer(); ?>
         </footer>

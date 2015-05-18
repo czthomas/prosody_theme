@@ -8,25 +8,31 @@
     $poems = new WP_Query( $poem_args );
 ?>
 
+
 <div class="main">
-<div class="content">
+<div class="row">
+<div class="content col-md-8">
 
-<?php if ( $poems->have_posts() ) : while ( $poems->have_posts() ) : $poems->the_post(); ?>
+    <?php if ( $poems->have_posts() ) : while ( $poems->have_posts() ) : $poems->the_post(); ?>
 
-            <div>
-                <?php the_content(); ?>
-            </div>
+                <div>
+                    <?php the_content(); ?>
+                </div>
 
-<?php endwhile; else: ?>
+    <?php endwhile; else: ?>
 
-            <h2>Getting Started</h2>
-            <p>Select a poem to begin.</p>
+                <h2>Getting Started</h2>
+                <p>Select a poem to begin.</p>
 
-<?php endif; ?>
-
-<?php get_sidebar(); ?>
-
+    <?php endif; ?>
 </div><!-- ends .content -->
+
+<div class="col-md-4">
+    <?php get_sidebar(); ?>
+</div>
+
+</div><!-- ends row -->
+
 </div><!-- ends .main -->
 
 <?php get_footer(); ?>
