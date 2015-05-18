@@ -7,6 +7,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/node_modules/normalize.css/normalize.css'; ?>">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/screen.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/scripts/thickbox.css'; ?>">
     <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css">
@@ -94,11 +95,12 @@
 
 </head>
 <body>
-
+    <div class="container-fluid">
     <div class="wrapper">
         <header>
+        <div class="row">
         <?php if (is_home()) : ?>
-            <div id="logo">
+            <div id="logo" class="col-md-8">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo01.gif" alt="" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo02.gif" alt="" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo03.gif" alt="" />
@@ -108,11 +110,12 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" />
             </div>
         <? else: ?>
-            <h1 class="logo"><a href="/"><?php bloginfo('name'); ?></a></h1>
+            <div class="col-md-8"></div><h1 class="logo"><a href="/"><?php bloginfo('name'); ?></a></h1></div>
         <?php endif; ?>
-        <div id="intro">
+        <div id="intro" class="col-md-4">
             <p><strong><?php bloginfo('name'); ?></strong>: <?php bloginfo('description'); ?></p>
             <h2 id="tagline"><a href="http://www.engl.virginia.edu">a project of the University of Virginia English Department</a></h2>
+        </div>
         </div>
         </header>
 
