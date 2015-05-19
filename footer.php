@@ -14,11 +14,10 @@
                 <a href="http://scholarslab.org/"><img alt="Scholars' Lab" src="<? echo get_template_directory_uri(); ?>/images/slab.png"/></a>
             </div>
             </div><!-- ends .row -->
+            </div><!-- ends container -->
             <!-- wp_footer is required for WP to queue scripts in the footer -->
             <?php wp_footer(); ?>
-            </div><!-- closes container -->
         </footer>
-    <!-- </div>closes wrapper -->
 
 
     <!-- Google analytics - Need to check if this is still a valid account or if it needs updating -->

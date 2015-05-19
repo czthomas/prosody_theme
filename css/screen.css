@@ -71,18 +71,12 @@ nav li a:visited a:focus {
   background: #2d2d2f url("../images/bg_nav.gif") repeat-x;
   color: #fff;
 }
-.wrapper {
-  margin: 0 auto;
-  padding: 0 47px;
-  overflow: hidden;
-}
 #main {
   background: #2d2d2f;
   border-top: 1px solid #444446;
   padding: 40px 0 50px;
   z-index: 1;
   overflow: visible;
-  margin-top: 12px;
 }
 footer {
   background: url("../images/bg_footer.gif") repeat-x;

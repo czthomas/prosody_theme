@@ -96,7 +96,6 @@
 </head>
 <body>
     <div class="container">
-    <!-- <div class="wrapper"> -->
         <header>
         <div class="row">
         <?php if (is_home()) : ?>
