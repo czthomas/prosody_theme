@@ -31,7 +31,7 @@
 
 
             foreach ($difficulty_levels as $difficulty ) {
-                echo "<h4>" . ucwords(str_replace('_', ' ', $difficulty)) . "</h4>";
+                echo "<h4>" . strtoupper(str_replace('_', ' ', $difficulty)) . "</h4>";
                 echo "<ul class='titles'>";
                 global $post;
 
@@ -66,7 +66,7 @@
 
 
                 foreach ($poem_types as $type ) {
-                    echo "<h4>" . ucwords(str_replace('_', ' ', $type)) . "</h4>";
+                    echo "<h4>" . strtoupper(str_replace('_', ' ', $type)) . "</h4>";
                     echo "<ul class='titles'>";
                     global $post;
 
@@ -113,7 +113,7 @@
                 sort($authors);
 
                 foreach ($authors as $author ) {
-                    echo "<h4>" . ucwords(str_replace('_', ' ', $author)) . "</h4>";
+                    echo "<h4>" . strtoupper(str_replace('_', ' ', $author)) . "</h4>";
                     echo "<ul class='titles'>";
                     global $post;
 
