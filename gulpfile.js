@@ -18,4 +18,4 @@ gulp.task('watch', function() {
     gulp.watch('**/*.styl', ['stylus']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['stylus', 'watch']);
