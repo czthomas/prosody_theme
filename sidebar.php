@@ -2,6 +2,7 @@
     <h2>List of Poems</h2>
 
     <div id="poem-sorting">
+    <div id="accordion">
 
         <h3 class="poem-sort-method">By Title</h3>
 
@@ -137,5 +138,6 @@
                 }
                 ?>
             </div>
-    </div>
-</div>
+        </div><!-- closes accordion -->
+    </div><!-- close poem-sorting -->
+</div><!-- close #sidebar -->

@@ -78,6 +78,17 @@ nav li a:visited a:focus {
   z-index: 1;
   overflow: visible;
 }
+#sidebar h2 {
+  background: url("../images/bg_hdr_sidebar.gif") 90px top no-repeat;
+  font: 2.5em Georgia, "Times New Roman", Times, serif;
+  text-align: right;
+  margin: 0;
+  padding: 20px 0 14px;
+}
+#sidebar h3 {
+  text-align: right;
+  font: 2em Georgia, "Times New Roman", Times, serif;
+}
 footer {
   background: url("../images/bg_footer.gif") repeat-x;
   padding-top: 18px;

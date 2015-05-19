@@ -19,6 +19,11 @@
             <?php wp_footer(); ?>
         </footer>
 
+    <!-- Script for accordion -->
+    <script>
+    $('#accordion').accordion();
+    </script>
+
 
     <!-- Google analytics - Need to check if this is still a valid account or if it needs updating -->
     <script type="text/javascript">
