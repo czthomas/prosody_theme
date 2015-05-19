@@ -1,23 +1,25 @@
         <footer>
+        <div class="container">
         <div class="row">
-            <div id="author_container" class="col-md-6">
+            <div id="author_container" class="col-lg-6 col-md-6">
                 <p><em>For Better For Verse</em> is authored by <a href="http://www.engl.virginia.edu/people/ht2t">Herbert Tucker</a>, John C. Coleman Professor of English at the <a href="http://virginia.edu">University of Virginia</a>.</p>
             </div>
-            <div id="dept_container" class="col-md-4">
+            <div id="dept_container" class="col-lg-4 col-md-4">
                 <div class="addr">University of Virginia Department of English</div>
                 <div class="addr">219 Bryan Hall, PO Box 400121</div>
                 <div class="addr">Charlottesville, VA 22904-4121</div>
                 <div class="addr">Fax: 434.924.1478 | TDD: 434.982.HEAR</div>
             </div>
-            <div class="scholars_lab_logo" class="col-md-2">
+            <div class="scholars_lab_logo" class="col-lg-2 col-md-2">
                 <a href="http://scholarslab.org/"><img alt="Scholars' Lab" src="<? echo get_template_directory_uri(); ?>/images/slab.png"/></a>
             </div>
             </div><!-- ends .row -->
             <!-- wp_footer is required for WP to queue scripts in the footer -->
             <?php wp_footer(); ?>
+            </div><!-- closes container -->
         </footer>
-    </div><!-- closes wrapper -->
-    </div><!-- closes container-fluid -->
+    <!-- </div>closes wrapper -->
+
 
     <!-- Google analytics - Need to check if this is still a valid account or if it needs updating -->
     <script type="text/javascript">

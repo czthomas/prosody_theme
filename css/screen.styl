@@ -2,8 +2,11 @@
 
 // layout styles
 
-.wrapper
-    center(1080px)
+// .wrapper
+//     center(1080px)
+
+.container
+    width 1080px
 
 // global styles
 
@@ -54,6 +57,7 @@ nav
     font-size 1.4em
     height 39px
     overflow visible
+    // background black
 
     li
         list-style none
@@ -89,12 +93,12 @@ nav
     padding 40px 0 50px
     z-index 1
     overflow visible
+    margin-top 12px
 
 //  Footer styles
 
 footer
-    background-image url('../images/bg_footer.gif')
-    background-repeat repeat-x
+    background url('../images/bg_footer.gif') repeat-x
     padding-top 18px
     height 125px
     font-size 12px
@@ -105,19 +109,13 @@ footer
     p
         margin 0
 
-    #author_container
-
-        a
-            text-decoration underline
+    #author_container a
+        text-decoration underline
 
     #dept_container
         text-align right
         border-right 1px dotted #676767
 
-    .scholars_lab_logo
-
-        img
-            padding-left 15px
-            padding-top 15px
-
-
+    .scholars_lab_logo img
+        padding-left 15px
+        padding-top 15px

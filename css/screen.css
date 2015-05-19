@@ -1,21 +1,5 @@
-.wrapper {
-  *zoom: 1;
-  width: auto;
-  max-width: 1080px;
-  float: none;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 0;
-  padding-right: 0;
-}
-.wrapper:before,
-.wrapper:after {
-  content: '';
-  display: table;
-}
-.wrapper:after {
-  clear: both;
+.container {
+  width: 1080px;
 }
 body {
   color: #fff;
@@ -101,10 +85,10 @@ nav li a:visited a:focus {
   padding: 40px 0 50px;
   z-index: 1;
   overflow: visible;
+  margin-top: 12px;
 }
 footer {
-  background-image: url("../images/bg_footer.gif");
-  background-repeat: repeat-x;
+  background: url("../images/bg_footer.gif") repeat-x;
   padding-top: 18px;
   height: 125px;
   font-size: 12px;
