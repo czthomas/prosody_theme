@@ -18,6 +18,23 @@
 
                 <div>
                     <?php the_content(); ?>
+                    <div class="row" id="utils">
+                        <div class="col-sm-4-offset-8 col-md-4-offset-8 col-lg-4-offset-8">
+                            Show
+                            <span>
+                                Stress
+                                <input type="checkbox">
+                            </span>
+                            <span>
+                                Foot division
+                                <input type="checkbox">
+                            </span>
+                            <span>
+                                Caesura
+                                <input type="checkbox">
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
     <?php endwhile; else: ?>
