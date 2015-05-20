@@ -98,7 +98,7 @@ nav li a:visited a:focus {
   padding: 0 24px;
   text-align: right;
   line-height: 40px;
-  font-weight: nomrla;
+  font-weight: normal;
   font-family: Arial, Verdana, Helvetica, sans-serif;
   text-decoration: none;
   cursor: pointer;
@@ -109,11 +109,28 @@ nav li a:visited a:focus {
   padding: 10px 10px 15px 15px;
   font-size: 0.9em;
   color: #fff;
+  max-height: 350px;
+  overflow: auto;
+}
+.poem-results h4 {
+  font-size: 1.2em;
+  color: #666;
+  border-bottom: 1px solid #19191b;
+  padding: 15px 2px;
 }
 .poem-results ul {
   margin-top: -1px;
   overflow: auto;
-  max-height: 350px;
+}
+.titles {
+  list-style-type: none;
+}
+.titles li {
+  background: url("../images/dashes.gif") bottom repeat-x;
+  padding: 15px 2px;
+}
+.titles a {
+  color: #a1a1a3;
 }
 footer {
   background: url("../images/bg_footer.gif") repeat-x;
