@@ -78,12 +78,12 @@ nav li a:visited a:focus {
   z-index: 1;
   overflow: visible;
 }
-.content {
-  background-color: #222;
+.poem-home {
   border: solid 10px #666;
-  height: 654px;
-  position: relative;
   overflow: auto;
+  position: relative;
+  height: 654px;
+  background-color: #222;
 }
 #utils {
   background: #444;
@@ -109,7 +109,7 @@ nav li a:visited a:focus {
   font-size: 1.3em;
 }
 #poem #poemtitle {
-  margin: 10px 0 15px 0;
+  margin: 10px 0 15px;
 }
 #poem #poemtitle h2 {
   padding-bottom: 10px;
@@ -120,7 +120,7 @@ span.space_1 {
 }
 small.date {
   padding-left: 1.5em;
-  font-size: 0.8em;
+  font-size: 0.6em;
   vertical-align: middle;
 }
 div.prosody-shadowline {
@@ -140,7 +140,7 @@ div.prosody-shadowline {
 }
 button {
   background: none;
-  border: none;
+  border: 0;
   color: #fff;
   padding: 0;
   margin: 0;
@@ -226,4 +226,43 @@ footer #dept_container {
 footer .scholars_lab_logo img {
   padding-left: 15px;
   padding-top: 15px;
+}
+#glossary {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+#glossary h2 {
+  font: 2.8em Georgia, "Times New Roman", Times, serif;
+  background: url("../images/bg_hdr.gif") left 8px no-repeat;
+  letter-spacing: 0.05em;
+  padding: 14px 0 10px;
+}
+#glossary dl {
+  margin: 10px 0 20px;
+  overflow: hidden;
+}
+#glossary dl dt {
+  width: 25%;
+  float: left;
+  padding: 25px 20px 25px 0;
+  border-top: 1px solid #222224;
+  text-align: right;
+  clear: both;
+  color: #a1a1a3;
+  font: 1.2em Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+}
+#glossary dl dd {
+  float: left;
+  width: 75%;
+  padding: 10px 20px;
+  border-top: 1px solid #222224;
+  overflow: hidden;
+}
+#glossary dl dd p {
+  font-size: 1.2em;
+}
+#glossary dl dt.first,
+#glossary dl dd.first {
+  border-top: none;
 }

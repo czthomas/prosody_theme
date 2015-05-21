@@ -77,12 +77,12 @@ nav
     z-index 1
     overflow visible
 
-.content
-    background-color #222222
+.poem-home
     border solid 10px #666
-    height 654px
-    position relative
     overflow auto
+    position relative
+    height 654px
+    background-color #222222
 
 #utils
     background #444
@@ -110,7 +110,7 @@ nav
     font-size 1.3em
 
     #poemtitle
-        margin 10px 0 15px 0
+        margin 10px 0 15px
 
         h2
             padding-bottom 10px
@@ -121,7 +121,7 @@ span.space_1
 
 small.date
     padding-left 1.5em
-    font-size .8em
+    font-size .6em
     vertical-align middle
 
 div.prosody-shadowline
@@ -150,7 +150,7 @@ span.prosody-syllable
 
 button
     background none
-    border none
+    border 0
     color #fff
     padding 0
     margin 0
@@ -192,7 +192,7 @@ button
 .poem-results
     background-color #000
     padding 10px 10px 15px 15px
-    font-size 0.9em
+    font-size .9em
     color #fff
     max-height 350px
     overflow auto
@@ -242,3 +242,47 @@ footer
     .scholars_lab_logo img
         padding-left 15px
         padding-top 15px
+
+//  Glossary styles
+
+#glossary
+
+    margin-bottom 20px
+    padding-bottom 20px
+
+    h2
+        font 2.8em Georgia, "Times New Roman", Times, serif
+        background url(../images/bg_hdr.gif) left 8px no-repeat
+        letter-spacing .05em
+        padding 14px 0 10px
+
+    dl
+        margin 10px 0 20px
+        overflow hidden
+        // width 590px
+
+        dt
+            width 25%
+            float left
+            padding 25px 20px 25px 0
+            border-top 1px solid #222224
+            text-align right
+            clear both
+            color #A1A1A3
+            font 1.2em Georgia, "Times New Roman", Times, serif;
+            text-transform uppercase
+
+        dd
+            float left
+            width 75%
+            padding 10px 20px
+            border-top 1px solid #222224
+            overflow hidden
+
+            p
+                font-size 1.2em
+
+        dt.first, dd.first
+            border-top none
+
+

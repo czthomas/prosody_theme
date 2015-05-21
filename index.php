@@ -12,7 +12,7 @@
 <div id="main">
 <div class="container">
 <div class="row">
-<div class="content col-lg-8 col-md-8 col-sm-8">
+<div class="content poem-home col-lg-8 col-md-8 col-sm-8">
 
     <?php if ( $poems->have_posts() ) : while ( $poems->have_posts() ) : $poems->the_post(); ?>
 
