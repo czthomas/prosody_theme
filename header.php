@@ -109,7 +109,9 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" />
             </div>
         <? else: ?>
-            <div class="col-lg-8 col-md-8 col-sm-8"></div><h1 class="logo"><a href="/"><?php bloginfo('name'); ?></a></h1></div>
+            <div id="logo" class="col-lg-8 col-md-8 col-sm-8">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" />
+            </div>
         <?php endif; ?>
         <div id="intro" class="col-lg-4 col-md-4 col-sm-4">
             <p><strong><?php bloginfo('name'); ?></strong>: <?php bloginfo('description'); ?></p>
