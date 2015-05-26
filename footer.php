@@ -21,9 +21,11 @@
 
     <!-- Script for accordion -->
     <script>
-    $('#accordion').accordion({
+    $( '#accordion' ).accordion({
         icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus"}
     });
+
+    $( '#tabs' ).tabs();
     </script>
 
 

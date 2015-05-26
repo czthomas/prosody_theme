@@ -266,3 +266,18 @@ footer .scholars_lab_logo img {
 #glossary dl dd.first {
   border-top: none;
 }
+#tabs {
+  background: #2d2d2f;
+  border: none;
+  border-top: 1px solid #3f3f41;
+  padding-top: 10px;
+}
+#subnav {
+  float: right;
+}
+#subnav li {
+  list-style: none;
+  float: left;
+  height: 37px;
+  color: #fff;
+}
