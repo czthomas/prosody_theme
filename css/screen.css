@@ -268,9 +268,51 @@ footer .scholars_lab_logo img {
 }
 #tabs {
   background: #2d2d2f;
-  border: none;
+  border: 0;
   border-top: 1px solid #3f3f41;
   padding-top: 10px;
+  font-size: 1.3em;
+}
+#tabs h2 {
+  color: #fff;
+  font: Georgia, "Times New Roman," Times, serif;
+  background: url("../images/bg_hdr.gif") left 8px no-repeat;
+  letter-spacing: 0.05em;
+  padding: 14px 0 10px;
+}
+#tabs p {
+  color: #fff;
+}
+#tabs .ui-widget-header {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
+}
+#tabs .ui-widget-header .ui-state-active,
+#tabs .ui-widget-header .ui-state-default {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
+}
+#tabs .ui-state-active {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
+}
+#tabs .ui-state-active a,
+#tabs .ui-state-active a:link {
+  color: #fff;
+}
+#tabs .ui-widget-content .ui-state-active,
+#tabs .ui-widget-content .ui-state-default {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
+}
+#tabs .ui-state-default {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
 }
 #subnav {
   float: right;
@@ -279,5 +321,11 @@ footer .scholars_lab_logo img {
   list-style: none;
   float: left;
   height: 37px;
-  color: #fff;
+}
+#subnav li a {
+  height: 25px;
+  margin: 0 15px 0 0;
+  float: left;
+  padding: 10px 5px 6px 0;
+  font-size: 1em;
 }
