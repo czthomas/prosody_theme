@@ -19,7 +19,7 @@
             <?php wp_footer(); ?>
         </footer>
 
-    <!-- Script for accordion -->
+    <!-- Scripts for accordion and tabs submenu-->
     <script>
     $( '#accordion' ).accordion({
         icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus"}

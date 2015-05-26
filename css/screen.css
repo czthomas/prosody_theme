@@ -71,6 +71,9 @@ nav li a:visited a:focus {
   background: #2d2d2f url("../images/bg_nav.gif") repeat-x;
   color: #fff;
 }
+.current-menu-item {
+  background: #2d2d2f url("../images/bg_nav.gif") repeat-x;
+}
 #main {
   background: #2d2d2f;
   border-top: 1px solid #444446;
