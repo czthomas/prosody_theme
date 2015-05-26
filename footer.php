@@ -28,6 +28,8 @@
     $( '#tabs' ).tabs();
     </script>
 
+    <!-- Script to highlight 'poem' in the nav menu when on single poem page -->
+
     <?php if ( is_single() ) : ?>
 
         <script>
