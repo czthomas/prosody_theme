@@ -25,7 +25,8 @@ gulp.task('uncss', ['sitemap'], function() {
 
     gulp.src('css/*.css')
     .pipe(uncss({
-        html: sitemap
+        html: sitemap,
+        ignore: [/expanded/, /js/, /wp-/, /align/, /admin-bar/]
     }))
     .pipe(gulp.dest('./css/out'));
 });

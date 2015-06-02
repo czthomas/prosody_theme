@@ -1,6 +1,6 @@
 body {
   color: #fff;
-  background: #232323 url("../images/bg.jpg") repeat-x;
+  background: #232323 url("../../images/bg.jpg") repeat-x;
   font-size: 18px;
 }
 body,
@@ -14,7 +14,7 @@ p {
   line-height: 150%;
 }
 header {
-  background: url("../images/bg_wrapper.jpg") right no-repeat;
+  background: url("../../images/bg_wrapper.jpg") right no-repeat;
   height: 185px;
   margin-top: 22px;
 }
@@ -39,7 +39,7 @@ header {
   text-indent: -9000px;
   display: block;
   height: 50px;
-  background: url("../images/tagline.gif") no-repeat;
+  background: url("../../images/tagline.gif") no-repeat;
   margin-top: 30px;
   padding: 0;
 }
@@ -68,11 +68,11 @@ nav li a a:hover,
 nav li a:visited a:hover,
 nav li a a:focus,
 nav li a:visited a:focus {
-  background: #2d2d2f url("../images/bg_nav.gif") repeat-x;
+  background: #2d2d2f url("../../images/bg_nav.gif") repeat-x;
   color: #fff;
 }
 .current-menu-item {
-  background: #2d2d2f url("../images/bg_nav.gif") repeat-x;
+  background: #2d2d2f url("../../images/bg_nav.gif") repeat-x;
 }
 #main {
   background: #2d2d2f;
@@ -153,7 +153,7 @@ button {
   display: none;
 }
 #sidebar h2 {
-  background: url("../images/bg_hdr_sidebar.gif") 90px top no-repeat;
+  background: url("../../images/bg_hdr_sidebar.gif") 90px top no-repeat;
   font: 2.5em Georgia, "Times New Roman", Times, serif;
   text-align: right;
   margin: 0;
@@ -200,14 +200,14 @@ button {
   list-style-type: none;
 }
 .titles li {
-  background: url("../images/dashes.gif") bottom repeat-x;
+  background: url("../../images/dashes.gif") bottom repeat-x;
   padding: 15px 2px;
 }
 .titles a {
   color: #a1a1a3;
 }
 footer {
-  background: url("../images/bg_footer.gif") repeat-x;
+  background: url("../../images/bg_footer.gif") repeat-x;
   padding-top: 18px;
   height: 125px;
   font-size: 12px;
@@ -236,7 +236,7 @@ footer .scholars_lab_logo img {
 }
 #glossary h2 {
   font: 2.8em Georgia, "Times New Roman", Times, serif;
-  background: url("../images/bg_hdr.gif") left 8px no-repeat;
+  background: url("../../images/bg_hdr.gif") left 8px no-repeat;
   letter-spacing: 0.05em;
   padding: 14px 0 10px;
 }
@@ -279,7 +279,7 @@ footer .scholars_lab_logo img {
 #tabs h2 {
   color: #fff;
   font: Georgia, "Times New Roman," Times, serif;
-  background: url("../images/bg_hdr.gif") left 8px no-repeat;
+  background: url("../../images/bg_hdr.gif") left 8px no-repeat;
   letter-spacing: 0.05em;
   padding: 14px 0 10px;
 }
