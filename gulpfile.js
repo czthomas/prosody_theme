@@ -19,10 +19,13 @@ gulp.task('sitemap', shell.task(
     'curl --silent --output sitemap.json http://localhost:8888/prosody/?show_sitemap'
 ));
 
-gulp.task('uncss', function() {
+gulp.task('uncss', ['sitemap'], function() {
+
+    var sitemap = JSON.parse(fs.readFileSync('./sitemap.json'));
+
     gulp.src('css/screen.css')
     .pipe(uncss({
-        html: ['*.html']
+        html: sitemap
     }))
     .pipe(gulp.dest('./out'));
 });

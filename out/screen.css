@@ -4,13 +4,306 @@ body {
   font-size: 18px;
 }
 
-body {
+body,
+input {
   font: 100% Arial, Verdana, Helvetica, sans-serif;
 }
 
 p {
   margin: 15px 0;
   line-height: 150%;
+}
+
+header {
+  background: url("../images/bg_wrapper.jpg") right no-repeat;
+  height: 185px;
+  margin-top: 22px;
+}
+
+#logo {
+  margin-top: 50px;
+  position: relative;
+}
+
+#intro {
+  margin-top: 30px;
+  height: 100px;
+  font-size: 1.2em;
+}
+
+#intro p {
+  display: inline;
+}
+
+#intro #tagline {
+  background: none;
+  padding: 0;
+}
+
+#intro #tagline a,
+#intro #tagline a:visited {
+  text-indent: -9000px;
+  display: block;
+  height: 50px;
+  background: url("../images/tagline.gif") no-repeat;
+  margin-top: 30px;
+  padding: 0;
+}
+
+nav {
+  font-size: 1.4em;
+  height: 39px;
+  overflow: visible;
+}
+
+nav li {
+  list-style: none;
+  float: left;
+  height: 37px;
+}
+
+nav li a,
+nav li a:visited {
+  height: 25px;
+  margin: 0 15px 0 0;
+  display: block;
+  float: left;
+  padding: 10px 20px 6px;
+  text-decoration: none;
+  color: #a1a0a0;
+  z-index: 1000;
+}
+
+.current-menu-item {
+  background: #2d2d2f url("../images/bg_nav.gif") repeat-x;
+}
+
+#main {
+  background: #2d2d2f;
+  border-top: 1px solid #444446;
+  padding: 40px 0 50px;
+  z-index: 1;
+  overflow: visible;
+}
+
+.poem-home {
+  border: solid 10px #666;
+  overflow: auto;
+  position: relative;
+  height: 654px;
+  background-color: #222;
+}
+
+#utils {
+  background: #444;
+  color: #fff;
+  margin: 5px auto 0;
+  padding: 5px;
+  width: 300px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#rhymeflag {
+  background-color: #999;
+  border-right: 1px solid #cfcfcf;
+  color: #444;
+  padding: 1px;
+  cursor: pointer;
+  font-size: 0.9em;
+  width: 30px;
+}
+
+#poem {
+  padding: 15px;
+  font-size: 1.3em;
+}
+
+#poem #poemtitle {
+  margin: 10px 0 15px;
+}
+
+#poem #poemtitle h2 {
+  padding-bottom: 10px;
+  line-height: 1em;
+}
+
+small.date {
+  padding-left: 1.5em;
+  font-size: 0.6em;
+  vertical-align: middle;
+}
+
+div.prosody-shadowline {
+  height: 18px;
+  display: none;
+}
+
+.buttons {
+  float: right;
+  margin-top: -1em;
+}
+
+#poem span.button {
+  word-spacing: 0;
+  letter-spacing: 0;
+}
+
+#poem .button button {
+  width: 18px;
+}
+
+button {
+  background: none;
+  border: 0;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.prosody-note {
+  display: none;
+}
+
+#sidebar h2 {
+  background: url("../images/bg_hdr_sidebar.gif") 90px top no-repeat;
+  font: 2.5em Georgia, "Times New Roman", Times, serif;
+  text-align: right;
+  margin: 0;
+  padding: 20px 0 14px;
+}
+
+#sidebar h3 {
+  text-align: right;
+  font: 2em Georgia, "Times New Roman", Times, serif;
+}
+
+.poem-sort-method {
+  color: #fff;
+  display: block;
+  height: 40px;
+  background: #19191b;
+  border: 1px solid #19191b;
+  padding: 0 24px;
+  text-align: right;
+  line-height: 40px;
+  font-weight: normal;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.poem-results {
+  background-color: #000;
+  padding: 10px 10px 15px 15px;
+  font-size: 0.9em;
+  color: #fff;
+  max-height: 350px;
+  overflow: auto;
+}
+
+.poem-results h4 {
+  font-size: 1.2em;
+  color: #666;
+  border-bottom: 1px solid #19191b;
+  padding: 15px 2px;
+}
+
+.poem-results ul {
+  margin-top: -1px;
+  overflow: auto;
+}
+
+.titles {
+  list-style-type: none;
+}
+
+.titles li {
+  background: url("../images/dashes.gif") bottom repeat-x;
+  padding: 15px 2px;
+}
+
+.titles a {
+  color: #a1a1a3;
+}
+
+footer {
+  background: url("../images/bg_footer.gif") repeat-x;
+  padding-top: 18px;
+  height: 125px;
+  font-size: 12px;
+}
+
+footer a,
+footer a:visited {
+  color: #afafaf;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer #author_container a {
+  text-decoration: underline;
+}
+
+footer #dept_container {
+  text-align: right;
+  border-right: 1px dotted #676767;
+}
+
+footer .scholars_lab_logo img {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+#glossary {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+#glossary h2 {
+  font: 2.8em Georgia, "Times New Roman", Times, serif;
+  background: url("../images/bg_hdr.gif") left 8px no-repeat;
+  letter-spacing: 0.05em;
+  padding: 14px 0 10px;
+}
+
+#glossary dl {
+  margin: 10px 0 20px;
+  overflow: hidden;
+}
+
+#glossary dl dt {
+  width: 25%;
+  float: left;
+  padding: 25px 20px 25px 0;
+  border-top: 1px solid #222224;
+  text-align: right;
+  clear: both;
+  color: #a1a1a3;
+  font: 1.2em Georgia, "Times New Roman", Times, serif;
+  text-transform: uppercase;
+}
+
+#glossary dl dd {
+  float: left;
+  width: 75%;
+  padding: 10px 20px;
+  border-top: 1px solid #222224;
+  overflow: hidden;
+}
+
+#glossary dl dd p {
+  font-size: 1.2em;
+}
+
+#glossary dl dt.first,
+#glossary dl dd.first {
+  border-top: none;
 }
 
 #tabs {
@@ -31,6 +324,36 @@ p {
 
 #tabs p {
   color: #fff;
+}
+
+#tabs .ui-widget-header {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
+}
+
+#tabs .ui-widget-header .ui-state-active,
+#tabs .ui-widget-header .ui-state-default {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
+}
+
+#tabs .ui-state-active {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
+}
+
+#tabs .ui-state-active a,
+#tabs .ui-state-active a:link {
+  color: #fff;
+}
+
+#tabs .ui-state-default {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
 }
 
 #subnav {
