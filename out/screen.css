@@ -1,0 +1,52 @@
+body {
+  color: #fff;
+  background: #232323 url("../images/bg.jpg") repeat-x;
+  font-size: 18px;
+}
+
+body {
+  font: 100% Arial, Verdana, Helvetica, sans-serif;
+}
+
+p {
+  margin: 15px 0;
+  line-height: 150%;
+}
+
+#tabs {
+  background: #2d2d2f;
+  border: 0;
+  border-top: 1px solid #3f3f41;
+  padding-top: 10px;
+  font-size: 1.3em;
+}
+
+#tabs h2 {
+  color: #fff;
+  font: Georgia, "Times New Roman," Times, serif;
+  background: url("../images/bg_hdr.gif") left 8px no-repeat;
+  letter-spacing: 0.05em;
+  padding: 14px 0 10px;
+}
+
+#tabs p {
+  color: #fff;
+}
+
+#subnav {
+  float: right;
+}
+
+#subnav li {
+  list-style: none;
+  float: left;
+  height: 37px;
+}
+
+#subnav li a {
+  height: 25px;
+  margin: 0 15px 0 0;
+  float: left;
+  padding: 10px 5px 6px 0;
+  font-size: 1em;
+}
