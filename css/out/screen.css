@@ -3,43 +3,37 @@ body {
   background: #232323 url("../../images/bg.jpg") repeat-x;
   font-size: 18px;
 }
-
 body,
+select,
+textarea,
 input {
   font: 100% Arial, Verdana, Helvetica, sans-serif;
 }
-
 p {
   margin: 15px 0;
   line-height: 150%;
 }
-
 header {
   background: url("../../images/bg_wrapper.jpg") right no-repeat;
   height: 185px;
   margin-top: 22px;
 }
-
 #logo {
   margin-top: 50px;
   position: relative;
 }
-
 #intro {
   margin-top: 30px;
   height: 100px;
   font-size: 1.2em;
 }
-
 #intro p {
   display: inline;
 }
-
 #intro #tagline {
   background: none;
   padding: 0;
 }
-
 #intro #tagline a,
 #intro #tagline a:visited {
   text-indent: -9000px;
@@ -49,19 +43,16 @@ header {
   margin-top: 30px;
   padding: 0;
 }
-
 nav {
   font-size: 1.4em;
   height: 39px;
   overflow: visible;
 }
-
 nav li {
   list-style: none;
   float: left;
   height: 37px;
 }
-
 nav li a,
 nav li a:visited {
   height: 25px;
@@ -73,11 +64,16 @@ nav li a:visited {
   color: #a1a0a0;
   z-index: 1000;
 }
-
+nav li a a:hover,
+nav li a:visited a:hover,
+nav li a a:focus,
+nav li a:visited a:focus {
+  background: #2d2d2f url("../../images/bg_nav.gif") repeat-x;
+  color: #fff;
+}
 .current-menu-item {
   background: #2d2d2f url("../../images/bg_nav.gif") repeat-x;
 }
-
 #main {
   background: #2d2d2f;
   border-top: 1px solid #444446;
@@ -85,7 +81,6 @@ nav li a:visited {
   z-index: 1;
   overflow: visible;
 }
-
 .poem-home {
   border: solid 10px #666;
   overflow: auto;
@@ -93,7 +88,6 @@ nav li a:visited {
   height: 654px;
   background-color: #222;
 }
-
 #utils {
   background: #444;
   color: #fff;
@@ -104,7 +98,6 @@ nav li a:visited {
   bottom: 0;
   right: 0;
 }
-
 #rhymeflag {
   background-color: #999;
   border-right: 1px solid #cfcfcf;
@@ -114,46 +107,40 @@ nav li a:visited {
   font-size: 0.9em;
   width: 30px;
 }
-
 #poem {
   padding: 15px;
   font-size: 1.3em;
 }
-
 #poem #poemtitle {
   margin: 10px 0 15px;
 }
-
 #poem #poemtitle h2 {
   padding-bottom: 10px;
   line-height: 1em;
 }
-
+span.space_1 {
+  margin-left: 1em;
+}
 small.date {
   padding-left: 1.5em;
   font-size: 0.6em;
   vertical-align: middle;
 }
-
 div.prosody-shadowline {
   height: 18px;
   display: none;
 }
-
 .buttons {
   float: right;
   margin-top: -1em;
 }
-
 #poem span.button {
   word-spacing: 0;
   letter-spacing: 0;
 }
-
 #poem .button button {
   width: 18px;
 }
-
 button {
   background: none;
   border: 0;
@@ -162,11 +149,9 @@ button {
   margin: 0;
   cursor: pointer;
 }
-
 .prosody-note {
   display: none;
 }
-
 #sidebar h2 {
   background: url("../../images/bg_hdr_sidebar.gif") 90px top no-repeat;
   font: 2.5em Georgia, "Times New Roman", Times, serif;
@@ -174,12 +159,10 @@ button {
   margin: 0;
   padding: 20px 0 14px;
 }
-
 #sidebar h3 {
   text-align: right;
   font: 2em Georgia, "Times New Roman", Times, serif;
 }
-
 .poem-sort-method {
   color: #fff;
   display: block;
@@ -195,7 +178,6 @@ button {
   cursor: pointer;
   margin: 0;
 }
-
 .poem-results {
   background-color: #000;
   padding: 10px 10px 15px 15px;
@@ -204,79 +186,64 @@ button {
   max-height: 350px;
   overflow: auto;
 }
-
 .poem-results h4 {
   font-size: 1.2em;
   color: #666;
   border-bottom: 1px solid #19191b;
   padding: 15px 2px;
 }
-
 .poem-results ul {
   margin-top: -1px;
   overflow: auto;
 }
-
 .titles {
   list-style-type: none;
 }
-
 .titles li {
   background: url("../../images/dashes.gif") bottom repeat-x;
   padding: 15px 2px;
 }
-
 .titles a {
   color: #a1a1a3;
 }
-
 footer {
   background: url("../../images/bg_footer.gif") repeat-x;
   padding-top: 18px;
   height: 125px;
   font-size: 12px;
 }
-
 footer a,
 footer a:visited {
   color: #afafaf;
 }
-
 footer p {
   margin: 0;
 }
-
 footer #author_container a {
   text-decoration: underline;
 }
-
 footer #dept_container {
   text-align: right;
   border-right: 1px dotted #676767;
 }
-
 footer .scholars_lab_logo img {
   padding-left: 15px;
   padding-top: 15px;
 }
-
 #glossary {
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
-
 #glossary h2 {
   font: 2.8em Georgia, "Times New Roman", Times, serif;
   background: url("../../images/bg_hdr.gif") left 8px no-repeat;
   letter-spacing: 0.05em;
   padding: 14px 0 10px;
 }
-
 #glossary dl {
   margin: 10px 0 20px;
   overflow: hidden;
 }
-
 #glossary dl dt {
   width: 25%;
   float: left;
@@ -288,7 +255,6 @@ footer .scholars_lab_logo img {
   font: 1.2em Georgia, "Times New Roman", Times, serif;
   text-transform: uppercase;
 }
-
 #glossary dl dd {
   float: left;
   width: 75%;
@@ -296,16 +262,13 @@ footer .scholars_lab_logo img {
   border-top: 1px solid #222224;
   overflow: hidden;
 }
-
 #glossary dl dd p {
   font-size: 1.2em;
 }
-
 #glossary dl dt.first,
 #glossary dl dd.first {
   border-top: none;
 }
-
 #tabs {
   background: #2d2d2f;
   border: 0;
@@ -313,7 +276,6 @@ footer .scholars_lab_logo img {
   padding-top: 10px;
   font-size: 1.3em;
 }
-
 #tabs h2 {
   color: #fff;
   font: Georgia, "Times New Roman," Times, serif;
@@ -321,51 +283,48 @@ footer .scholars_lab_logo img {
   letter-spacing: 0.05em;
   padding: 14px 0 10px;
 }
-
 #tabs p {
   color: #fff;
 }
-
 #tabs .ui-widget-header {
   color: #fff;
   background: #2d2d2f;
   border: 0;
 }
-
 #tabs .ui-widget-header .ui-state-active,
 #tabs .ui-widget-header .ui-state-default {
   color: #fff;
   background: #2d2d2f;
   border: 0;
 }
-
 #tabs .ui-state-active {
   color: #fff;
   background: #2d2d2f;
   border: 0;
 }
-
 #tabs .ui-state-active a,
 #tabs .ui-state-active a:link {
   color: #fff;
 }
-
+#tabs .ui-widget-content .ui-state-active,
+#tabs .ui-widget-content .ui-state-default {
+  color: #fff;
+  background: #2d2d2f;
+  border: 0;
+}
 #tabs .ui-state-default {
   color: #fff;
   background: #2d2d2f;
   border: 0;
 }
-
 #subnav {
   float: right;
 }
-
 #subnav li {
   list-style: none;
   float: left;
   height: 37px;
 }
-
 #subnav li a {
   height: 25px;
   margin: 0 15px 0 0;

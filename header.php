@@ -8,7 +8,8 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/node_modules/normalize.css/normalize.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/scripts/thickbox.css'; ?>">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/out/bootstrap.min.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/out/jquery-ui.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/out/screen.css'; ?>">
 

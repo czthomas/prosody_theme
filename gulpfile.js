@@ -12,7 +12,7 @@ gulp.task('stylus', function() {
     .pipe(stylus({
         use: [autoprefixer()]
     }))
-    .pipe(gulp.dest('css/'));
+    .pipe(gulp.dest('css/out/'));
 });
 
 gulp.task('sitemap', shell.task(
@@ -25,8 +25,7 @@ gulp.task('uncss', ['sitemap'], function() {
 
     gulp.src('css/*.css')
     .pipe(uncss({
-        html: sitemap,
-        ignore: [/expanded/, /js/, /wp-/, /align/, /admin-bar/]
+        html: sitemap
     }))
     .pipe(gulp.dest('./css/out'));
 });
