@@ -23,11 +23,11 @@ gulp.task('uncss', ['sitemap'], function() {
 
     var sitemap = JSON.parse(fs.readFileSync('./sitemap.json'));
 
-    gulp.src('css/screen.css')
+    gulp.src('css/*.css')
     .pipe(uncss({
         html: sitemap
     }))
-    .pipe(gulp.dest('./out'));
+    .pipe(gulp.dest('./css/out'));
 });
 
 gulp.task('watch', function() {
