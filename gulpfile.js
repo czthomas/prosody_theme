@@ -3,6 +3,8 @@ var gulp = require('gulp'),
       autoprefixer = require('autoprefixer-stylus'),
       gutil = require('gulp-util');
       uncss = require('gulp-uncss');
+      shell = require('gulp-shell');
+      fs = require('fs');
 
 
 gulp.task('stylus', function() {
@@ -12,6 +14,10 @@ gulp.task('stylus', function() {
     }))
     .pipe(gulp.dest('css/'));
 });
+
+gulp.task('sitemap', shell.task(
+    'curl --silent --output sitemap.json http://localhost:8888/prosody/?show_sitemap'
+));
 
 gulp.task('uncss', function() {
     gulp.src('css/screen.css')
