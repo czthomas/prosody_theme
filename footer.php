@@ -1,7 +1,7 @@
         <footer>
         <div class="container">
         <div class="row">
-            <div id="author_container" class="col-lg-6 col-md-6 col-sm-6">
+            <div id="author_container" class="col-lg-6 col-md-6 col-sm-4">
                 <p><em>For Better For Verse</em> is authored by <a href="http://www.engl.virginia.edu/people/ht2t">Herbert Tucker</a>, John C. Coleman Professor of English at the <a href="http://virginia.edu">University of Virginia</a>.</p>
             </div>
             <div id="dept_container" class="col-lg-4 col-md-4 col-sm-4">
@@ -10,7 +10,7 @@
                 <div class="addr">Charlottesville, VA 22904-4121</div>
                 <div class="addr">Fax: 434.924.1478 | TDD: 434.982.HEAR</div>
             </div>
-            <div class="scholars_lab_logo" class="col-lg-2 col-md-2 col-sm-2">
+            <div class="scholars_lab_logo" class="col-lg-2 col-md-2 col-sm-4">
                 <a href="http://scholarslab.org/"><img alt="Scholars' Lab" src="<? echo get_template_directory_uri(); ?>/images/slab.png"/></a>
             </div>
             </div><!-- ends .row -->
@@ -21,11 +21,11 @@
 
     <!-- Scripts for accordion and tabs submenu-->
     <script>
-    $( '#accordion' ).accordion({
-        icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus"}
-    });
+        $( '#accordion' ).accordion({
+            icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus"}
+        });
 
-    $( '#tabs' ).tabs();
+        $( '#tabs' ).tabs();
     </script>
 
     <!-- Script to highlight 'poem' in the nav menu when on single poem page -->
