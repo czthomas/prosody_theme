@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
       stylus = require('gulp-stylus'),
       autoprefixer = require('autoprefixer-stylus'),
-      gutil = require('gulp-util');
       uncss = require('gulp-uncss');
       shell = require('gulp-shell');
       fs = require('fs');
