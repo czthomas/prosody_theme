@@ -81,7 +81,8 @@ nav
 
 .poem-home
     border solid 10px #666
-    overflow auto
+    // overflow auto
+    overflow-y scroll
     position relative
     height 654px
     background-color #222222
@@ -105,11 +106,20 @@ nav
     font-size .9em
     width 30px
 
+#rhymebar
+    background-color #999
+    float left
+    width 7px
+    cursor pointer
+    border-right 1px solid #CFCFCF
+
 // Poem styles
 
 #poem
     padding 15px
     font-size 1.3em
+    float left
+    margin-left 25px
 
     #poemtitle
         margin 10px 0 15px
@@ -133,6 +143,7 @@ div.prosody-shadowline
 
 div.TEI-l
     // display table-row
+    line-height 280%
 
 span.prosody-syllable
     // white-space pre
@@ -159,6 +170,9 @@ button
     cursor pointer
 
 .prosody-note
+    display none
+
+.prosody-note-button
     display none
 
 
