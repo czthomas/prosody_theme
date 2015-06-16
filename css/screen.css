@@ -119,6 +119,22 @@ nav li a:visited a:focus {
 #rhyme .lrhyme .check {
   padding: 0 3px !important;
 }
+#rhyme input#rhymecheck {
+  width: 14px;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+  color: #222;
+}
+#rhyme input#rhymecheck.right {
+  background: #32cd32;
+}
+#rhyme input#rhymecheck.wrong {
+  background: #b22222;
+}
+#rhyme input#rhymecheck:hover {
+  background: #ddd;
+}
 #rhymebar {
   background-color: #999;
   float: left;
