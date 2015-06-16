@@ -95,6 +95,7 @@
 
 </head>
 <body>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/wz_tooltip.js"></script>
     <div class="container">
         <header>
         <div class="row">
