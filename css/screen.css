@@ -107,6 +107,18 @@ nav li a:visited a:focus {
   font-size: 0.9em;
   width: 30px;
 }
+#rhyme {
+  width: 25px;
+  float: left;
+  background-color: #444;
+}
+#rhyme .lrhyme {
+  height: 31px;
+  padding: 0 4px;
+}
+#rhyme .lrhyme .check {
+  padding: 0 3px !important;
+}
 #rhymebar {
   background-color: #999;
   float: left;
