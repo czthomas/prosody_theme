@@ -7,7 +7,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/node_modules/normalize.css/normalize.css'; ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/scripts/thickbox.css'; ?>">
+    <!-- <link rel="stylesheet" type="text/css" href="<?php //echo get_template_directory_uri() . '/scripts/thickbox.css'; ?>"> -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/jquery-ui.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/screen.css'; ?>">
@@ -20,7 +20,7 @@
     <!-- Javascripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/scripts/thickbox-compressed.js"></script>
+    <!-- <script src="<?php //echo get_template_directory_uri(); ?>/scripts/thickbox-compressed.js"></script> -->
     <script src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
 
     <script type="text/javascript">var tb_pathToImage = "<?php echo get_template_directory_uri(); ?>/scripts/images/loadingAnimation.gif";</script>
