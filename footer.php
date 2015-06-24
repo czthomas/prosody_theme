@@ -1,4 +1,29 @@
         <footer>
+            <div id="meter-select">
+                <form action="" title="Checking the meter" name="meterform" id="meterform">
+                    <label for="foot-select">Please identify the meter of the line</label><br/>
+                    <select id="foot-select" name="foot" title="Name of foot">
+                        <option value="--+">anapestic</option>
+                                    <option value="+--">dactylic</option>
+                                    <option value="-+">iambic</option>
+                                    <option value="--">pyrrhic</option>
+                                    <option value="++">spondaic</option>
+                      <option value="+-">trochaic</option>
+                    </select><br/><br/>
+                    <label for="number-select">Please describe the number of feet</label><br/>
+                    <select id="number-select" name="number" title="Number of feet">
+                        <option value="1">monometer</option>
+                        <option value="2">dimeter</option>
+                        <option value="3">trimeter</option>
+                        <option value="4">tetrameter</option>
+                        <option value="5">pentameter</option>
+                        <option value="6">hexameter</option>
+                    </select><br/><br/>
+                    <input type="hidden" name="answer" id="answer" title="The answer"/>
+                </form>
+                <button id="check-answer" title="Check answer" />
+                <label for="check-answer">Submit</label>
+            </div>
         <div class="container">
         <div class="row">
             <div id="author_container" class="col-lg-6 col-md-6 col-sm-4">
@@ -26,6 +51,9 @@
         });
 
         $( '#tabs' ).tabs();
+
+        $('#meter-select').dialog({ autoOpen: false });
+
     </script>
 
     <!-- Script to highlight 'poem' in the nav menu when on single poem page -->
