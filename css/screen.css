@@ -105,7 +105,7 @@ nav {
 nav li {
   list-style: none;
   float: left;
-  height: 37px;
+  height: 40px;
 }
 nav li a,
 nav li a:visited {
@@ -307,6 +307,10 @@ footer .scholars_lab_logo img {
   margin-bottom: 20px;
   padding-bottom: 20px;
 }
+#glossary p {
+  margin: 15px 0;
+  line-height: 150%;
+}
 #glossary h2 {
   font: 2.8em Georgia, "Times New Roman", Times, serif;
   background: url("../images/bg_hdr.gif") left 8px no-repeat;
@@ -361,6 +365,9 @@ footer .scholars_lab_logo img {
   padding-top: 10px;
   font-size: 1.3em;
 }
+#tabs span {
+  color: #fff;
+}
 #tabs h2 {
   color: #fff;
   font: Georgia, "Times New Roman," Times, serif;
@@ -370,6 +377,8 @@ footer .scholars_lab_logo img {
 }
 #tabs p {
   color: #fff;
+  margin: 15px 0;
+  line-height: 150%;
 }
 #tabs .ui-widget-header {
   color: #fff;
