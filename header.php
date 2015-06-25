@@ -77,7 +77,6 @@
                             nowrap:  1,
 
                 });
-                // $('#poem-tabs').tabs();
              });
         </script>
     <?php endif; ?>
