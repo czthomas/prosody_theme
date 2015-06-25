@@ -1,7 +1,6 @@
 var gulp = require('gulp'),
       stylus = require('gulp-stylus'),
-      autoprefixer = require('autoprefixer-stylus'),
-      gutil = require('gulp-util');
+      autoprefixer = require('autoprefixer-stylus');
 
 
 gulp.task('stylus', function() {

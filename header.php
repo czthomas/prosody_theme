@@ -7,10 +7,9 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/node_modules/normalize.css/normalize.css'; ?>">
-    <!-- <link rel="stylesheet" type="text/css" href="<?php //echo get_template_directory_uri() . '/scripts/thickbox.css'; ?>"> -->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/jquery-ui.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/screen.css'; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/shadow.css'; ?>">
 
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
@@ -20,7 +19,6 @@
     <!-- Javascripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-    <!-- <script src="<?php //echo get_template_directory_uri(); ?>/scripts/thickbox-compressed.js"></script> -->
     <script src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
 
     <script type="text/javascript">var tb_pathToImage = "<?php echo get_template_directory_uri(); ?>/scripts/images/loadingAnimation.gif";</script>
@@ -98,9 +96,9 @@
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/wz_tooltip.js"></script>
     <div class="container">
         <header>
-        <div class="row">
+        <div>
         <?php if (is_home()) : ?>
-            <div id="logo" class="col-lg-8 col-md-8 col-sm-8">
+            <div id="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo01.gif" alt="" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo02.gif" alt="" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo03.gif" alt="" />
@@ -110,19 +108,19 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" />
             </div>
         <? else: ?>
-            <div id="logo" class="col-lg-8 col-md-8 col-sm-8">
+            <div id="logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" />
             </div>
         <?php endif; ?>
-        <div id="intro" class="col-lg-4 col-md-4 col-sm-4">
+        <div id="intro">
             <p><strong><?php bloginfo('name'); ?></strong>: <?php bloginfo('description'); ?></p>
             <h2 id="tagline"><a href="http://www.engl.virginia.edu">a project of the University of Virginia English Department</a></h2>
         </div>
         </div>
         </header>
         <nav>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
+            <div>
+                <div>
                     <?php wp_nav_menu(); ?>
                 </div>
             </div>
