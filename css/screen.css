@@ -6,16 +6,13 @@ body {
   color: #fff;
   background: #232323 url("../images/bg.jpg") repeat-x;
   font-size: 18px;
+  line-height: 1em;
 }
 body,
 select,
 textarea,
 input {
   font: 100% Arial, Verdana, Helvetica, sans-serif;
-}
-p {
-  margin: 15px 0;
-  line-height: 150%;
 }
 a,
 a:visited {
@@ -155,10 +152,11 @@ nav li a:visited a:focus {
   right: 0;
 }
 #poem {
-  padding: 15px;
+  padding-top: 15px;
   font-size: 1.3em;
   float: left;
   margin-left: 25px;
+  width: 90%;
 }
 #poem #poemtitle {
   margin: 10px 0 15px;
@@ -199,7 +197,7 @@ span.prosody-marker {
   white-space: pre;
 }
 div.TEI-l {
-  line-height: 280%;
+  line-height: 1em;
 }
 .buttons {
   float: right;

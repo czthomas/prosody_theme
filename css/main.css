@@ -15,7 +15,7 @@ div.prosody-shadowline {
     height: 18px;
 }
 div.TEI-l {
-    display:table-row;
+    /*display:table-row;*/
 }
 span:hover {
     background:#444;
@@ -39,7 +39,7 @@ span.prosody-shadowsyllable {
 }
 span.prosody-syllable {
     white-space:pre;
-    display:table-cell;
+    /*display:table-cell;*/
     /* padding-right:1em; */
     vertical-align: bottom;
 }
@@ -277,13 +277,14 @@ small.date {
 #rhymeflag {
     clear:both;
     float:left;
-    width:30px;
+    width:32px;
     background:#999;
     border-right:1px solid #CFCFCF;
     color:#444;
     padding:1px;
     cursor:pointer;
     font-size:9px;
+    /*margin-top: 10px;*/
 }
 #rhymeflag:hover {
     background: #fff;
