@@ -100,6 +100,7 @@ nav {
   font-size: 1.4em;
   height: 39px;
   overflow: visible;
+  margin-top: 10px;
 }
 nav li {
   list-style: none;
@@ -129,6 +130,7 @@ nav li a:visited a:focus {
 }
 .content {
   padding-left: 0;
+  padding-right: 0;
 }
 #main {
   background: #2d2d2f;
@@ -139,20 +141,13 @@ nav li a:visited a:focus {
 }
 .poem-home {
   border: solid 10px #666;
-  overflow-y: scroll;
   position: relative;
   height: 654px;
   background-color: #222;
 }
-#utils {
-  background: #444;
-  color: #fff;
-  margin: 5px auto 0;
-  padding: 5px;
-  width: 300px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.scrollfix {
+  overflow: auto;
+  height: 634px;
 }
 #poem {
   padding-top: 15px;
@@ -160,6 +155,7 @@ nav li a:visited a:focus {
   float: left;
   margin-left: 25px;
   width: 90%;
+  overflow: auto;
 }
 #poem #poemtitle {
   margin: 10px 0 15px;

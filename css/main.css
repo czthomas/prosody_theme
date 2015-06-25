@@ -184,15 +184,30 @@ label {
     }
 
 #utils {
-    position: fixed;
-    background:#444;
+    /*position: absolute;*/
+    background:#666;
     color:#fff;
-    width:440px;
-    margin: 5px auto 0;
-    padding:5px;
+    /*width:440px;*/
+    /*margin: auto;*/
+    margin-right: -10px;
+    /*padding:5px;*/
+    padding-bottom: 5px;
+    padding-right: 10px;
     float:right;
     bottom: 0px;
-    right: 0px;
+    right: 10px;
+    /*text-align: right;*/
+}
+
+.inner-util {
+    font-size: 1.2em;
+    background: #444;
+    width: 440px;
+    float: right;
+    height: 23px;
+    padding-top: 5px;
+    padding-left: 10px;
+    text-align: left;
 }
 
 #utils button {

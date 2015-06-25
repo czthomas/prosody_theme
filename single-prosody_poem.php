@@ -16,17 +16,18 @@
 
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                <div>
-                    <?php the_content(); ?>
+                    <div class="scrollfix">
+                        <?php the_content(); ?>
+                    </div>
                     <div class="row" id="utils">
-                        <div class="col-sm-4-offset-8 col-md-4-offset-8 col-lg-4-offset-8">
+                        <div class="col-sm-4-offset-8 col-md-4-offset-8 col-lg-4-offset-8 inner-util">
                         Show
                         <span>Stress <input id="togglestress" class="on" name="togglestress" value="on" type="checkbox" checked="checked"/></span>
                         <span>&#160;&#160;&#160;Foot division <input id="togglefeet" class="on" name="togglefeet" value="on" type="checkbox" checked="checked"/></span>
                         <span>&#160;&#160;&#160;Caesura <input id="togglecaesura" class="on" name="togglecaesura" value="on" type="checkbox"/></span>
                         </div>
                     </div>
-                </div>
+
 
     <?php endwhile; else: ?>
 

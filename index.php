@@ -16,11 +16,11 @@
 
     <?php if ( $poems->have_posts() ) : while ( $poems->have_posts() ) : $poems->the_post(); ?>
 
-                <div>
+                <div class="scrollfix">
                     <?php the_content(); ?>
                 </div>
                 <div class="row" id="utils">
-                    <div class="col-sm-4-offset-8 col-md-4-offset-8 col-lg-4-offset-8">
+                    <div class="col-sm-4-offset-8 col-md-4-offset-8 col-lg-4-offset-8 inner-util">
                         Show
                         <span>Stress <input id="togglestress" class="on" name="togglestress" value="on" type="checkbox" checked="checked"/></span>
                         <span>&#160;&#160;&#160;Foot division <input id="togglefeet" class="on"  name="togglefeet" value="on" type="checkbox" checked="checked"/></span>
