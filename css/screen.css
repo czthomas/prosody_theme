@@ -374,6 +374,8 @@ footer .scholars_lab_logo img {
   background: url("../images/bg_hdr.gif") left 8px no-repeat;
   letter-spacing: 0.05em;
   padding: 14px 0 10px;
+  line-height: 1.8em;
+  margin-top: 15px;
 }
 #tabs p {
   color: #fff;
@@ -426,4 +428,31 @@ footer .scholars_lab_logo img {
   padding: 10px 5px 6px 0;
   font-size: 1em;
   color: #a1a0a0;
+}
+.poem_tabs {
+  margin-bottom: 10px;
+}
+.poem_tabs li {
+  display: inline;
+  background: #444;
+  padding: 10px;
+  color: #fff;
+  font-size: 1.2em;
+}
+.poem_tabs li a {
+  text-decoration: none;
+}
+#poem_resources {
+  padding-top: 15px;
+  margin-left: 25px;
+  font-size: 1.2em;
+}
+#poem_resources h2 {
+  background: url("../images/bg_hdr.gif") left 8px no-repeat;
+  font: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 0.05em;
+  padding: 14px 0 10px;
+  line-height: 2em;
+  font-size: 1.8em;
+  margin-bottom: 20px;
 }
