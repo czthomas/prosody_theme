@@ -1,36 +1,18 @@
-/*body {
-    font-family: "Arial Unicode MS", arial, verdana, helvetica, sans-serif;
-    font-size: 13px;
-    background: #222222;
-    color: #FFFFFF;
-    line-height: 1em;
-}*/
 
-/* div.prosody-line {
-    display:block;
-    width: 600px;
-} */
 div.prosody-shadowline {
     display:table-row;
     height: 18px;
 }
-div.TEI-l {
-    /*display:table-row;*/
-}
+
 span:hover {
     background:#444;
 }
 
-/* Handles the spacing for poems */
-/*span.space_1 { margin-left: 1em;}
-span.space_2 { margin-left: 2em;}
-span.space_3 { margin-left: 3em;}
-span.space_4 { margin-left: 4em;}*/
+
 
 span.prosody-shadowsyllable {
     display:table-cell;
     empty-cells: show;
-    /*padding-right:1em;*/
     text-align:center;
     font-size: 13px;
     color: #DEB887;
@@ -39,8 +21,6 @@ span.prosody-shadowsyllable {
 }
 span.prosody-syllable {
     white-space:pre;
-    /*display:table-cell;*/
-    /* padding-right:1em; */
     vertical-align: bottom;
 }
 span.prosody-marker {
@@ -51,7 +31,6 @@ span.prosody-footmarker {
     color: #DEB887;
     font-weight: bold;
     vertical-align: bottom;
-    /* padding: 0.2em; */
     width: 1ex;
 }
 span.prosody-placeholder {
@@ -94,23 +73,6 @@ p.prosody-note-show {
     margin: 15px;
 }
 
-/*button.prosody-note-button {
-}*/
-
-/*#poem {
-    width: 520px;
-    padding: 15px;
-    float:left;
-}*/
-
-/* #poem span {
-    word-spacing: .4em;
-    letter-spacing: .03em;
-    } */
-
-#poem .prosody-shadowline span, #poem .TEI-l span {
-    /** margin: 0 -2px; */
-}
 
 #poem #poemtitle {
     margin: 10px 0 15px 0;
@@ -122,9 +84,6 @@ p.prosody-note-show {
 }
 
 .buttons {
-    /* position: absolute;
-    left: 400px;
-    margin-top: -20px; */
     float: right;
     margin-top: -1em;
 }
@@ -184,19 +143,14 @@ label {
     }
 
 #utils {
-    /*position: absolute;*/
     background:#666;
     color:#fff;
-    /*width:440px;*/
-    /*margin: auto;*/
     margin-right: -10px;
-    /*padding:5px;*/
     padding-bottom: 5px;
     padding-right: 10px;
     float:right;
     bottom: 0px;
     right: 10px;
-    /*text-align: right;*/
 }
 
 .inner-util {
@@ -213,16 +167,6 @@ label {
 #utils button {
     margin: 0 auto;
 }
-
-/*.discrep {
-    color: #F0F055 !important;
-}*/
-/*#poem .prosody-syllable span.prosody-footmarker {
-    color: #DEB887;
-    font-weight: bold;
-    vertical-align: bottom;
-    }
-    */
 
 small.date {
     padding-left:1.5em;
