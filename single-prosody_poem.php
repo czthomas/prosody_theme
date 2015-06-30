@@ -35,17 +35,17 @@
             </div>
         </div>
 
-    <?php endwhile; else: ?>
+        <?php endwhile; else: ?>
 
-                <h2>Getting Started</h2>
-                <p>Select a poem to begin.</p>
+            <h2>Getting Started</h2>
+            <p>Select a poem to begin.</p>
 
-    <?php endif; ?>
-</div><!-- ends .content -->
+        <?php endif; ?>
+    </div><!-- ends .content -->
 
-<div class="col-lg-4 col-md-4 col-sm-4">
-    <?php get_sidebar(); ?>
-</div>
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <?php get_sidebar(); ?>
+    </div>
 
 </div><!-- ends row -->
 </div><!-- ends .container -->
