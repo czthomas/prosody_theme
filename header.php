@@ -14,7 +14,7 @@
 
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
-        <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+        <script src="node_modules/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Javascripts -->
