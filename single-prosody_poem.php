@@ -1,13 +1,5 @@
 <?php get_header(); ?>
 
-<?php
-    $poem_args = array(
-        'post_type' => 'prosody_poem',
-        'category_name' => 'featured'
-        );
-    $poems = new WP_Query( $poem_args );
-?>
-
 <div id="main">
 <div class="container">
 <div class="row">
@@ -20,7 +12,7 @@
             <li id="poem_text_tab"><a href="#">Text</a></li>
             <li id="poem_resources_tab"><a href="#">Resources</a></li>
         </ul>
-    <?php endif ?>
+    <?php endif; ?>
 
     <div class="content poem-home col-lg-8 col-md-8 col-sm-8">
         <div class="scrollfix">
