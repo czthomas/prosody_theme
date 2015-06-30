@@ -3,6 +3,7 @@
 - developed on mamp with php 5.6.7
 - needs node and npm
 
+- stylint for linting stylus
 
 
 ### Dependencies
