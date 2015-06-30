@@ -167,8 +167,12 @@ span.space_1
 
 small.date
     padding-left 1.5em
-    font-size .6em
+    font-size 12px
     vertical-align middle
+
+span.prosody-syllable
+    white-space pre
+    vertical-align  bottom
 
 div.prosody-shadowline
     display table-row
@@ -179,7 +183,9 @@ span:hover
 
 span.prosody-shadowsyllable
     display table-cell
+    empty-cells show
     text-align center
+    font-size 13px
     color #DEB887
     vertical-align bottom
     height 18px
@@ -192,6 +198,11 @@ span.prosody-placeholder, span.prosody-marker
     visibility hidden
     white-space pre
 
+span.prosody-footmarker
+    color #DEB887
+    font-weight bold
+    vertical-align bottom
+    width 1ex
 
 div.TEI-l
     line-height 1em
@@ -200,20 +211,27 @@ div.TEI-l
     float right
     margin-top -1em
 
-#poem span.button
-    word-spacing 0
-    letter-spacing 0
+#poem
+    span.button
+        word-spacing 0
+        letter-spacing 0
+
+    span.button:hover
+        background none
 
 #poem .button button
     width 18px
 
 button
     background none
-    border 0
+    border none
     color #fff
     padding 0
     margin 0
     cursor pointer
+
+    img
+        vertical-align middle
 
 .prosody-note
     display none
@@ -221,6 +239,148 @@ button
 .prosody-note-button
     display none
 
+p.prosody-note-show
+    font-size 12px
+    margin 15px
+
+span.prosody-checkstress
+    display table-cell
+
+span.prosody-checkfeet
+    display table-cell
+
+.caesura
+    color #aa55aa
+    font-weight bold
+    padding 0 1ex 0 0
+    vertical-align bottom
+    font-size 13px
+    display table-cell
+    empty-cells show
+    text-align center
+
+span.caesura:hover
+    background transparent
+
+.prosody-shadowline .caesura
+    visibility hidden
+    height 18px
+
+label
+    vertical-align bottom
+    margin-left -7px
+
+#meter-select
+    margin 10px
+
+#meter-select label
+    margin 5px 0
+
+#meter-select select
+    margin 5px 0
+
+#meter-select option
+    padding 2px 5px
+
+#meter-select button
+    background #444
+    padding 4px
+    border 2px solid #ddd
+    margin 10px 0
+
+#meter-select button:hover
+    background #858575
+
+#utils
+    background #666
+    color #fff
+    margin-right -10px
+    padding-bottom 5px
+    padding-right 10px
+    float right
+    bottom 0px
+    right 10px
+
+#utils button
+    margin 0 auto
+
+.inner-util
+    font-size: 1.2em
+    background #444
+    width 440px
+    float right
+    height 23px
+    padding-top 5px
+    padding-left 10px
+    text-align left
+
+#rhymebar
+    height 0px
+    background #999
+    float left
+    width 7px
+    cursor pointer
+    border-right 1px solid #CFCFCF
+
+#rhymebar:hover
+    background #ddd
+
+#rhyme
+    height 0px
+    width 25px
+    float left
+    background #444
+
+#rhyme .lrhyme
+    height 31px
+    padding 0 4px
+
+#rhyme .check
+    padding 0 3px !important
+
+#rhyme input
+    width 9px
+    background #656565
+    height 16px
+    margin 0
+    padding 0 2px
+    border none
+    color #fff
+    font-size 11px
+
+#rhyme input:hover
+    background #888
+
+#rhyme input#rhymecheck
+    width 14px
+    padding 0
+    font-weight bold
+    cursor pointer
+    background #999
+    color #222
+
+#rhyme input#rhymecheck:hover
+    background #ddd
+
+#rhyme input#rhymecheck.right
+    background #32CD32
+
+#rhyme input#rhymecheck.wrong
+    background #B22222
+
+#rhymeflag
+    clear both
+    float left
+    width 32px
+    background #999
+    border-right 1px solid #CFCFCF
+    color #444
+    padding 1px
+    cursor pointer
+    font-size 9px
+
+#rhymeflag:hover
+    background #fff
 
 // Sidebar styles
 
