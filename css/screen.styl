@@ -1,6 +1,6 @@
 // global styles
 
-html
+*
     margin 0
     padding 0
 
@@ -20,8 +20,8 @@ a, a:visited
 a:hover, a:active
     color #c99a73
 
-a:focus
-    outline 0
+*:focus
+    outline none
 
 ol
     margin 15px
@@ -47,7 +47,7 @@ cite
     display block
     text-transform uppercase
     font-style normal
-    font .6em Georgia, "Times New Roman", Times, serif
+    font 0.6em Georgia, "Times New Roman", Times, serif
     padding 4px 0 4px 25px
 
 hr
@@ -57,7 +57,7 @@ hr
     width 100%
     height 1px
     margin 15px 0
-    border 0
+    border none
     display block
 
 
@@ -162,27 +162,13 @@ nav
             padding-bottom 10px
             line-height 1em
 
-    span.button
-        word-spacing 0
-        letter-spacing 0
-
-    span.button:hover
-        background none
-
-    .button button
-        width 18px
-
 span.space_1
     margin-left 1em
 
 small.date
     padding-left 1.5em
-    font-size 12px
+    font-size .6em
     vertical-align middle
-
-span.prosody-syllable
-    white-space pre
-    vertical-align  bottom
 
 div.prosody-shadowline
     display table-row
@@ -193,9 +179,7 @@ span:hover
 
 span.prosody-shadowsyllable
     display table-cell
-    empty-cells show
     text-align center
-    font-size 13px
     color #DEB887
     vertical-align bottom
     height 18px
@@ -208,11 +192,6 @@ span.prosody-placeholder, span.prosody-marker
     visibility hidden
     white-space pre
 
-span.prosody-footmarker
-    color #DEB887
-    font-weight bold
-    vertical-align bottom
-    width 1ex
 
 div.TEI-l
     line-height 1em
@@ -220,6 +199,13 @@ div.TEI-l
 .buttons
     float right
     margin-top -1em
+
+#poem span.button
+    word-spacing 0
+    letter-spacing 0
+
+#poem .button button
+    width 18px
 
 button
     background none
@@ -229,157 +215,12 @@ button
     margin 0
     cursor pointer
 
-    img
-        vertical-align middle
-
 .prosody-note
     display none
 
 .prosody-note-button
     display none
 
-p.prosody-note-show
-    font-size 12px
-    margin 15px
-
-span.prosody-checkstress
-    display table-cell
-
-span.prosody-checkfeet
-    display table-cell
-
-.caesura
-    color #aa55aa
-    font-weight bold
-    padding 0 1ex 0 0
-    vertical-align bottom
-    font-size 13px
-    display table-cell
-    empty-cells show
-    text-align center
-
-span.caesura:hover
-    background transparent
-
-.prosody-shadowline .caesura
-    visibility hidden
-    height 18px
-
-label
-    vertical-align bottom
-    margin-left -7px
-
-#meter-select
-    margin 10px
-
-#meter-select label
-    margin 5px 0
-
-#meter-select select
-    margin 5px 0
-
-#meter-select option
-    padding 2px 5px
-
-#meter-select button
-    background #444
-    padding 4px
-    border 2px solid #ddd
-    margin 10px 0
-
-#meter-select button:hover
-    background #858575
-
-#utils
-    background #666
-    color #fff
-    margin-right -10px
-    padding-bottom 5px
-    padding-right 10px
-    float right
-    bottom 0
-    right 10px
-
-#utils button
-    margin 0 auto
-
-.inner-util
-    font-size: 1.2em
-    background #444
-    width 440px
-    float right
-    height 23px
-    padding-top 5px
-    padding-left 10px
-    text-align left
-
-#rhymebar
-    height 0
-    background #999
-    float left
-    width 7px
-    cursor pointer
-    border-right 1px solid #CFCFCF
-
-#rhymebar:hover
-    background #ddd
-
-#rhyme
-    height 0
-    width 25px
-    float left
-    background #444
-
-#rhyme .lrhyme
-    height 31px
-    padding 0 4px
-
-#rhyme .check
-    padding 0 3px !important
-
-#rhyme input
-    width 9px
-    background #656565
-    height 16px
-    margin 0
-    padding 0 2px
-    border 0
-    color #fff
-    font-size 11px
-
-#rhyme input:hover
-    background #888
-
-#rhyme input#rhymecheck
-    width 14px
-    padding 0
-    font-weight bold
-    cursor pointer
-    background #999
-    color #222
-
-#rhyme input#rhymecheck:hover
-    background #ddd
-
-#rhyme input#rhymecheck.right
-    background #32CD32
-
-#rhyme input#rhymecheck.wrong
-    background #B22222
-
-#rhymeflag
-    clear both
-    float left
-    width 32px
-    background #999
-    border-right 1px solid #CFCFCF
-    color #444
-    padding 1px
-    cursor pointer
-    font-size 9px
-
-#rhymeflag:hover
-    background #fff
 
 // Sidebar styles
 
@@ -409,7 +250,7 @@ label
     text-decoration none
     cursor pointer
     margin 0
-    outline 0
+    outline none
     border-bottom 1px solid #0b0b0d
 
 .poem-results
@@ -536,7 +377,7 @@ footer
 
     h2
         color #fff
-        font Georgia, "Times New Roman", Times, serif
+        font Georgia, "Times New Roman," Times, serif
         background url(../images/bg_hdr.gif) left 8px no-repeat
         letter-spacing .05em
         padding 14px 0 10px
@@ -622,3 +463,4 @@ footer
         line-height 2em
         font-size 1.8em
         margin-bottom 20px
+

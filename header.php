@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/bootstrap.min.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/jquery-ui.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/screen.css'; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/poem.css'; ?>">
 
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
