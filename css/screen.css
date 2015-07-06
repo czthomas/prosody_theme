@@ -438,8 +438,14 @@ footer .scholars_lab_logo img {
   color: #fff;
   font-size: 1.2em;
 }
-.poem_tabs li a {
+.poem_tabs li a,
+.poem_tabs li a:visited {
   text-decoration: none;
+  color: #a1a1a3;
+}
+.poem_tabs li a:hover,
+.poem_tabs li a:active {
+  color: #c99a73;
 }
 #poem_resources {
   padding-top: 15px;
