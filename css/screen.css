@@ -224,7 +224,7 @@ button {
   display: none;
 }
 #sidebar h2 {
-  background: url("../images/bg_hdr_sidebar.gif") 90px top no-repeat;
+  background: url("../images/bg_hdr_sidebar.gif") top left 70% no-repeat;
   font: 2.5em Georgia, "Times New Roman", Times, serif;
   text-align: right;
   margin: 0;
@@ -370,11 +370,10 @@ footer .scholars_lab_logo img {
 }
 #tabs h2 {
   color: #fff;
-  font: Georgia, "Times New Roman," Times, serif;
+  font: 2.4em Georgia, "Times New Roman," Times, serif;
   background: url("../images/bg_hdr.gif") left 8px no-repeat;
   letter-spacing: 0.05em;
   padding: 14px 0 10px;
-  line-height: 1.8em;
   margin-top: 15px;
 }
 #tabs p {
