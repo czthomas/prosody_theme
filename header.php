@@ -25,31 +25,6 @@
 
     <script type="text/javascript">var tb_pathToImage = "<?php echo get_template_directory_uri(); ?>/scripts/images/loadingAnimation.gif";</script>
 
-
-<!-- This controlled the page/tab structure. Better to redo this with the actual WP nav menu, and attach resources to end of each poem directly (i.e. not in a new tab) -->
-    <?php if(!is_page()) : ?>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('#poem-tabs').tabs({
-                    load: function(event, ui) {
-                        $('a', ui.panel).click(function() {
-                            $(ui.panel).load(this.href);
-                            return false;
-                        });
-                    }
-                }  );
-                $('#subnav-wrapper').tabs({
-                    load: function(event, ui) {
-                        $('a', ui.panel).click(function() {
-                            $(ui.panel).load(this.href);
-                            return false;
-                        });
-                    }
-                });
-          });
-        </script>
-    <?php endif; ?>
-
     <?php if ( is_front_page() ) : ?>
         <script type="text/javascript" src="<? echo get_template_directory_uri(); ?>/js/jquery.cycle.js"></script>
         <script type="text/javascript">
