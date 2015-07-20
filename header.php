@@ -25,21 +25,6 @@
 
     <script type="text/javascript">var tb_pathToImage = "<?php echo get_template_directory_uri(); ?>/scripts/images/loadingAnimation.gif";</script>
 
-    <!-- This is to be reworked using localStorage -->
-    <script type="text/javascript">
-    //     $(document).ready(function(){
-    //             var cookieName = 'stickyAccordion';
-
-    //             $("#poem_sorting").accordion({
-    //                 active: ( $.cookies.get( cookieName ) || 0 ),
-    //                 header: 'h4',
-    //                                 collapsible: true,
-    //                 change: function( e, ui ) {
-    //                     $.cookies.set( cookieName, $( this ).find( 'h4' ).index ( ui.newHeader[0] ) );
-    //                 }
-    //             } );
-    //     });
-    // </script>
 
 <!-- This controlled the page/tab structure. Better to redo this with the actual WP nav menu, and attach resources to end of each poem directly (i.e. not in a new tab) -->
     <?php if(!is_page()) : ?>

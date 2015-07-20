@@ -46,13 +46,22 @@
 
     <!-- Scripts for accordion and tabs submenu-->
     <script>
+    $(document).ready(function () {
+
         $( '#accordion' ).accordion({
-            icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus"}
+            icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus"},
+            activate: function (e, ui) {
+                localStorage.setItem('accordion-active', $(this).accordion( "option", "active"));
+            },
+            active: +localStorage.getItem('accordion-active')
         });
 
         $( '#tabs' ).tabs();
 
         $('#meter-select').dialog({ autoOpen: false });
+
+    });
+
 
     </script>
 
