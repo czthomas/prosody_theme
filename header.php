@@ -98,6 +98,7 @@
     <div class="container">
         <header>
         <div class="row">
+        <?php $url = home_url(); ?>
         <?php if (is_home()) : ?>
             <div id="logo" class="col-lg-8 col-md-8 col-sm-8">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo01.gif" alt="" />
@@ -106,11 +107,11 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo04.gif" alt="" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo05.gif" alt="" />
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo06.gif" alt="" />
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" />
+                <a href="<?php echo $url; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" /></a>
             </div>
         <? else: ?>
             <div id="logo" class="col-lg-8 col-md-8 col-sm-8">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" />
+                <a href="<?php echo $url; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" /></a>
             </div>
         <?php endif; ?>
         <div id="intro" class="col-lg-4 col-md-4 col-sm-4">
