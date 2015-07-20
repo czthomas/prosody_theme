@@ -165,14 +165,13 @@ small.date {
   background: #444;
 }
 #rhyme .lrhyme {
-  height: 31px;
+  height: 30px;
   padding: 0 4px;
 }
 #rhyme .check {
   padding: 0 3px !important;
 }
 #rhyme input {
-  width: 9px;
   background: #656565;
   height: 16px;
   margin: 0;
