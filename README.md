@@ -1,7 +1,6 @@
 ### Dependencies
 
-- npm: gulp, gulp-stylus, autoprefixer-stylus, normalize.css, html5shiv
-
+- npm: gulp, gulp-stylus, autoprefixer-stylus
 
 ### Gulp tasks
 

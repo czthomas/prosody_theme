@@ -6,7 +6,7 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/node_modules/normalize.css/normalize.css'; ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/normalize.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/bootstrap.min.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/jquery-ui.css'; ?>">
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/screen.css'; ?>">
@@ -14,7 +14,7 @@
 
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
-        <script src="node_modules/html5shiv/dist/html5shiv.js"></script>
+        <script src="<? echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Javascripts -->
