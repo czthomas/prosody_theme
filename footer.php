@@ -44,16 +44,12 @@
             <?php wp_footer(); ?>
         </footer>
 
-    <!-- Script to highlight 'poem' in the nav menu when on single poem page -->
-
+    <!-- Highlight 'poem' in the nav menu when on single poem page -->
     <?php if ( is_single() ) : ?>
-
         <script>
             $('.menu li').first().addClass( 'current-menu-item');
         </script>
-
     <?php endif; ?>
-
 
     <!-- Google analytics - Need to check if this is still a valid account or if it needs updating -->
     <script type="text/javascript">
