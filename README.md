@@ -25,3 +25,7 @@
 
 - custom post type for poems
 -
+
+- You must set WP Permalinks to Postname for the poems to actually show up.
+
+- Note differences between screen and poem css

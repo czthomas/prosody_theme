@@ -44,27 +44,6 @@
             <?php wp_footer(); ?>
         </footer>
 
-    <!-- Scripts for accordion and tabs submenu-->
-    <script>
-    $(document).ready(function () {
-
-        $( '#accordion' ).accordion({
-            icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus"},
-            activate: function (e, ui) {
-                localStorage.setItem('accordion-active', $(this).accordion( "option", "active"));
-            },
-            active: +localStorage.getItem('accordion-active')
-        });
-
-        $( '#tabs' ).tabs();
-
-        $('#meter-select').dialog({ autoOpen: false });
-
-    });
-
-
-    </script>
-
     <!-- Script to highlight 'poem' in the nav menu when on single poem page -->
 
     <?php if ( is_single() ) : ?>

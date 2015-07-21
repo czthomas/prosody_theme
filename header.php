@@ -21,40 +21,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/hack.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/utility.js"></script>
 
-    <script type="text/javascript">var tb_pathToImage = "<?php echo get_template_directory_uri(); ?>/scripts/images/loadingAnimation.gif";</script>
+    <script type="text/javascript">var tb_pathToImage = "<?php echo get_template_directory_uri(); ?>/images/loadingAnimation.gif";</script>
 
     <?php if ( is_front_page() ) : ?>
         <script type="text/javascript" src="<? echo get_template_directory_uri(); ?>/js/jquery.cycle.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
                 $('#logo').cycle({
-                                            fx: 'none',
+                            fx: 'none',
                             timeout:  100,
                             speed:    500,
                             delay:    -100,
                             nowrap:  1,
-
                 });
              });
         </script>
     <?php endif; ?>
 
-<!-- RSS feed, Atom feed, pingback url, favicon - Are these necessary? -->
+    <!-- RSS feed, Atom feed, pingback url -->
 
-<!--     <link rel="alternate" type="application/rss+xml" title="<?php //bloginfo('name'); ?> RSS Feed" href="<?php //bloginfo('rss2_url'); ?>" />
-    <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php //bloginfo('atom_url'); ?>" />
-    <link rel="pingback" href="<?php //bloginfo('pingback_url'); ?>" />
+    <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
+    <link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="<?php bloginfo('atom_url'); ?>" />
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-    <link rel="shortcut icon" href="/favicon.ico" /> -->
-
-<!-- wp_head is necessary for a lot of wp hooks and actions, such as javascript queueing  -->
+    <!-- wp_head is necessary for a lot of wp hooks and actions, such as javascript queueing  -->
     <?php wp_head(); ?>
 
 </head>
 <body>
-    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/wz_tooltip.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/wz_tooltip.js"></script>
     <div class="container">
         <header>
         <div class="row">
