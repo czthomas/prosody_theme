@@ -14,7 +14,7 @@
 
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
-        <script src="<? echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
     <![endif]-->
 
     <!-- Javascripts -->
@@ -26,7 +26,7 @@
     <script type="text/javascript">var tb_pathToImage = "<?php echo get_template_directory_uri(); ?>/images/loadingAnimation.gif";</script>
 
     <?php if ( is_front_page() ) : ?>
-        <script type="text/javascript" src="<? echo get_template_directory_uri(); ?>/js/jquery.cycle.js"></script>
+        <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.cycle.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
                 $('#logo').cycle({

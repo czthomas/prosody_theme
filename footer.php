@@ -36,7 +36,7 @@
                 <div class="addr">Fax: 434.924.1478 | TDD: 434.982.HEAR</div>
             </div>
             <div class="scholars_lab_logo" class="col-lg-2 col-md-2 col-sm-4">
-                <a href="http://scholarslab.org/"><img alt="Scholars' Lab" src="<? echo get_template_directory_uri(); ?>/images/slab.png"/></a>
+                <a href="http://scholarslab.org/"><img alt="Scholars' Lab" src="<?php echo get_template_directory_uri(); ?>/images/slab.png"/></a>
             </div>
             </div><!-- ends .row -->
             </div><!-- ends container -->
