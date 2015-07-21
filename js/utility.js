@@ -2,9 +2,17 @@ $(document).ready(function(){
 
     $('#rhyme').prev().hide();
 
-    var contentWidth = $('.poem-home').width();
-    $('#utils').width(contentWidth + 10);
+    // Set the width of #utils and then resize as necessary
+    function utilSize () {
+        var contentWidth = $('.poem-home').width();
+        $('#utils').width(contentWidth + 10);
+    }
+    utilSize();
+    $(window).resize( function() {
+        utilSize();
+    });
 
+    // Tabs for poem resources and text
     $('#poem_resources').hide();
     $('#poem_text_tab').click(function(e){
         e.preventDefault();
@@ -17,6 +25,7 @@ $(document).ready(function(){
         $('#poem_resources').show();
     });
 
+    // Accordion for the sidebar
     $( '#accordion' ).accordion({
         icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus"},
         activate: function (e, ui) {
@@ -25,8 +34,10 @@ $(document).ready(function(){
         active: +localStorage.getItem('accordion-active')
     });
 
+    // Tabs for the Instructions page
     $( '#tabs' ).tabs();
 
+    // Dialog box for the meter
     $('#meter-select').dialog({ autoOpen: false });
 
 });
