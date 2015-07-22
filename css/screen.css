@@ -248,7 +248,7 @@ button {
   text-decoration: none;
   cursor: pointer;
   margin: 0;
-  outline: none;
+  outline: 0;
   border-bottom: 1px solid #0b0b0d;
 }
 .poem-results {
@@ -369,7 +369,7 @@ footer .scholars_lab_logo img {
 }
 #tabs h2 {
   color: #fff;
-  font: 2.4em Georgia, "Times New Roman," Times, serif;
+  font: 2.4em Georgia, "Times New Roman", Times, serif;
   background: url("../images/bg_hdr.gif") left 8px no-repeat;
   letter-spacing: 0.05em;
   padding: 14px 0 10px;

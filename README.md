@@ -1,3 +1,7 @@
+### Development Environment
+
+- Developed locally with MAMP 3.2.1 running PHP 5.6.7, node 0.12.7, npm 2.12.1
+
 ### Dependencies
 
 - npm: gulp, gulp-stylus, autoprefixer-stylus
@@ -24,5 +28,3 @@
 - If the poem has any resources associated with it, add them in the "Resources" field. For media files, use the built-in "Add Media" button of the WYSIWYG editor.
 - Hit "Publish."
 - The home page of the site shows whichever poem has the category "Featured." If this category does not exist in your WP install, simple create it when creating a poem.
-
-
