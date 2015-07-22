@@ -18,6 +18,7 @@
 - There are two main stylesheets: screen.css and poem.css. Poem.css deals specifically with all elements involved in the display of the poem, such as the rhymebar and the check buttons for each line. This effectively covers everything that was in an iframe in the previous iteration of Prosody. Screen.css covers everything else in the site.
 - In order for the poems to show up, you must set WP Permalinks to Postname (i.e., pretty permalinks) in the WP settings.
 - There are two static pages in the site: Glossary and Instructions. To create these, create a new page, add the appropriate title, then copy in the content from either glossary_text.html or instructions_text.html. This should be copied into the "text" tab of the editor.
+- In WP Settings/Writing, make sure that "Wordpress should correct invalidly nested XHTML automatically" is *not* checked. If it is checked, WP will strip out breaks that are necessary for proper display of the poems and rhymebar inputs.
 
 ### Upload process
 
