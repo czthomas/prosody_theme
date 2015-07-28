@@ -113,7 +113,14 @@
                 sort($authors);
 
                 foreach ($authors as $author ) {
-                    echo "<h4>" . strtoupper(str_replace('_', ' ', $author)) . "</h4>";
+                    $author_full = explode(",", $author);
+                    $author_last = $author_full[0];
+                    if (! isset($author_full[1])) {
+                      $author_full[1] = null;
+                    }
+                    $author_first = $author_full[1];
+                    $author_right = $author_first . ' ' . $author_last;
+                    echo "<h4>" . strtoupper(str_replace('_', ' ', $author_right)) . "</h4>";
                     echo "<ul class='titles'>";
                     global $post;
 
