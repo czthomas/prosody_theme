@@ -99,20 +99,26 @@
 
                 $args = array(
                     'post_type' => 'prosody_poem',
-                    'posts_per_page' => -1
+                    'posts_per_page' => -1,
+                    'orderby' => 'title',
+                    'order' => 'ASC'
                 );
 
                 $poems = get_posts( $args );
                 foreach ($poems as $poem ) {
                     $author_name = get_post_meta( $poem->ID, 'Author', true );
-                    array_push( $authors, $author_name );
+                    if (array_key_exists($author_name, $authors)) {
+                      $authors[$author_name][] = $poem;
+                    } else {
+                      $authors[$author_name] = array($poem);
+                    }
                 }
 
                 wp_reset_postdata();
 
-                sort($authors);
+                ksort($authors);
 
-                foreach ($authors as $author ) {
+                foreach ($authors as $author=>$author_posts ) {
                     $author_full = explode(",", $author);
                     $num_names = count($author_full);
                     $author_last = $author_full[0];
@@ -132,18 +138,7 @@
                     }
                     echo "<h4>" . strtoupper(str_replace('_', ' ', $author_right)) . "</h4>";
                     echo "<ul class='titles'>";
-                    global $post;
 
-                    $args = array(
-                            'post_type' => 'prosody_poem',
-                            'meta_key' => 'Author',
-                            'meta_value' => $author,
-                            'orderby' => 'title',
-                            'order' => 'ASC',
-                            'posts_per_page' => -1
-                    );
-
-                    $author_posts = get_posts( $args );
                     foreach ($author_posts as $post ) :
                         setup_postdata( $post );
                 ?>
