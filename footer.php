@@ -27,7 +27,9 @@
         <div class="container">
         <div class="row">
             <div id="author_container" class="col-lg-6 col-md-6 col-sm-4">
-                <p><em>For Better For Verse</em> is authored by <a href="http://www.engl.virginia.edu/people/ht2t">Herbert Tucker</a>, John C. Coleman Professor of English at the <a href="http://virginia.edu">University of Virginia</a>.</p>
+                <p><em>For Better For Verse</em> is authored by <a href="http://www.engl.virginia.edu/people/ht2t">Herbert Tucker</a></p>
+                <p>John C. Coleman Professor of English</p>
+                <p><a href="http://virginia.edu">University of Virginia</a></p>
             </div>
             <div id="dept_container" class="col-lg-4 col-md-4 col-sm-4">
                 <div class="addr">University of Virginia Department of English</div>
