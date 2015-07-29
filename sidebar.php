@@ -114,12 +114,22 @@
 
                 foreach ($authors as $author ) {
                     $author_full = explode(",", $author);
+                    $num_names = count($author_full);
                     $author_last = $author_full[0];
                     if (! isset($author_full[1])) {
                       $author_full[1] = null;
                     }
-                    $author_first = $author_full[1];
-                    $author_right = $author_first . ' ' . $author_last;
+                    if (! isset($author_full[2])) {
+                      $author_full[2] = null;
+                    }
+                    if ($num_names == 2) {
+                      $author_first = $author_full[1];
+                      $author_right = $author_first . ' ' . $author_last;
+                    } elseif ($num_names == 3) {
+                      $author_first = $author_full[2];
+                      $author_suffix = $author_full[1];
+                      $author_right = $author_first . ' ' . $author_last . ' '; $author_right .= $author_suffix;
+                    }
                     echo "<h4>" . strtoupper(str_replace('_', ' ', $author_right)) . "</h4>";
                     echo "<ul class='titles'>";
                     global $post;
