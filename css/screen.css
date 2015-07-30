@@ -427,15 +427,15 @@ footer .scholars_lab_logo img {
   font-size: 1em;
   color: #a1a0a0;
 }
-#rules {
+#rules-top {
   background: #2d2d2f;
   border: 0;
   font-size: 1.3em;
 }
-#rules span {
+#rules-top span {
   color: #fff;
 }
-#rules h2 {
+#rules-top h2 {
   color: #fff;
   font: 2.4em Georgia, "Times New Roman", Times, serif;
   background: url("../images/bg_hdr.gif") left 8px no-repeat;
@@ -443,7 +443,7 @@ footer .scholars_lab_logo img {
   padding: 14px 0 10px;
   margin-top: 15px;
 }
-#rules p {
+#rules-top p {
   color: #fff;
   margin: 15px 0;
   line-height: 150%;
