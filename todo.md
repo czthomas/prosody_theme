@@ -12,4 +12,4 @@ Add some contact info for errors or do browser check and message for incompatibl
 
 ~~Fix Caesura spacing~~
 
-Look into size breaks at small widths
+~~Look into size breaks at small widths - currently won't fix.~~

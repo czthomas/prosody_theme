@@ -491,3 +491,6 @@ footer .scholars_lab_logo img {
 .ui-dialog-title:hover {
   background: #19191b;
 }
+option {
+  color: #000;
+}
