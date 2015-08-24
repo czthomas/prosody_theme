@@ -125,7 +125,7 @@ label {
   padding-bottom: 5px;
   padding-right: 10px;
   float: right;
-  bottom: 0px;
+  bottom: 0;
   right: 10px;
 }
 #utils button {
@@ -147,7 +147,7 @@ small.date {
   vertical-align: middle;
 }
 #rhymebar {
-  height: 0px;
+  height: 0;
   background: #999;
   float: left;
   width: 7px;
@@ -215,6 +215,9 @@ small.date {
 }
 #rhymeform p {
   height: 16px;
+}
+#rhymeform p:first-child {
+  height: inherit;
 }
 .indent {
   padding-left: 1em;
