@@ -40,3 +40,5 @@ function prosody_dashboard_help ()
 }
 
 add_action('wp_dashboard_setup', 'prosody_direction_widget');
+
+remove_filter('the_content', 'wpautop');
