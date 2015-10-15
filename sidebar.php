@@ -62,7 +62,7 @@
             <div class="poem-results">
                 <?php
 
-                $poem_types = array( 'ballad', 'blank_verse', 'cinquain', 'couplet', 'quatrain', 'sixain', 'song', 'sonnet', 'spenserian_stanza' );
+                $poem_types = array( 'ballad', 'blank_verse', 'cinquain', 'couplet', 'octave', 'ode', 'quatrain', 'roundel', 'sixain', 'song', 'sonnet', 'spenserian_stanza', 'tercet' );
 
 
                 foreach ($poem_types as $type ) {
