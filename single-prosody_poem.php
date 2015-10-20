@@ -33,6 +33,8 @@
             <span>&#160;&#160;&#160;Foot division <input id="togglefeet" class="on" name="togglefeet" value="on" type="checkbox" checked="checked"/></span>
             <span>&#160;&#160;&#160;Caesura <input id="togglecaesura" class="on" name="togglecaesura" value="on" type="checkbox"/></span>
             </div>
+            <div id='colorblock'>
+            </div>
         </div>
 
         <?php endwhile; else: ?>

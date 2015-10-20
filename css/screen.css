@@ -494,3 +494,8 @@ footer .scholars_lab_logo img {
 option {
   color: #000;
 }
+#colorblock {
+  height: 10px;
+  width: 10px;
+  background: #00f;
+}
