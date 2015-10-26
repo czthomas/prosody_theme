@@ -17,7 +17,7 @@ input {
 a,
 a:visited {
   color: #a1a1a3;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover,
 a:active {
@@ -262,6 +262,7 @@ button {
 .poem-results h4 {
   color: #666;
   border-bottom: 1px solid #19191b;
+  border-top: 1px solid #19191b;
   padding: 15px 2px;
 }
 .poem-results ul {
@@ -272,7 +273,6 @@ button {
   list-style-type: none;
 }
 .titles li {
-  background: url("../images/dashes.gif") bottom repeat-x;
   padding: 15px 2px;
 }
 .titles a {

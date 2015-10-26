@@ -128,6 +128,9 @@
                     if (! isset($author_full[2])) {
                       $author_full[2] = null;
                     }
+                    if ($num_names == 1) {
+                      $author_right = $author_last;
+                    }
                     if ($num_names == 2) {
                       $author_first = $author_full[1];
                       $author_right = $author_first . ' ' . $author_last;
