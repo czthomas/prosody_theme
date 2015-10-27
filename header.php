@@ -73,7 +73,8 @@
         <?php endif; ?>
         <div id="intro" class="col-lg-4 col-md-4 col-sm-4">
             <p><strong><?php bloginfo('name'); ?></strong>: <?php bloginfo('description'); ?></p>
-            <h2 id="tagline"><a href="http://www.engl.virginia.edu">a project of the University of Virginia English Department</a></h2>
+            <!-- <h2 id="tagline"><a href="http://www.engl.virginia.edu">a project of the University of Virginia English Department</a></h2> -->
+            <img id=tagline src="<?php echo get_template_directory_uri(); ?>/images/tagline.gif" alt="Link to U.Va. English Department">
         </div>
         </div>
         </header>
@@ -85,4 +86,3 @@
             </div>
         </nav>
         </div><!-- closes .container -->
-
