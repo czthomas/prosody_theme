@@ -12,7 +12,8 @@ body,
 select,
 textarea,
 input {
-  font: 100% Arial, Verdana, Helvetica, sans-serif;
+  /*font: 100% Arial, Verdana, Helvetica, sans-serif;*/
+  font: 100% 'Open Sans', sans-serif;
 }
 a,
 a:visited {
@@ -239,7 +240,8 @@ button {
   text-align: right;
   line-height: 40px;
   font-weight: normal;
-  font-family: Arial, Verdana, Helvetica, sans-serif;
+  /*font-family: Arial, Verdana, Helvetica, sans-serif;*/
+  font: 100% 'Open Sans', sans-serif;
   text-decoration: none;
   cursor: pointer;
   margin: 0;
