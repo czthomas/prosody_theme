@@ -33,7 +33,7 @@
             <span>&#160;&#160;&#160;Foot division <input id="togglefeet" class="on" name="togglefeet" value="on" type="checkbox" checked="checked"/></span>
             <span>&#160;&#160;&#160;Caesura <input id="togglecaesura" class="on" name="togglecaesura" value="on" type="checkbox"/></span>
             <!-- Within this chunk, move the javascript call out to handlers -->
-            <span id="toggle-discrepancies" style="display:none">&#160;&#160;&#160;Syncopation <input id="togglediscrepancies" onclick="toggledifferences(this)" name="togglediscrepancies" value="off" type="checkbox"/></span>
+            <span>&#160;&#160;&#160;Syncopation <input id="togglediscrepancies" onclick="toggledifferences(this)" name="togglediscrepancies" value="off" type="checkbox"/></span>
             </div>
         </div>
 
