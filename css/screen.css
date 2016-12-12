@@ -215,7 +215,7 @@ button {
 }
 #sidebar h4 {
   color: #ccc;
-  background-color: #333;
+  border-top: 4px solid #555;
   padding-left: 8px;
 }
 .poem-sort-method {
