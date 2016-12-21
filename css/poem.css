@@ -56,6 +56,9 @@ span.caesura:hover {
 }
 p.prosody-note {
   display: none;
+  color: #ddd;
+  font-size: 1.4em;
+  line-height: 1.5;
 }
 p.prosody-note-show {
   font-size: 12px;
