@@ -6,7 +6,7 @@ span:hover {
   background: #444;
 }
 span.prosody-shadowsyllable {
-  display: table-cell;
+  display: inline-block;
   empty-cells: show;
   text-align: center;
   font-size: 13px;
