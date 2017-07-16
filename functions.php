@@ -44,20 +44,21 @@ add_action('wp_dashboard_setup', 'prosody_direction_widget');
 remove_filter('the_content', 'wpautop');
 
 // Code for adding bulk action to process metadata
+if (class_exists('Seravo_Custom_Bulk_Action')) {
+  $bulk_action = new Seravo_Custom_Bulk_Action(array('post_type' => 'prosody_poem'));
 
-$bulk_action = new Seravo_Custom_Bulk_Action(array('post_type' => 'prosody_poem'));
-
-$bulk_action->register_bulk_action(array(
-  'menu_text' => 'Update Posts',
-  'admin_notice' => 'Posts Updated',
-  'callback' => function($post_ids) {
-      foreach ($post_ids as $post_id) {
-        global $post;
-        $post = get_post($post_id);
-        prosody_xml_transform($post);
+  $bulk_action->register_bulk_action(array(
+    'menu_text' => 'Update Posts',
+    'admin_notice' => 'Posts Updated',
+    'callback' => function($post_ids) {
+        foreach ($post_ids as $post_id) {
+          global $post;
+          $post = get_post($post_id);
+          prosody_xml_transform($post);
+        }
+        return true;
       }
-      return true;
-    }
-));
+  ));
 
-$bulk_action->init();
+  $bulk_action->init();
+}
