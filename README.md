@@ -5,6 +5,7 @@
 ### Dependencies
 
 - npm: gulp, gulp-stylus, autoprefixer-stylus
+- WP Plugins: Custom Bulk Action plugin by Seravo
 
 ### Gulp tasks
 
