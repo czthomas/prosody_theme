@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
-      stylus = require('gulp-stylus'),
-      autoprefixer = require('autoprefixer-stylus');
+    stylus = require('gulp-stylus'),
+    autoprefixer = require('autoprefixer-stylus'),
+    jshint = require('gulp-jshint');
 
 
 gulp.task('stylus', function() {
@@ -9,6 +10,12 @@ gulp.task('stylus', function() {
         use: [autoprefixer()]
     }))
     .pipe(gulp.dest('css/'));
+});
+
+gulp.task('lint', function() {
+	return gulp.src('./js/utility.js')
+	.pipe(jshint())
+	.pipe(jshint.reporter('default'))
 });
 
 gulp.task('watch', function() {

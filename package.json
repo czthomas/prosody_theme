@@ -10,5 +10,9 @@
     "gulp-stylus": "^2.0.1",
     "html5shiv": "^3.7.2",
     "normalize.css": "^3.0.3"
+  },
+  "devDependencies": {
+    "gulp-jshint": "^2.0.4",
+    "jshint": "^2.9.5"
   }
 }
