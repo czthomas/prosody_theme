@@ -18,6 +18,12 @@ gulp.task('lint', function() {
 	.pipe(jshint.reporter('default'))
 });
 
+gulp.task('plugin_lint', function() {
+	return gulp.src('../../plugins/prosody_plugin/js/handlers.js')
+	.pipe(jshint())
+	.pipe(jshint.reporter('default'))
+});
+
 gulp.task('watch', function() {
     gulp.watch('**/*.styl', ['stylus']);
 });
