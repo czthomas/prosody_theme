@@ -14,13 +14,20 @@ gulp.task('stylus', function() {
 
 gulp.task('lint', function() {
 	return gulp.src('./js/utility.js')
-	.pipe(jshint())
+	.pipe(jshint({'eqeqeq': true}))
 	.pipe(jshint.reporter('default'))
 });
 
 gulp.task('plugin_lint', function() {
 	return gulp.src('../../plugins/prosody_plugin/js/handlers.js')
-	.pipe(jshint())
+	.pipe(jshint(
+        {
+            'eqeqeq': true,
+            'latedef': 'nofunc',
+            'shadow': false,
+            'undef': true
+        }
+    ))
 	.pipe(jshint.reporter('default'))
 });
 
