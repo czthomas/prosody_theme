@@ -468,6 +468,9 @@ footer .scholars_lab_logo img {
   font-size: 1.8em;
   margin-bottom: 20px;
 }
+#meter-select select {
+  color: #000;
+}
 #meter-select option {
   color: #000;
 }
