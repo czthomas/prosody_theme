@@ -5,41 +5,13 @@
     <title><?php echo wp_title( '|', true, 'right' ); ?><?php echo get_bloginfo( 'name' ); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/normalize.css'; ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/bootstrap.min.css'; ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/jquery-ui.css'; ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/screen.css'; ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri() . '/css/poem.css'; ?>">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic' rel='stylesheet' type='text/css'>
-
+    <!-- Javascripts -->
     <!-- HTML5 Shiv -->
     <!--[if lt IE 9]>
         <script src="<?php echo get_template_directory_uri(); ?>/js/html5shiv.js"></script>
     <![endif]-->
 
-    <!-- Javascripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/popup.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/utility.js"></script>
-
     <script type="text/javascript">var tb_pathToImage = "<?php echo get_template_directory_uri(); ?>/images/loadingAnimation.gif";</script>
-
-    <?php if ( is_front_page() ) : ?>
-        <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.cycle.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('#logo').cycle({
-                            fx: 'none',
-                            timeout:  100,
-                            speed:    500,
-                            delay:    -100,
-                            nowrap:  1,
-                });
-             });
-        </script>
-    <?php endif; ?>
 
     <!-- RSS feed, Atom feed, pingback url -->
 
