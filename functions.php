@@ -6,9 +6,8 @@ function prosody_register_nav_menu() {
 add_action( 'init', 'prosody_register_nav_menu' );
 
 // Enqeue js and css
-function prosody_queue_javascript ()
+function prosody_queue_scripts ()
 {
-
 
     wp_enqueue_style(
         'normalize',
@@ -37,15 +36,7 @@ function prosody_queue_javascript ()
     wp_enqueue_style(
         'screen',
         get_template_directory_uri() . '/css/screen.css',
-        array(),
-        null,
-        false
-        );
-
-    wp_enqueue_style(
-        'poem',
-        get_template_directory_uri() . '/css/poem.css',
-        array(),
+        array('normalize', 'bootstrap', 'jquery-ui-css'),
         null,
         false
         );
@@ -93,7 +84,7 @@ function prosody_queue_javascript ()
         );
 }
 
-add_action('wp_enqueue_scripts', 'prosody_queue_javascript');
+add_action('wp_enqueue_scripts', 'prosody_queue_scripts');
 
 function prosody_direction_widget ()
 {
