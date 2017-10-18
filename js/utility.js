@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-    $('#rhyme').prev().hide();
-
     // Set the width of #utils and then resize as necessary
     function utilSize () {
         var contentWidth = $('.poem-home').width();
@@ -36,8 +34,5 @@ $(document).ready(function(){
 
     // Tabs for the Instructions page
     $( '#tabs' ).tabs();
-
-    // Dialog box for the meter
-    $('#meter-select').dialog({ autoOpen: false });
 
 });
