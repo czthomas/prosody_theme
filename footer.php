@@ -4,11 +4,12 @@
                     <label for="foot-select">Please identify the meter of the line</label><br/>
                     <select id="foot-select" name="foot" title="Name of foot">
                         <option value="--+">anapestic</option>
-                                    <option value="+--">dactylic</option>
-                                    <option value="-+">iambic</option>
-                                    <option value="--">pyrrhic</option>
-                                    <option value="++">spondaic</option>
-                      <option value="+-">trochaic</option>
+                        <option value="+--">dactylic</option>
+                        <option value="-+">iambic</option>
+                        <option value="+-">trochaic</option>
+                        <option value="-+-">amphebraic</option>
+                        <option value="+++">dolnik (three stresses)</option>
+                        <option value="++++">dolnik (four stresses)</option>
                     </select><br/><br/>
                     <label for="number-select">Please describe the number of feet</label><br/>
                     <select id="number-select" name="number" title="Number of feet">
