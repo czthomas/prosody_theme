@@ -8,8 +8,8 @@
                         <option value="-+">iambic</option>
                         <option value="+-">trochaic</option>
                         <option value="-+-">amphebraic</option>
-                        <option value="+++">dolnik (three stresses)</option>
-                        <option value="++++">dolnik (four stresses)</option>
+                        <option value="+++">three-foot dolnik</option>
+                        <option value="++++">four-foot dolnik</option>
                     </select><br/><br/>
                     <label for="number-select">Please describe the number of feet</label><br/>
                     <select id="number-select" name="number" title="Number of feet">
