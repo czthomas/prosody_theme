@@ -1,5 +1,14 @@
 <div id="sidebar">
-    <h2>List of Poems</h2>
+    <?php
+        $categories = get_the_category();
+
+        $category = $categories[0];
+        if($category->slug == 'featured') {
+            $category = $categories[1];
+        }
+    ?>
+
+    <h2><?php echo $category->name ?></h2>
 
     <div id="poem-sorting">
     <div id="accordion">
@@ -10,6 +19,7 @@
                 <ul class="titles">
                     <?php
                         $args = array(
+                            'category_name' => $category->slug,
                             'post_type' => 'prosody_poem',
                             'orderby' => 'title',
                             'order' => 'ASC',

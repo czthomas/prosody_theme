@@ -1,9 +1,14 @@
 <?php get_header(); ?>
 
 <?php
+    $category = get_category(get_query_var('cat'))->slug;
+    if(!$category) {
+        $category = 'featured';
+    }
+
     $poem_args = array(
         'post_type' => 'prosody_poem',
-        'category_name' => 'featured'
+        'category_name' => $category
         );
     $poems = new WP_Query( $poem_args );
 ?>
@@ -11,7 +16,7 @@
 <div id="main">
 <div class="container">
 <div class="row">
-    <?php if ( $poems->have_posts() ) : while ( $poems->have_posts() ) : $poems->the_post(); ?>
+    <?php if ( $poems->have_posts() ) : $poems->the_post(); ?>
         <?php $resources = get_post_meta( $post->ID, 'Resources', true ); ?>
         <?php if ( $resources ): ?>
             <ul class="poem_tabs">
@@ -43,7 +48,7 @@
             </div>
         </div>
 
-        <?php endwhile; else: ?>
+        <?php else: ?>
 
             <h2>Getting Started</h2>
             <p>Select a poem to begin.</p>

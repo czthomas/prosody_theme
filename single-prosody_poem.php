@@ -4,7 +4,7 @@
 <div class="container">
 <div class="row">
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) : the_post(); ?>
 
     <?php $resources = get_post_meta( $post->ID, 'Resources', true ); ?>
     <?php if ( $resources ): ?>
@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <?php endwhile; else: ?>
+        <?php else: ?>
 
             <h2>Getting Started</h2>
             <p>Select a poem to begin.</p>
