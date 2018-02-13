@@ -1,12 +1,18 @@
 // global styles
 
+color-highlight = #fff4db
+color-midtone =   #ce6a37
+color-key =       #6b0000
+color-bgoff =     #092027
+color-bg =        #261b19
+
 *
     margin 0
     padding 0
 
 body
     color #fff
-    background #232323 url(../images/bg.jpg) repeat-x
+    background color-bg url(../images/bg.jpg) repeat-x
     font-size 18px
     line-height 1em
 
@@ -19,7 +25,7 @@ a, a:visited
     text-decoration none
 
 a:hover, a:active
-    color #c99a73
+    color color-midtone
 
 *:focus
     outline 0
@@ -34,11 +40,11 @@ ol
         margin-left 25px
 
 blockquote
-    background #242424 url(../images/quote.gif) no-repeat 10px 22px
+    background bg-off url(../images/quote.gif) no-repeat 10px 22px
     font italic 1.5em Georgia, "Times New Roman", Times, serif
     padding 22px 22px 22px 85px
     margin 15px 0 15px 20px
-    border 1px solid #1c1c1c
+    border 1px solid color-key
     border-width 0 0 1px 3px
 
     p
@@ -136,17 +142,20 @@ nav
     padding-right 0
 
 #main
-    background #2d2d2f
-    border-top 1px solid #444446
+    background color-bgoff
+    border-top 1px solid color-key
     padding 40px 0 50px
     z-index 1
     overflow visible
 
 .poem-home
-    border solid 10px #666
+    color color-highlight
+    border solid 2px color-key
+    border-radius 20px
+    padding 5px
     position relative
     height 654px
-    background-color #222222
+    background-color color-bg
 
 .scrollfix
     overflow auto
@@ -208,7 +217,7 @@ button
 
 .prosody-note
     display none
-    color #ccc
+    color color-highlight
     font-size 1.4em
     line-height 1.5
 

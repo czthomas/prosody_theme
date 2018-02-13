@@ -4,7 +4,7 @@
 }
 body {
   color: #fff;
-  background: #232323 url("../images/bg.jpg") repeat-x;
+  background: #261b19 url("../images/bg.jpg") repeat-x;
   font-size: 18px;
   line-height: 1em;
 }
@@ -21,7 +21,7 @@ a:visited {
 }
 a:hover,
 a:active {
-  color: #c99a73;
+  color: #ce6a37;
 }
 *:focus {
   outline: 0;
@@ -36,11 +36,11 @@ ol li {
   margin-left: 25px;
 }
 blockquote {
-  background: #242424 url("../images/quote.gif") no-repeat 10px 22px;
+  background: bg-off url("../images/quote.gif") no-repeat 10px 22px;
   font: italic 1.5em Georgia, "Times New Roman", Times, serif;
   padding: 22px 22px 22px 85px;
   margin: 15px 0 15px 20px;
-  border: 1px solid #1c1c1c;
+  border: 1px solid #6b0000;
   border-width: 0 0 1px 3px;
 }
 blockquote p {
@@ -128,17 +128,20 @@ nav li a:visited a:focus {
   padding-right: 0;
 }
 #main {
-  background: #2d2d2f;
-  border-top: 1px solid #444446;
+  background: #092027;
+  border-top: 1px solid #6b0000;
   padding: 40px 0 50px;
   z-index: 1;
   overflow: visible;
 }
 .poem-home {
-  border: solid 10px #666;
+  color: #fff4db;
+  border: solid 2px #6b0000;
+  border-radius: 20px;
+  padding: 5px;
   position: relative;
   height: 654px;
-  background-color: #222;
+  background-color: #261b19;
 }
 .scrollfix {
   overflow: auto;
@@ -198,7 +201,7 @@ button {
 }
 .prosody-note {
   display: none;
-  color: #ccc;
+  color: #fff4db;
   font-size: 1.4em;
   line-height: 1.5;
 }
