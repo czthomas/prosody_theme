@@ -1,10 +1,14 @@
 <div id="sidebar">
     <?php
-        $categories = get_the_category();
+        if(get_query_var('cat')) {
+            $category = get_category(get_query_var('cat'));
+        } else {
+            $categories = get_the_category();
 
-        $category = $categories[0];
-        if($category->slug == 'featured') {
-            $category = $categories[1];
+            $category = $categories[0];
+            if($category->slug == 'featured') {
+                $category = $categories[1];
+            }
         }
     ?>
 
