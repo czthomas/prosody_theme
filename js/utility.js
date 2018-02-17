@@ -1,14 +1,14 @@
 $(document).ready(function(){
 
     // Set the width of #utils and then resize as necessary
-    function utilSize () {
+    /*function utilSize () {
         var contentWidth = $('.poem-home').width();
         $('#utils').width(contentWidth + 10);
     }
     utilSize();
     $(window).resize( function() {
         utilSize();
-    });
+    });*/
 
     // Tabs for poem resources and text
     $('#poem_resources').hide();
@@ -25,7 +25,7 @@ $(document).ready(function(){
 
     // Accordion for the sidebar
     $( '#accordion' ).accordion({
-        icons: { "header": "ui-icon-plus", "activeHeader": "ui-icon-minus"},
+        icons: { "header": "ui-icon-triangle-1-e", "activeHeader": "ui-icon-triangle-1-s"},
         activate: function (e, ui) {
             localStorage.setItem('accordion-active', $(this).accordion( "option", "active"));
         },
