@@ -150,15 +150,16 @@ nav li a:visited a:focus {
 }
 .poem-home {
   color: #fff4db;
-  border: solid 2px #6b0000;
   padding: 5px;
   position: relative;
-  min-height: 654px;
+  min-height: 45vh;
   background-color: #261b19;
+  border-top: 2px solid #6b0000;
 }
 @media (min-width: 768px) {
   .poem-home {
-    border-right: none;
+    border-left: 2px solid #6b0000;
+    border-bottom: 2px solid #6b0000;
     border-radius: 20px 0 0 20px;
   }
 }
@@ -234,11 +235,13 @@ button {
 }
 #sidebar-container {
   background-color: #261b19;
-  border: 2px solid #6b0000;
+  border-top: 2px solid #6b0000;
+  border-bottom: 2px solid #6b0000;
+  padding-bottom: 16px;
 }
 @media (min-width: 768px) {
   #sidebar-container {
-    border-left: none;
+    border-right: 2px solid #6b0000;
     border-radius: 0 20px 20px 0;
   }
 }
@@ -271,7 +274,7 @@ button {
   padding: 10px 10px 15px 15px;
   font-size: 0.9em;
   color: #fff;
-  max-height: 25%;
+  max-height: 30vh;
   overflow: auto;
 }
 .poem-results h4 {
@@ -295,6 +298,8 @@ button {
   border: none;
   border-left: 2px solid #6b0000;
   border-bottom: 2px solid #6b0000;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 #accordion .ui-icon {
   color: #fff4db;
@@ -526,6 +531,9 @@ footer .scholars_lab_logo img {
 }
 .ui-dialog-title:hover {
   background: #19191b;
+}
+#rhymegutter {
+  padding-bottom: 2em;
 }
 #rhymebar {
   float: left;

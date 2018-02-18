@@ -161,14 +161,15 @@ nav
 
 .poem-home
     color color-highlight
-    border solid 2px color-key
     padding 5px
     position relative
-    min-height 654px
+    min-height 45vh
     background-color color-bg
+    border-top 2px solid color-key
 
     @media (min-width: 768px)
-        border-right none
+        border-left 2px solid color-key
+        border-bottom 2px solid color-key
         border-radius 20px 0 0 20px
 
 .scrollfix
@@ -245,10 +246,12 @@ button
 
 #sidebar-container
     background-color color-bg
-    border 2px solid color-key
+    border-top 2px solid color-key
+    border-bottom 2px solid color-key
+    padding-bottom 16px
 
     @media (min-width: 768px)
-        border-left none
+        border-right 2px solid color-key
         border-radius 0 20px 20px 0
 
 #sidebar
@@ -282,7 +285,7 @@ button
     padding 10px 10px 15px 15px
     font-size .9em
     color #fff
-    max-height 25%
+    max-height 30vh
     overflow auto
 
     h4
@@ -307,6 +310,8 @@ button
         border none
         border-left 2px solid color-key
         border-bottom 2px solid color-key
+        border-bottom-left-radius 20px
+        border-top-left-radius 20px
     .ui-icon
         color color-highlight
 
@@ -548,6 +553,10 @@ footer
   background #19191b
 
 // Styles from rhyme controls
+
+#rhymegutter
+    padding-bottom 2em
+
 #rhymebar
     float left
     width 7px
