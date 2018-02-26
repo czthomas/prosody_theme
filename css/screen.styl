@@ -1,12 +1,18 @@
 // global styles
 
+color-highlight = #fff4db
+color-midtone =   #ce6a37
+color-key =       #6b0000
+color-bgoff =     #092027
+color-bg =        #261b19
+
 *
     margin 0
     padding 0
 
 body
     color #fff
-    background #232323 url(../images/bg.jpg) repeat-x
+    background color-bg
     font-size 18px
     line-height 1em
 
@@ -19,7 +25,7 @@ a, a:visited
     text-decoration none
 
 a:hover, a:active
-    color #c99a73
+    color color-midtone
 
 *:focus
     outline 0
@@ -34,11 +40,11 @@ ol
         margin-left 25px
 
 blockquote
-    background #242424 url(../images/quote.gif) no-repeat 10px 22px
+    background bg-off url(../images/quote.gif) no-repeat 10px 22px
     font italic 1.5em Georgia, "Times New Roman", Times, serif
     padding 22px 22px 22px 85px
     margin 15px 0 15px 20px
-    border 1px solid #1c1c1c
+    border 1px solid color-key
     border-width 0 0 1px 3px
 
     p
@@ -61,15 +67,18 @@ hr
     border 0
     display block
 
+#main > .container > .row
+    @media (min-width: 768px)
+        display flex
 
 // header styles
 header
-    background url(../images/bg_wrapper.jpg) right no-repeat
-    height 185px
+    background color-bg
     margin-top 22px
+    margin-bottom 22px
 
 #logo
-    margin-top 50px
+    margin-top 22px
     position relative
 
     img + img
@@ -106,28 +115,36 @@ nav
     height 39px
     overflow visible
     margin-top 10px
+    text-align center
 
     li
+        display inline-block
         list-style none
-        float left
+        float none
         height 40px
+        width 10em
+        border 2px solid color-midtone
+        border-radius 20px
+        background-color color-bg
 
         a, a:visited
             height 25px
-            margin 0 15px 0 0
+            margin 0 auto 0 auto
             display block
             float left
             padding 10px 20px 6px
             text-decoration none
-            color #a1a0a0
+            color color-midtone
             z-index 1000
+            text-align center
+            width 100%
 
             a:hover, a:focus
                 background #2d2d2f url(../images/bg_nav.gif) repeat-x
                 color #fff
 
 .current-menu-item
-    background #2d2d2f url(../images/bg_nav.gif) repeat-x
+    background-color color-key
 
 // Content div styles
 
@@ -136,21 +153,30 @@ nav
     padding-right 0
 
 #main
-    background #2d2d2f
-    border-top 1px solid #444446
+    background color-bgoff
+    border-top 2px solid color-key
     padding 40px 0 50px
     z-index 1
     overflow visible
 
 .poem-home
-    border solid 10px #666
+    color color-highlight
+    padding 5px
     position relative
-    height 654px
-    background-color #222222
+    min-height 45vh
+    background-color color-bg
+    border-top 2px solid color-key
+
+    @media (min-width: 768px)
+        border-left 2px solid color-key
+        border-bottom 2px solid color-key
+        border-radius 20px 0 0 20px
 
 .scrollfix
-    overflow auto
-    height 634px
+    width 100%
+
+#poem_text
+    display flex
 
 // Poem styles
 
@@ -158,9 +184,10 @@ nav
     padding-top 15px
     font-size 1.28em
     float left
+    min-width 80%
+    width 100%
     margin-left 25px
-    width 90%
-    overflow auto
+    flex auto
 
     #poemtitle
         margin 10px 0 15px
@@ -208,41 +235,42 @@ button
 
 .prosody-note
     display none
-    color #ccc
+    color color-highlight
     font-size 1.4em
     line-height 1.5
 
 .prosody-note-button
     display none
 
-
 // Sidebar styles
+
+#sidebar-container
+    background-color color-bg
+    border-top 2px solid color-key
+    border-bottom 2px solid color-key
+    padding-bottom 16px
+
+    @media (min-width: 768px)
+        border-right 2px solid color-key
+        border-radius 0 20px 20px 0
 
 #sidebar
     h2
-        background url(../images/bg_hdr_sidebar.gif) top left 70% no-repeat
         font 2.5em Georgia, "Times New Roman", Times, serif
-        text-align right
+        text-align center
         margin 0
         padding 20px 0 14px
+        color color-highlight
 
     h3
-        text-align right
+        text-align center
         font 2em Georgia, "Times New Roman", Times, serif
 
-    h4
-        color #ccc
-        border-top 4px solid #555
-        padding-left 8px
-
 .poem-sort-method
-    color #fff
     display block
     height 40px
-    background #19191b
-    border 1px solid #19191b
     padding 0 24px
-    text-align right
+    text-align center
     line-height 40px
     font-weight normal
     // font-family Arial, Verdana, Helvetica, sans-serif
@@ -254,23 +282,38 @@ button
     border-bottom 1px solid #0b0b0d
 
 .poem-results
-    background-color #000
     padding 10px 10px 15px 15px
     font-size .9em
     color #fff
-    max-height 350px
+    max-height 30vh
     overflow auto
 
     h4
         // font-size 1.2em
-        color #666
-        border-bottom 1px solid #19191b
-        border-top 1px solid #19191b
+        color color-highlight
+        display block
+        text-align center
+        border-bottom 1px solid color-key
         padding 15px 2px
 
     ul
         margin-top -1px
         overflow auto
+
+#accordion
+    .ui-widget-content
+        background color-bg
+        border none
+    .ui-accordion-header
+        color color-highlight
+        background color-bg
+        border none
+        border-left 2px solid color-key
+        border-bottom 2px solid color-key
+        border-bottom-left-radius 20px
+        border-top-left-radius 20px
+    .ui-icon
+        color color-highlight
 
 .titles
     list-style-type none
@@ -280,15 +323,18 @@ button
         padding 15px 2px
 
     a
-        color #A1A1A3
+        display block
+        color color-midtone
+        text-align left
 
 //  Footer styles
 
 footer
-    background url('../images/bg_footer.gif') repeat-x
+    background-color color-bg
     padding-top 18px
     height 125px
     font-size 12px
+    border-top 2px solid color-key
 
     a, a:visited
         color #AFAFAF
@@ -506,27 +552,37 @@ footer
 .ui-dialog-title:hover
   background #19191b
 
-// Styles for rhyme controls
+// Styles from rhyme controls
+#rhymegutter
+    padding-bottom 2em
+
 #rhymebar
-    height 0
-    background #999
     float left
     width 7px
-    cursor pointer
-    border-right 1px solid #cfcfcf
-    &:hover
-        background #ddd
+    display flex
+    flex-direction column
+    
+    .rhymefield
+        background #999
+        border-right 1px solid #cfcfcf
+        flex-grow 1
+        cursor pointer
+
+        &:hover
+            background #ddd
 
 #rhyme
     height 0
     width 25px
     float left
-    background #444
     .lrhyme
         height 30px
         padding 0 4px
     .check
         padding 0 3px !important
+    form
+        background #444
+        padding-bottom 10px
     input
         // width 9px
         background #656565
@@ -564,3 +620,17 @@ footer
     font-size 9px
     &:hover
         background #fff
+
+#utils
+    float left
+    width 100%
+    position absolute
+    bottom 4px
+    background-color #00000000
+
+    .inner-util
+        background-color #00000000
+        width 100%
+        display inline-block
+        margin auto
+        text-align center

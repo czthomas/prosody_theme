@@ -27,28 +27,10 @@
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/wz_tooltip.js"></script>
     <div class="container">
         <header>
-        <div class="row">
-        <?php $url = home_url(); ?>
-        <?php if (is_home()) : ?>
-            <div id="logo" class="col-lg-8 col-md-8 col-sm-8">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo01.gif" alt="" />
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo02.gif" alt="" />
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo03.gif" alt="" />
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo04.gif" alt="" />
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo05.gif" alt="" />
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo06.gif" alt="" />
-                <a href="<?php echo $url; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" /></a>
+        <div class="row center-block">
+            <div id="logo" class="center-block">
+                <a href="<?php echo $url; ?>"><img class="center-block" src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" /></a>
             </div>
-        <?php else: ?>
-            <div id="logo" class="col-lg-8 col-md-8 col-sm-8">
-                <a href="<?php echo $url; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" /></a>
-            </div>
-        <?php endif; ?>
-        <div id="intro" class="col-lg-4 col-md-4 col-sm-4">
-            <p><strong><?php bloginfo('name'); ?></strong>: <?php bloginfo('description'); ?></p>
-            <!-- <h2 id="tagline"><a href="http://www.engl.virginia.edu">a project of the University of Virginia English Department</a></h2> -->
-            <img id=tagline src="<?php echo get_template_directory_uri(); ?>/images/tagline.gif" alt="Link to U.Va. English Department">
-        </div>
         </div>
         </header>
         <nav>
