@@ -538,20 +538,20 @@ footer .scholars_lab_logo img {
 #rhymebar {
   float: left;
   width: 7px;
-  cursor: pointer;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-}
-#rhymebar:hover {
-  background: #ddd;
 }
 #rhymebar .rhymefield {
   background: #999;
   border-right: 1px solid #cfcfcf;
   -ms-flex-positive: 1;
       flex-grow: 1;
+  cursor: pointer;
+}
+#rhymebar .rhymefield:hover {
+  background: #ddd;
 }
 #rhyme {
   height: 0;
