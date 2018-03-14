@@ -14,7 +14,7 @@
         </ul>
     <?php endif; ?>
 
-    <div class="content poem-home col-lg-8 col-md-8 col-sm-8">
+    <div class="content poem-home col-lg-6 col-md-6 col-sm-8">
         <div class="scrollfix">
             <div id="poem_text">
                 <?php the_content(); ?>
@@ -44,7 +44,7 @@
         <?php endif; ?>
     </div><!-- ends .content -->
 
-    <div id="sidebar-container" class="col-lg-4 col-md-4 col-sm-4">
+    <div id="sidebar-container" class="col-lg-3 col-md-3 col-sm-4">
         <?php get_sidebar(); ?>
     </div>
 

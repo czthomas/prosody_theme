@@ -1,17 +1,17 @@
 // global styles
 
-color-highlight = #fff4db
-color-midtone =   #ce6a37
-color-key =       #6b0000
-color-bgoff =     #092027
-color-bg =        #261b19
+color-highlight = #dee8c5
+color-midtone =   #d4daa8
+color-key =       #d5e198
+color-bgoff =     #b8a363
+color-bg =        rgba(38, 39, 33, 0.85)
 
 *
     margin 0
     padding 0
 
 body
-    color #fff
+    color #ffffff
     background color-bg
     font-size 18px
     line-height 1em
@@ -19,6 +19,7 @@ body
 body, select, textarea, input
     // font 100% Arial, Verdana, Helvetica, sans-serif
     font 100% 'Open Sans', sans-serif
+    background url(../images/bg.jpg) color-bgoff
 
 a, a:visited
     color #A1A1A3
@@ -73,9 +74,14 @@ hr
 
 // header styles
 header
-    background color-bg
     margin-top 22px
     margin-bottom 22px
+
+body > script + .container
+    background linear-gradient(color-bg 10%, rgba(0,0,0,0))
+    width 100%
+    margin none
+    padding none 
 
 #logo
     margin-top 22px
@@ -111,11 +117,13 @@ header
 
 
 nav
-    font-size 1.4em
+    font-size 1.6em
     height 39px
     overflow visible
     margin-top 10px
     text-align center
+    font-family Georgia, serif
+    font-style bold
 
     li
         display inline-block
@@ -144,7 +152,10 @@ nav
                 color #fff
 
 .current-menu-item
-    background-color color-key
+    background-color color-bgoff
+
+    a, a:visited
+        color black
 
 // Content div styles
 
@@ -153,14 +164,11 @@ nav
     padding-right 0
 
 #main
-    background color-bgoff
-    border-top 2px solid color-key
     padding 40px 0 50px
     z-index 1
     overflow visible
 
 .poem-home
-    color color-highlight
     padding 5px
     position relative
     min-height 45vh
@@ -171,6 +179,9 @@ nav
         border-left 2px solid color-key
         border-bottom 2px solid color-key
         border-radius 20px 0 0 20px
+    
+    @media (min-width: 992px)
+        margin-left 12.5%
 
 .scrollfix
     width 100%
@@ -280,6 +291,7 @@ button
     margin 0
     outline 0
     border-bottom 1px solid #0b0b0d
+    background none
 
 .poem-results
     padding 10px 10px 15px 15px
@@ -302,18 +314,21 @@ button
 
 #accordion
     .ui-widget-content
-        background color-bg
+        background none
         border none
+
+        a
+            color #ffffff
+
     .ui-accordion-header
         color color-highlight
-        background color-bg
         border none
-        border-left 2px solid color-key
         border-bottom 2px solid color-key
-        border-bottom-left-radius 20px
-        border-top-left-radius 20px
+        margin-bottom 4px
+        padding-right 1.5em
+    
     .ui-icon
-        color color-highlight
+        background-image: url(images/ui-icons_dee8c5_256x240.png)
 
 .titles
     list-style-type none
@@ -330,11 +345,9 @@ button
 //  Footer styles
 
 footer
-    background-color color-bg
     padding-top 18px
     height 125px
     font-size 12px
-    border-top 2px solid color-key
 
     a, a:visited
         color #AFAFAF
@@ -561,10 +574,13 @@ footer
     width 7px
     display flex
     flex-direction column
+
+    .rhymespacer
+        background linear-gradient(rgba(0,0,0,0) 80%, color-key)
     
     .rhymefield
-        background #999
-        border-right 1px solid #cfcfcf
+        background color-key
+        border-right 1px solid color-highlight
         flex-grow 1
         cursor pointer
 
@@ -581,7 +597,7 @@ footer
     .check
         padding 0 3px !important
     form
-        background #444
+        background color-bg
         padding-bottom 10px
     input
         // width 9px
@@ -612,9 +628,9 @@ footer
     clear both
     float left
     width 32px
-    background #999
+    background color-key
     border-right 1px solid #cfcfcf
-    color #444
+    color black
     padding 1px
     cursor pointer
     font-size 9px
