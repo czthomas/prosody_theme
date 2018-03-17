@@ -7,13 +7,13 @@ body {
   background: rgba(38,39,33,0.85);
   font-size: 18px;
   line-height: 1em;
+  background: url("../images/bg.jpg") #b8a363;
 }
 body,
 select,
 textarea,
 input {
   font: 100% 'Open Sans', sans-serif;
-  background: url("../images/bg.jpg") #b8a363;
 }
 a,
 a:visited {
