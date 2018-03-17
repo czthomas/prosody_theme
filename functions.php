@@ -41,22 +41,6 @@ function prosody_queue_scripts ()
         false
         );
 
-    wp_enqueue_script(
-        'prosody-jquery',
-        '//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js',
-        array(),
-        null,
-        false
-        );
-
-    wp_enqueue_script(
-        'prosody-jquery-ui',
-        '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js',
-        array('prosody-jquery'),
-        null,
-        false
-        );
-
     if ( is_front_page() ) {
       wp_enqueue_script(
           'prosody-jquery-cycle',
@@ -70,7 +54,7 @@ function prosody_queue_scripts ()
     wp_enqueue_script(
         'popup',
         get_template_directory_uri() . '/js/popup.js',
-        array('prosody-jquery', 'prosody-jquery-ui'),
+        array('jquery-core', 'jquery-ui-core'),
         null,
         true
         );
@@ -78,7 +62,7 @@ function prosody_queue_scripts ()
     wp_enqueue_script(
         'utility',
         get_template_directory_uri() . '/js/utility.js',
-        array('prosody-jquery', 'prosody-jquery-ui'),
+        array('jquery-core', 'jquery-ui-core', 'jquery-ui-accordion', 'jquery-ui-tabs'),
         null,
         true
         );

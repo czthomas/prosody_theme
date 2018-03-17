@@ -1,4 +1,4 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
 
     // Set the width of #utils and then resize as necessary
     /*function utilSize () {
