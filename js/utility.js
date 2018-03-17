@@ -10,19 +10,6 @@ jQuery(document).ready(function($){
         utilSize();
     });*/
 
-    // Tabs for poem resources and text
-    $('#poem_resources').hide();
-    $('#poem_text_tab').click(function(e){
-        e.preventDefault();
-        $('#poem_resources').hide();
-        $('#poem_text').show();
-    });
-    $('#poem_resources_tab').click(function(e){
-        e.preventDefault();
-        $('#poem_text').hide();
-        $('#poem_resources').show();
-    });
-
     // Accordion for the sidebar
     $( '#accordion' ).accordion({
         icons: { "header": "ui-icon-triangle-1-e", "activeHeader": "ui-icon-triangle-1-s"},
@@ -34,5 +21,4 @@ jQuery(document).ready(function($){
 
     // Tabs for the Instructions page
     $( '#tabs' ).tabs();
-
 });

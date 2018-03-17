@@ -18,24 +18,17 @@
 <div class="row">
     <?php if ( $poems->have_posts() ) : $poems->the_post(); ?>
         <?php $resources = get_post_meta( $post->ID, 'Resources', true ); ?>
-        <?php if ( $resources ): ?>
-            <ul class="poem_tabs">
-                <li id="poem_text_tab"><a href="#">Text</a></li>
-                <li id="poem_resources_tab"><a href="#">Resources</a></li>
-            </ul>
-    <?php endif; ?>
 
     <div class="content poem-home col-lg-6 col-md-6 col-sm-8">
         <div class="scrollfix">
-            <div id="poem_text">
-                <?php the_content(); ?>
-            </div>
             <?php if ( $resources ): ?>
                 <div id="poem_resources">
-                    <h2>Resources</h2>
                     <?php echo do_shortcode( $resources ); ?>
                 </div>
             <?php endif ?>
+            <div id="poem_text">
+                <?php the_content(); ?>
+            </div>
         </div>
         <div class="row" id="utils">
             <div class="inner-util">
