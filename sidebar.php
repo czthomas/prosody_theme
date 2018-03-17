@@ -50,6 +50,7 @@
                 global $post;
 
                 $args = array(
+                        'category_name' => $category->slug,
                         'post_type' => 'prosody_poem',
                         'meta_key' => 'Difficulty',
                         'meta_value' => $difficulty,
@@ -85,6 +86,7 @@
                     global $post;
 
                     $args = array(
+                            'category_name' => $category->slug,
                             'post_type' => 'prosody_poem',
                             'meta_key' => 'Type',
                             'meta_value' => $type,
@@ -112,6 +114,7 @@
                 $authors = array();
 
                 $args = array(
+                    'category_name' => $category->slug,
                     'post_type' => 'prosody_poem',
                     'posts_per_page' => -1,
                     'orderby' => 'title',
