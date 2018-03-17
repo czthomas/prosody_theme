@@ -41,16 +41,6 @@ function prosody_queue_scripts ()
         false
         );
 
-    if ( is_front_page() ) {
-      wp_enqueue_script(
-          'prosody-jquery-cycle',
-          get_template_directory_uri(). '/js/jquery.cycle.js',
-          array('prosody-jquery'),
-          null,
-          false
-          );
-    }
-
     wp_enqueue_script(
         'popup',
         get_template_directory_uri() . '/js/popup.js',

@@ -33,22 +33,6 @@
             <?php wp_footer(); ?>
         </footer>
 
-    <?php if ( is_front_page() ) : ?>
-        <script type="text/javascript">
-            jQuery(document).ready(function($){
-                $('#logo').cycle({
-                            fx: 'none',
-                            timeout:  100,
-                            speed:    500,
-                            delay:    -100,
-                            nowrap:  1,
-                });
-             });
-        </script>
-    <?php endif; ?>
-
-
-
     <!-- Google analytics - Need to check if this is still a valid account or if it needs updating -->
     <script type="text/javascript">
 
