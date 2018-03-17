@@ -158,9 +158,9 @@ nav li a:visited a:focus {
   z-index: 1;
   overflow: visible;
 }
-.poem-home {
+.poem-home,
+.post-home {
   padding: 5px;
-  position: relative;
   min-height: 45vh;
   background-color: rgba(38,39,33,0.85);
   border-top: 2px solid #d5e198;
@@ -175,6 +175,17 @@ nav li a:visited a:focus {
 @media (min-width: 992px) {
   .poem-home {
     margin-left: 12.5%;
+  }
+}
+.post-home {
+  padding: 2em;
+  font-size: 1.28em;
+  border-bottom: 2px solid #d5e198;
+}
+@media (min-width: 768px) {
+  .post-home {
+    border: 2px solid #d5e198;
+    border-radius: 20px;
   }
 }
 .scrollfix {

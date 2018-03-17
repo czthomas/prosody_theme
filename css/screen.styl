@@ -168,13 +168,13 @@ nav
     z-index 1
     overflow visible
 
-.poem-home
+.poem-home, .post-home
     padding 5px
-    position relative
     min-height 45vh
     background-color color-bg
     border-top 2px solid color-key
 
+.poem-home
     @media (min-width: 768px)
         border-left 2px solid color-key
         border-bottom 2px solid color-key
@@ -182,6 +182,14 @@ nav
     
     @media (min-width: 992px)
         margin-left 12.5%
+
+.post-home
+    padding 2em
+    font-size 1.28em
+    border-bottom 2px solid color-key
+    @media (min-width: 768px)
+        border 2px solid color-key
+        border-radius 20px
 
 .scrollfix
     width 100%
