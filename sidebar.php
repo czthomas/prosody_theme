@@ -77,7 +77,7 @@
             <div class="poem-results">
                 <?php
 
-                $poem_types = array( 'ballad', 'blank_verse', 'cinquain', 'couplet', 'octave', 'ode', 'quatrain', 'roundel', 'sixain', 'song', 'sonnet', 'spenserian_stanza', 'tercet' );
+                $poem_types = array( 'Ode', 'Sonnet', 'Onegin Stanza', 'Ballad', 'Elegy', 'Blank verse (Белый стих)', 'Free verse with rhyme (Вольный стих)', 'Free verse (Свободный стих)', 'Syllabic verse' );
 
 
                 foreach ($poem_types as $type ) {
