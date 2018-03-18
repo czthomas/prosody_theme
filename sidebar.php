@@ -10,6 +10,8 @@
                 $category = $categories[1];
             }
         }
+
+        $tei_type = get_post_meta( $post->ID, 'tei_type', true);
     ?>
 
     <h2><?php echo $category->name ?></h2>
@@ -72,40 +74,42 @@
             ?>
 
             </div>
-        <h3 class="poem-sort-method">By Type</h3>
+        <?php if($tei_type == 'poem'): ?>
+            <h3 class="poem-sort-method">By Type</h3>
 
-            <div class="poem-results">
-                <?php
+                <div class="poem-results">
+                    <?php
 
-                $poem_types = array( 'Ode', 'Sonnet', 'Onegin Stanza', 'Ballad', 'Elegy', 'Blank verse (Белый стих)', 'Free verse with rhyme (Вольный стих)', 'Free verse (Свободный стих)', 'Syllabic verse' );
+                    $poem_types = array( 'Ode', 'Sonnet', 'Onegin Stanza', 'Ballad', 'Elegy', 'Blank verse (Белый стих)', 'Free verse with rhyme (Вольный стих)', 'Free verse (Свободный стих)', 'Syllabic verse' );
 
 
-                foreach ($poem_types as $type ) {
-                    echo "<h4>" . strtoupper(str_replace('_', ' ', $type)) . "</h4>";
-                    echo "<ul class='titles'>";
-                    global $post;
+                    foreach ($poem_types as $type ) {
+                        echo "<h4>" . strtoupper(str_replace('_', ' ', $type)) . "</h4>";
+                        echo "<ul class='titles'>";
+                        global $post;
 
-                    $args = array(
-                            'category_name' => $category->slug,
-                            'post_type' => 'prosody_poem',
-                            'meta_key' => 'Type',
-                            'meta_value' => $type,
-                            'orderby' => 'title',
-                            'order' => 'ASC',
-                            'posts_per_page' => -1
-                    );
+                        $args = array(
+                                'category_name' => $category->slug,
+                                'post_type' => 'prosody_poem',
+                                'meta_key' => 'Type',
+                                'meta_value' => $type,
+                                'orderby' => 'title',
+                                'order' => 'ASC',
+                                'posts_per_page' => -1
+                        );
 
-                    $poem_types_posts = get_posts( $args );
-                    foreach ($poem_types_posts as $post ) :
-                        setup_postdata( $post ); ?>
-                        <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-                <?php
-                    endforeach;
-                    wp_reset_postdata();
-                    echo "</ul>";
-                }
-                ?>
-            </div>
+                        $poem_types_posts = get_posts( $args );
+                        foreach ($poem_types_posts as $post ) :
+                            setup_postdata( $post ); ?>
+                            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                    <?php
+                        endforeach;
+                        wp_reset_postdata();
+                        echo "</ul>";
+                    }
+                    ?>
+                </div>
+        <?php endif ?>
         <h3 class="poem-sort-method">By Author</h3>
 
             <div class="poem-results">
