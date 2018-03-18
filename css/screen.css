@@ -70,15 +70,12 @@ hr {
     display: flex;
   }
 }
-header {
-  margin-top: 22px;
-  margin-bottom: 22px;
-}
 body > script + .container {
-  background: linear-gradient(rgba(38,39,33,0.85) 10%, rgba(0,0,0,0));
+  background: #dee8c5;
   width: 100%;
   margin: none;
   padding: none;
+  border-bottom: 4px solid #d5e198;
 }
 #logo {
   margin-top: 22px;

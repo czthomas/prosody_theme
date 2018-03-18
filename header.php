@@ -29,7 +29,7 @@
         <header>
         <div class="row center-block">
             <div id="logo" class="center-block">
-                <a href="<?php echo $url; ?>"><img class="center-block" src="<?php echo get_template_directory_uri(); ?>/images/logo.gif" alt="<?php bloginfo('name'); ?>" /></a>
+                <a href="<?php echo $url; ?>"><img class="center-block" src="<?php echo get_template_directory_uri() . (is_front_page() ? '/images/logo.gif' : '/images/logo-static.png'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
             </div>
         </div>
         </header>
