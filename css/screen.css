@@ -178,6 +178,7 @@ nav li a:visited a:focus {
   padding: 2em;
   font-size: 1.28em;
   border-bottom: 2px solid #d5e198;
+  margin: auto;
 }
 @media (min-width: 768px) {
   .post-home {
