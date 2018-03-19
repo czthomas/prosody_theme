@@ -342,12 +342,15 @@ button {
 }
 footer {
   padding-top: 18px;
-  height: 125px;
+  padding-bottom: 18px;
   font-size: 12px;
+  background-color: #dee8c5;
+  border-top: 4px solid #d5e198;
 }
 footer a,
-footer a:visited {
-  color: #afafaf;
+footer a:visited,
+footer a:hover {
+  color: #000;
 }
 footer p {
   margin: 0;
@@ -362,6 +365,21 @@ footer #dept_container {
 footer .scholars_lab_logo img {
   padding-left: 15px;
   padding-top: 15px;
+}
+footer .credits {
+  color: #000;
+  text-align: center;
+  font-size: 0.8em;
+}
+@media (min-width: 768px) {
+  footer .credits:nth-child(odd) {
+    text-align: right;
+  }
+}
+@media (min-width: 768px) {
+  footer .credits:nth-child(even) {
+    text-align: left;
+  }
 }
 #glossary {
   margin-bottom: 20px;

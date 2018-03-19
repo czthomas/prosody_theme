@@ -353,11 +353,13 @@ button
 
 footer
     padding-top 18px
-    height 125px
+    padding-bottom 18px
     font-size 12px
+    background-color color-highlight
+    border-top 4px solid color-key
 
-    a, a:visited
-        color #AFAFAF
+    a, a:visited, a:hover
+        color black
 
     p
         margin 0
@@ -372,6 +374,18 @@ footer
     .scholars_lab_logo img
         padding-left 15px
         padding-top 15px
+    
+    .credits
+        color black
+        text-align center
+        font-size 0.8em
+    
+    .credits:nth-child(odd)
+        @media (min-width: 768px)
+            text-align right
+    .credits:nth-child(even)
+        @media (min-width: 768px)
+            text-align left
 
 //  Glossary styles
 
