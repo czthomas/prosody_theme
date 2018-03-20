@@ -31,16 +31,16 @@
                         <i>Rhythm of Russian</i> is authored by <a href="mailto:ash3ra@virginia.edu">Abigail Hohn</a><br/>
                         PhD Candidate, Slavic Languages and Literatures, University of Virginia<br/><br/>
 
-                        Website design by Christopher Thomas<br/>
-                        Training and support by Ammon Shepherd of the Scholars’ Lab<br/><br/>
+                        Website design by Christopher Thomas<br/><br/>
                     </div>
                     <div class="credits col-sm-6">
                         Project supported by a Language Technology Incubator Grant<br/>
                         Provided by the University of Virginia’s Learning Design and Technology<br/><br/>
 
                         This website is indebted to Prosody and its designers:<br/>
-                        Herbert Tucker, John C. Coleman Professor of English, and the Scholars’ Lab<br/>
+                        Herbert Tucker, John C. Coleman Professor of English, and the Scholars’ Lab<br/><br/>
                     </div>
+                    <div class="credits col-sm-6"></div>
                     <a href="http://slavic.as.virginia.edu/"><img class="col-sm-6 img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/uva.png"/></a>
                 </div><!-- ends .row -->
             </div><!-- ends container -->
