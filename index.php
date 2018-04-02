@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
 <?php
-    $category = get_category(get_query_var('cat'))->slug;
-    if(!$category) {
+    $category = get_query_var('category_name');
+    if(empty($category)) {
         $category = 'featured';
     }
 

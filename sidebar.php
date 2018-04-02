@@ -11,6 +11,11 @@
             }
         }
 
+        // bail out with empty sidebar on invalid categories
+        if(is_null($category)): ?>
+            </div>
+        <?php return; endif;
+
         $tei_type = get_post_meta( $post->ID, 'tei_type', true);
     ?>
 
