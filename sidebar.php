@@ -19,7 +19,7 @@
         $tei_type = get_post_meta( $post->ID, 'tei_type', true);
     ?>
 
-    <h2><?php echo $category->name ?></h2>
+    <h2><?php echo $category->description ?></h2>
 
     <div id="poem-sorting">
     <div id="accordion">
