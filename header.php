@@ -25,7 +25,7 @@
 </head>
 <body>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/wz_tooltip.js"></script>
-    <div class="container">
+    <div class="header container">
         <header>
         <div class="row center-block">
             <div id="logo" class="center-block">

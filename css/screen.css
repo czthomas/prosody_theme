@@ -70,7 +70,7 @@ hr {
     display: flex;
   }
 }
-body > script + .container {
+.header {
   background: #dee8c5;
   width: 100%;
   margin: none;
@@ -108,6 +108,11 @@ nav {
   text-align: center;
   font-family: Georgia, serif;
   font-style: bold;
+  display: inline;
+}
+nav .row {
+  background-color: #dee8c5;
+  padding-bottom: 20px;
 }
 nav li {
   display: inline-block;
