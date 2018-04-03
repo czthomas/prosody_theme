@@ -53,9 +53,19 @@ $sidebar_filters = [
 
     "proverb" => [
         [
-            "title" => "By Topic",
+            "title" => "Proverb",
             "key" => "",
-            "filters" => [ ""=>"" ]
+            "filters" => [""=>""]
+        ],[
+            "title" => "By Topic",
+            "key" => "Topic",
+            "filters" => [
+                "friendship" => "Friendship",
+                "love"       => "Love",
+                "money"      => "Money",
+                "work"       => "Work",
+                ""           => ""
+            ]
         ]
     ],
 
@@ -76,14 +86,21 @@ $sidebar_filters = [
             "key" => "",
             "filters" => [ ""=>"" ]
         ],[
-            "title" => "By Module",
-            "key" => "module",
+            "title" => "By Grammar Topic",
+            "key" => "Grammar",
             "filters" => [
-                "1" => "Module 1",
-                "2" => "Module 2",
-                "3" => "Module 3",
-                "4" => "Module 4",
-                "5" => "Module 5",
+                "relative" => "Relative Pronouns",
+                "stress"   => "Stress",
+                "vocab"    => "Vocabulary"
+            ]
+        ],[
+            "title" => "By Difficulty",
+            "key" => "Difficulty",
+            "filters" => [
+                "1" => "First Semester",
+                "2" => "Second Semester",
+                "3" => "Third Semester",
+                "4" => "Fourth Semester"
             ]
         ]
     ],
