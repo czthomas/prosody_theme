@@ -71,7 +71,7 @@ hr {
   }
 }
 .header {
-  background: #dee8c5;
+  background: #ad0c2f;
   width: 100%;
   margin: none;
   padding: none;
@@ -111,7 +111,7 @@ nav {
   display: inline;
 }
 nav .row {
-  background-color: #dee8c5;
+  background-color: #ad0c2f;
   padding-bottom: 20px;
 }
 nav li {
@@ -254,7 +254,7 @@ button {
 }
 .prosody-note {
   display: none;
-  color: #dee8c5;
+  color: #d5e198;
   font-size: 1.4em;
   line-height: 1.5;
 }
@@ -278,7 +278,7 @@ button {
   text-align: center;
   margin: 0;
   padding: 20px 0 14px;
-  color: #dee8c5;
+  color: #d5e198;
 }
 #sidebar h3 {
   text-align: center;
@@ -307,7 +307,7 @@ button {
   overflow: auto;
 }
 .poem-results h4 {
-  color: #dee8c5;
+  color: #d5e198;
   display: block;
   text-align: center;
   border-bottom: 1px solid #d5e198;
@@ -325,7 +325,7 @@ button {
   color: #fff;
 }
 #accordion .ui-accordion-header {
-  color: #dee8c5;
+  color: #d5e198;
   border: none;
   border-bottom: 2px solid #d5e198;
   margin-bottom: 4px;
@@ -349,7 +349,7 @@ footer {
   padding-top: 18px;
   padding-bottom: 18px;
   font-size: 12px;
-  background-color: #dee8c5;
+  background-color: #ad0c2f;
   border-top: 4px solid #d5e198;
 }
 footer a,
@@ -594,7 +594,7 @@ footer .credits {
 }
 #rhymebar .rhymefield {
   background: #d5e198;
-  border-right: 1px solid #dee8c5;
+  border-right: 1px solid #d5e198;
   -ms-flex-positive: 1;
       flex-grow: 1;
   cursor: pointer;
