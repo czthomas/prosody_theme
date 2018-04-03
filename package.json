@@ -1,7 +1,7 @@
 {
-  "name": "prosody",
+  "name": "prosody-RoR",
   "version": "1.1.0",
-  "description": "Theme for For Better for Verse",
+  "description": "Theme for For Rhythm of Russian",
   "author": "Scott Bailey/Scholars' Lab",
   "license": "ISC",
   "dependencies": {
