@@ -19,6 +19,7 @@
                         <option value="4">tetrameter</option>
                         <option value="5">pentameter</option>
                         <option value="6">hexameter</option>
+                        <option value="7">heptameter</option>
                     </select><br/><br/>
                     <input type="hidden" name="answer" id="answer" title="The answer"/>
                 </form>
