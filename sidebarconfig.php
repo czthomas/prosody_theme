@@ -58,14 +58,8 @@ $sidebar_filters = [
             "filters" => [""=>""]
         ],[
             "title" => "By Topic",
-            "key" => "Topic",
-            "filters" => [
-                "friendship" => "Friendship",
-                "love"       => "Love",
-                "money"      => "Money",
-                "work"       => "Work",
-                ""           => ""
-            ]
+            "key" => "!taxonomy",
+            "taxonomy" => "proverb_topic"
         ]
     ],
 
@@ -87,12 +81,8 @@ $sidebar_filters = [
             "filters" => [ ""=>"" ]
         ],[
             "title" => "By Grammar Topic",
-            "key" => "Grammar",
-            "filters" => [
-                "relative" => "Relative Pronouns",
-                "stress"   => "Stress",
-                "vocab"    => "Vocabulary"
-            ]
+            "key" => "!taxonomy",
+            "taxonomy" => "learner_topic"
         ],[
             "title" => "By Difficulty",
             "key" => "Difficulty",
