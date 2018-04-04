@@ -45,8 +45,8 @@ $sidebar_filters = [
                 "blank_verse"      => "Blank verse (Белый стих)", 
                 "free_verse"       => "Free verse (Свободный стих)",
                 "free_verse_rhyme" => "Free verse with rhyme (Вольный стих)",
-                "syllabic_verse"   => "Syllabic verse"
-                "none"             => "",
+                "syllabic_verse"   => "Syllabic verse",
+                "none"             => ""
             ]
         ],[
             "title" => "By Author",
