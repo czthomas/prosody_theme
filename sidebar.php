@@ -29,7 +29,7 @@
                     <h3 class="poem-sort-method"><?php echo $method["title"] ?></h3>
                     <div class="poem-results">
                         <?php
-                            if(empty($method["key"]) || $method["key"][0] != '!'):
+                            if(empty($method["by"]) || $method["by"][0] != '!'):
                                 foreach($method['filters'] as $filter_key=>$filter_name):
                                     $args = array(
                                         'category_name' => $category->slug,
@@ -39,8 +39,8 @@
                                         'posts_per_page' => -1
                                     );
 
-                                    if(!empty($method['key'])) {
-                                        $args['meta_key'] = $method['key'];
+                                    if(!empty($method['by'])) {
+                                        $args['meta_key'] = $method['by'];
                                         $args['meta_value'] = $filter_key;
                                     }
 
@@ -61,7 +61,7 @@
                                 endforeach;
                             else:
                                 // special key handlers
-                                switch($method['key']) {
+                                switch($method['by']) {
                                     // builds sidebar menu from custom taxonomy
                                     case '!taxonomy':
                                         $terms = get_terms(array(

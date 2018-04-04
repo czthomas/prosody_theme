@@ -6,8 +6,9 @@
     schema:
         category slug => [
             "title" => filter method display name,
-            "key" => WP_Query meta_key, if any
-                (or "!author" to engage special case for author sorting),
+            "by"  => WP_Query meta_key, if any, or special case:
+                !author   - collates by author
+                !taxonomy - collates along specified custom taxonomy
             "filters" => [
                 WP_Query meta_value => display name,
                 ...
@@ -20,11 +21,11 @@ $sidebar_filters = [
     "poem" => [
         [
             "title" => "By Title",
-            "key" => "",
+            "by"  => "",
             "filters" => [ ""=>"" ]
         ],[
             "title" => "By Difficulty",
-            "key" => "Difficulty",
+            "by"  => "Difficulty",
             "filters" => [
                 "1" => "Beginning",
                 "2" => "Intermediate",
@@ -32,7 +33,7 @@ $sidebar_filters = [
             ]
         ],[
             "title" => "By Type",
-            "key" => "Type",
+            "by"  => "Type",
             "filters" => [
                 ""                 => "",
                 "ballad"           => "Ballad",
@@ -47,18 +48,18 @@ $sidebar_filters = [
             ]
         ],[
             "title" => "By Author",
-            "key" => "!author"
+            "by"  => "!author"
         ]
     ],
 
     "proverb" => [
         [
             "title" => "Proverb",
-            "key" => "",
+            "by"  => "",
             "filters" => [""=>""]
         ],[
             "title" => "By Topic",
-            "key" => "!taxonomy",
+            "by"  => "!taxonomy",
             "taxonomy" => "proverb_topic"
         ]
     ],
@@ -66,26 +67,26 @@ $sidebar_filters = [
     "prose" => [
         [
             "title" => "By Title",
-            "key" => "",
+            "by"  => "",
             "filters" => [ ""=>"" ]
         ],[
             "title" => "By Author",
-            "key" => "!author"
+            "by"  => "!author"
         ]
     ],
 
     "beginners" => [
         [
             "title" => "By Title",
-            "key" => "",
+            "by"  => "",
             "filters" => [ ""=>"" ]
         ],[
             "title" => "By Grammar Topic",
-            "key" => "!taxonomy",
+            "by"  => "!taxonomy",
             "taxonomy" => "learner_topic"
         ],[
             "title" => "By Difficulty",
-            "key" => "Difficulty",
+            "by"  => "Difficulty",
             "filters" => [
                 "1" => "First Semester",
                 "2" => "Second Semester",
