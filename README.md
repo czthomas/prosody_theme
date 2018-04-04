@@ -1,3 +1,6 @@
+## prosody-theme-RoR
+specialized prosody fork for UVA's Rhythm of Russian site
+
 ### Development Environment
 
 - Developed locally with MAMP 3.2.1 running PHP 5.6.7, node 0.12.7, npm 2.12.1
