@@ -16,11 +16,11 @@
 <div id="main">
 <div class="container">
 <div class="row">
+<div class="content poem-home col-lg-6 col-md-6 col-sm-8">
     <?php if ( $poems->have_posts() ) : $poems->the_post(); ?>
         <?php $resources = get_post_meta( $post->ID, 'Resources', true ); ?>
         <?php $tei_type = get_post_meta( $post->ID, 'tei_type', true); ?>
 
-    <div class="content poem-home col-lg-6 col-md-6 col-sm-8">
         <div class="scrollfix">
             <?php if ( $resources ): ?>
                 <div id="poem_resources">
@@ -45,10 +45,10 @@
         <?php endif ?>
 
         <?php else: ?>
-
-            <h2>Getting Started</h2>
-            <p>Select a poem to begin.</p>
-
+            <div class="scrollfix">
+                <div id="poem_text">
+                </div>
+            </div>
         <?php endif; ?>
     </div><!-- ends .content -->
 
