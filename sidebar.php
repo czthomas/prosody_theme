@@ -31,8 +31,6 @@
                         <?php
                             if(empty($method["key"]) || $method["key"][0] != '!'):
                                 foreach($method['filters'] as $filter_key=>$filter_name):
-                                    ?> <ul class='titles'> <?php
-
                                     $args = array(
                                         'category_name' => $category->slug,
                                         'post_type' => 'prosody_poem',
@@ -52,6 +50,7 @@
                                         echo "<h4>" . $filter_name . "</h4>";
                                     }
 
+                                    ?> <ul class='titles'> <?php
                                     while($results->have_posts()) {
                                         $results->the_post();
                                         ?>
