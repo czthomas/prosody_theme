@@ -24,6 +24,7 @@
     <div id="poem-sorting">
     <div id="accordion">
         <?php
+            if(array_key_exists($category->slug, $sidebar_filters)):
             foreach($sidebar_filters[$category->slug] as $method):
                 ?>
                     <h3 class="poem-sort-method"><?php echo $method["title"] ?></h3>
@@ -166,6 +167,7 @@
                     </div>
                 <?php
             endforeach;
+            endif;
         ?>
         </div><!-- closes accordion -->
     </div><!-- close poem-sorting -->
