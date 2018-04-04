@@ -81,7 +81,7 @@ $sidebar_filters = [
             "by"  => "",
             "filters" => [ ""=>"" ]
         ],[
-            "title" => "By Grammar Topic",
+            "title" => "By Topic",
             "by"  => "!taxonomy",
             "taxonomy" => "learner_topic"
         ],[
