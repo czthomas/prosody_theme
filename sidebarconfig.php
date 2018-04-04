@@ -35,7 +35,6 @@ $sidebar_filters = [
             "title" => "By Type",
             "by"  => "Type",
             "filters" => [
-                ""                 => "",
                 "ballad"           => "Ballad",
                 "childlit"         => "Children's literature",
                 "elegy"            => "Elegy",
@@ -47,6 +46,7 @@ $sidebar_filters = [
                 "free_verse"       => "Free verse (Свободный стих)",
                 "free_verse_rhyme" => "Free verse with rhyme (Вольный стих)",
                 "syllabic_verse"   => "Syllabic verse"
+                "none"             => "",
             ]
         ],[
             "title" => "By Author",
