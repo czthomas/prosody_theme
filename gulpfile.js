@@ -1,7 +1,10 @@
 var gulp = require('gulp'),
     stylus = require('gulp-stylus'),
     autoprefixer = require('autoprefixer-stylus'),
-    jshint = require('gulp-jshint');
+    jshint = require('gulp-jshint'),
+    zip = require('gulp-zip');
+
+var package = require('./package.json');
 
 
 gulp.task('stylus', function() {
@@ -16,6 +19,14 @@ gulp.task('lint', function() {
 	return gulp.src('./js/utility.js')
 	.pipe(jshint({'eqeqeq': true}))
 	.pipe(jshint.reporter('default'))
+});
+
+gulp.task('zip', function() {
+    gulp.src(['**',
+            '!node_modules', '!node_modules/**',
+            '!dist', '!dist/**'])
+        .pipe(zip((package.name + '-' + package.version).replace(/[\s\.]/g, '-') + '.zip'))
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function() {

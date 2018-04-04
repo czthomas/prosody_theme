@@ -9,7 +9,8 @@
     "gulp": "^3.8.11",
     "gulp-stylus": "^2.0.1",
     "html5shiv": "^3.7.2",
-    "normalize.css": "^3.0.3"
+    "normalize.css": "^3.0.3",
+    "gulp-zip": "^4.1.0"
   },
   "devDependencies": {
     "gulp-jshint": "^2.0.4",
