@@ -4,37 +4,37 @@
     sidebar_filters maps categories to a list of filtering methods
 
     schema:
-        category slug => [
+        category slug => array(
             "title" => filter method display name,
             "by"  => WP_Query meta_key, if any, or special case:
                 !author   - collates by author
                 !taxonomy - collates along specified custom taxonomy
-            "filters" => [
+            "filters" => array(
                 WP_Query meta_value => display name,
                 ...
-            ]
-        ],
+            )
+        ),
         ...
 */
 
-$sidebar_filters = [
-    "poem" => [
-        [
+$sidebar_filters = array(
+    "poem" => array(
+        array(
             "title" => "By Title",
             "by"  => "",
-            "filters" => [ ""=>"" ]
-        ],[
+            "filters" => array( ""=>"" )
+        ),array(
             "title" => "By Difficulty",
             "by"  => "Difficulty",
-            "filters" => [
+            "filters" => array(
                 "1" => "Beginning",
                 "2" => "Intermediate",
                 "3" => "Advanced"
-            ]
-        ],[
+            )
+        ),array(
             "title" => "By Type",
             "by"  => "Type",
-            "filters" => [
+            "filters" => array(
                 "ballad"           => "Ballad",
                 "childlit"         => "Children's literature",
                 "elegy"            => "Elegy",
@@ -47,56 +47,56 @@ $sidebar_filters = [
                 "free_verse_rhyme" => "Free verse with rhyme (Вольный стих)",
                 "syllabic_verse"   => "Syllabic verse",
                 "none"             => ""
-            ]
-        ],[
+            )
+        ),array(
             "title" => "By Author",
             "by"  => "!author"
-        ]
-    ],
+        )
+    ),
 
-    "proverb" => [
-        [
+    "proverb" => array(
+        array(
             "title" => "Proverb",
             "by"  => "",
-            "filters" => [""=>""]
-        ],[
+            "filters" => array(""=>"")
+        ),array(
             "title" => "By Topic",
             "by"  => "!taxonomy",
             "taxonomy" => "proverb_topic"
-        ]
-    ],
+        )
+    ),
 
-    "prose" => [
-        [
+    "prose" => array(
+        array(
             "title" => "By Title",
             "by"  => "",
-            "filters" => [ ""=>"" ]
-        ],[
+            "filters" => array( ""=>"" )
+        ),array(
             "title" => "By Author",
             "by"  => "!author"
-        ]
-    ],
+        )
+    ),
 
-    "beginners" => [
-        [
+    "beginners" => array(
+        array(
             "title" => "By Title",
             "by"  => "",
-            "filters" => [ ""=>"" ]
-        ],[
+            "filters" => array( ""=>"" )
+        ),array(
             "title" => "By Topic",
             "by"  => "!taxonomy",
             "taxonomy" => "learner_topic"
-        ],[
+        ),array(
             "title" => "By Difficulty",
             "by"  => "Difficulty",
-            "filters" => [
+            "filters" => array(
                 "1" => "First Semester",
                 "2" => "Second Semester",
                 "3" => "Third Semester",
                 "4" => "Fourth Semester"
-            ]
-        ]
-    ],
-];
+            )
+        )
+    ),
+);
 
 ?>
