@@ -7,7 +7,7 @@
                         <option value="+--">dactylic</option>
                         <option value="-+">iambic</option>
                         <option value="+-">trochaic</option>
-                        <option value="-+-">amphebraic</option>
+                        <option value="-+-">amphibraic</option>
                         <option value="+++">three-foot dolnik</option>
                         <option value="++++">four-foot dolnik</option>
                     </select><br/><br/>
