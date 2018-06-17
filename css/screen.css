@@ -209,11 +209,14 @@ nav li a:visited a:focus {
       flex: auto;
 }
 #poem #poemtitle {
-  margin: 10px 0 15px;
+  margin: 10px 0 0px;
 }
 #poem #poemtitle h2 {
   padding-bottom: 10px;
   line-height: 1em;
+}
+h4 {
+  margin-bottom: 15px;
 }
 span.space_1 {
   margin-left: 1em;
@@ -230,7 +233,8 @@ div.prosody-shadowline {
 div.prosody-line {
   padding-top: 6px;
 }
-span:hover {
+.prosody-syllable:hover,
+.prosody-shadowsyllable:hover {
   background: #444;
 }
 div.TEI-l {
@@ -611,7 +615,7 @@ footer .credits {
   float: left;
 }
 #rhyme .lrhyme {
-  height: 22px;
+  height: 36px;
   padding: 0 4px;
 }
 #rhyme .check {
@@ -665,10 +669,7 @@ footer .credits {
   background: #fff;
 }
 #rhymeform p {
-  height: 20px;
-}
-#rhymeform p:first-child {
-  height: 0px;
+  height: 36px;
 }
 #utils {
   float: left;
@@ -683,4 +684,22 @@ footer .credits {
   display: inline-block;
   margin: auto;
   text-align: center;
+}
+span.translation {
+  border: 1px #fff dashed;
+  padding: 0 2px 0 2px;
+}
+div.translation {
+  border: 1px #fff dashed;
+  margin: 10px 0 10px 0;
+  padding: 4px;
+}
+div.translation h2 {
+  font-size: 16px;
+}
+div.translation p {
+  margin-left: 2em;
+}
+#poem > div:last-child {
+  margin-bottom: 40px;
 }
